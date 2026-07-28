@@ -1014,7 +1014,9 @@ html body #notiffi_panel .notiffi_manage {
   position: relative;
   border-bottom: 1px solid var(--fft-line);
   background: linear-gradient(90deg, color-mix(in srgb, var(--fft-panel) 65%, var(--transparent)), var(--transparent));
+  overflow: hidden;
 }
+.fft-hub .hub_title > :not(.hub-gif) { position: relative; z-index: 1; }
 .fft-hub .hub-summary {
   margin-top: 30px;
   position: static;
@@ -1059,22 +1061,18 @@ html body #notiffi_panel .notiffi_manage {
   padding: 38px;
   border-right: 1px solid var(--fft-line);
 }
-.fft-hub .hub_infos {
-  padding-bottom: 142px;
-  position: relative;
-}
+.fft-hub .hub_infos { position: relative; }
 .fft-hub .hub-gif {
   width: 100%;
-  height: 112px;
+  height: 100%;
   position: absolute;
   z-index: 0;
   left: 0;
   bottom: 0;
   object-fit: cover;
   object-position: center;
-  border-top: 1px solid var(--fft-line);
-  opacity: .82;
-  filter: grayscale(1) contrast(1.2);
+  opacity: .24;
+  filter: grayscale(1) contrast(1.3) blur(1px);
 }
 .fft-hub .hub_lastConnected { border-right: 0; }
 .fft-hub .hub_lastUser { display: grid; grid-template-columns: 92px 1fr; gap: 24px; align-items: center; }
