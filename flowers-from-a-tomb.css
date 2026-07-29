@@ -3533,16 +3533,16 @@ body .page-actions .button.primary:hover {
 .fft-viewtopic-nav {
   margin: 0 0 6px;
   color: var(--fft-muted);
-  font-size: 0;
+  font-size: 14px;
   font-weight: 600;
   text-align: left;
 }
 .fft-viewtopic-nav a { color: var(--fft-muted); font-size: 14px; transition: color .24s ease; }
-.fft-viewtopic-nav a + a::before {
-  content: "\203A";
+.fft-breadcrumb-separator {
   margin: 0 7px;
   color: var(--fft-muted);
-  font-size: 14px;
+  font-size: 12px;
+  vertical-align: -1px;
 }
 .fft-viewtopic-nav a:hover { color: var(--fft-ink); }
 .fft-viewtopic-head h1 {
