@@ -1934,8 +1934,34 @@ img.avatar-preview {
 }
 .fft-admin-text p:last-child { margin-bottom: 0; }
 .fft-admin-text strong { color: var(--fft-ink); }
+.fft-admin-body::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.fft-admin-post--two-icons .fft-ls-icons,
+.fft-admin-post--gif .fft-ls-gif,
+.fft-admin-post--moodboard .fft-ls-moodboard {
+  margin: 5px 26px 20px 4px;
+  float: left;
+}
+.fft-admin-post--three-icons .fft-ls-icons {
+  margin: 0 0 26px;
+  justify-content: center;
+}
+.fft-admin-post--quote .fft-ls-quote,
+.fft-admin-post--panorama .fft-ls-panorama {
+  margin: 0 0 28px;
+}
+.fft-admin-post--panorama .fft-ls-panorama img { height: 190px !important; }
 @media (max-width: 560px) {
   .fft-admin-post--simple { padding: 22px; }
+  .fft-admin-post--two-icons .fft-ls-icons,
+  .fft-admin-post--gif .fft-ls-gif,
+  .fft-admin-post--moodboard .fft-ls-moodboard {
+    margin: 0 0 26px;
+    float: none;
+  }
 }
 
 :root,
