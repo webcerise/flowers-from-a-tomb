@@ -307,14 +307,8 @@ body #wombat.fft-profile-view {
   border-right: 1px solid var(--fft-line);
   background: var(--fft-panel);
 }
-#wombat .profile_avatar:after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to bottom, var(--transparent) 68%, var(--fft-panel) 100%);
-  pointer-events: none;
-}
-#wombat .profile_avatar img {
+#wombat .profile_avatar > img,
+#wombat .profile_avatar > a > img {
   width: 100% !important;
   height: 100% !important;
   max-width: none !important;
@@ -323,6 +317,31 @@ body #wombat.fft-profile-view {
   object-position: center top;
   border-radius: 0;
   filter: grayscale(1) contrast(1.04);
+}
+#wombat .profile_avatar-main {
+  width: 200px;
+  height: 320px;
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  overflow: hidden;
+  border: 1px solid var(--fft-line);
+  background: var(--fft-paper);
+  transform: translate(-50%, -50%);
+}
+#wombat .profile_avatar-main > a,
+#wombat .profile_avatar-main img {
+  width: 100% !important;
+  height: 100% !important;
+  max-width: none !important;
+  display: block;
+}
+#wombat .profile_avatar-main img {
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 0;
+  filter: none;
 }
 #wombat .profile_infos {
   min-width: 0;
@@ -394,8 +413,8 @@ body #wombat.fft-profile-view {
 }
 #wombat .profile_content {
   width: 100%;
-  height: auto;
-  max-height: none;
+  height: 380px;
+  max-height: 380px;
   margin-top: 28px;
   grid-column: 1 / -1;
   grid-row: 2;
@@ -404,8 +423,14 @@ body #wombat.fft-profile-view {
   align-content: start;
   border-top: 1px solid var(--fft-line);
   border-left: 1px solid var(--fft-line);
-  overflow: visible;
+  overflow-x: hidden;
+  overflow-y: auto;
+  scrollbar-color: var(--fft-muted) var(--fft-paper);
+  scrollbar-width: thin;
 }
+#wombat .profile_content::-webkit-scrollbar { width: 5px; }
+#wombat .profile_content::-webkit-scrollbar-track { background: var(--fft-paper); }
+#wombat .profile_content::-webkit-scrollbar-thumb { background: var(--fft-muted); }
 #wombat .profile_field {
   min-width: 0;
   min-height: 76px;
