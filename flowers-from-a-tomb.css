@@ -2227,6 +2227,7 @@ body .page-actions .button.primary:hover {
   padding: 0;
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   border: 1px solid var(--fft-line);
   border-radius: 0;
   background: var(--transparent);
