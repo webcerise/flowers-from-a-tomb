@@ -1,4 +1,4 @@
-﻿
+
 :root,
 :root[data-color-scheme="light"] {
   --forumSize: min(1180px, calc(100vw - 120px));
@@ -438,6 +438,11 @@ body #fft-profile-view.fft-profile-view {
   align-content: start;
   column-gap: 12px;
 }
+
+img.avatar-preview {
+  width: 200px;
+}
+
 #fft-profile-view .profile_infos > strong {
   padding: 7px 10px;
   display: inline-block;
