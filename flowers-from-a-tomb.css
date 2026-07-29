@@ -104,6 +104,7 @@ body { min-width: 0; font: 400 14px/1.6 var(--font); background: var(--body); }
 .fft-forums { display: grid; gap: 14px; margin-top: 0; }
 .fft-forum {
   min-height: 205px;
+  padding: 0;
   position: relative;
   display: grid;
   grid-template-columns: minmax(0, 1fr) 125px 220px 112px;
@@ -122,12 +123,12 @@ body { min-width: 0; font: 400 14px/1.6 var(--font); background: var(--body); }
   position: absolute;
   z-index: 2;
   top: 50%;
-  right: 43px;
+  right: 56px;
   display: grid;
   place-items: center;
   color: var(--light);
-  font-size: 25px;
-  transform: translateY(-50%);
+  font-size: 34px;
+  transform: translate(50%, -50%);
 }
 .fft-forum .forum_desc > span {
   position: absolute;
@@ -184,6 +185,12 @@ body { min-width: 0; font: 400 14px/1.6 var(--font); background: var(--body); }
   background: var(--dark-surface);
 }
 .fft-forum-avatar img { width: 100% !important; height: 100% !important; max-width: none !important; max-height: none !important; display: block; object-fit: cover; object-position: center top; border-radius: 0; filter: grayscale(1) contrast(1.08); transition: transform .35s ease; }
+.fft-forum-avatar:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(#0002, #0008);
+}
 .fft-forum:hover .fft-forum-avatar img { transform: scale(1.035); }
 .fft-forum-avatar > .ph { position: absolute; inset: 0; display: grid; place-items: center; color: var(--light); font-size: 25px; }
 .fft-forum-avatar img + .ph { display: grid; }
