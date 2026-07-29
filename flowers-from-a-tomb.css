@@ -1642,6 +1642,179 @@ img.avatar-preview {
   .fft-dossier-questions div { grid-template-columns: 1fr; gap: 7px; }
 }
 
+/* Fiche pour les publications administratives */
+.fft-admin-post {
+  width: min(720px, 100%);
+  margin: 26px auto;
+  border: 1px solid var(--fft-line);
+  background: var(--fft-paper);
+  color: var(--fft-ink);
+  font: 400 14px/1.8 var(--font);
+}
+.fft-admin-post * { box-sizing: border-box; }
+.fft-admin-head {
+  min-height: 220px;
+  display: grid;
+  grid-template-columns: 86px minmax(0, 1fr);
+  border-bottom: 1px solid var(--fft-line);
+}
+.fft-admin-index {
+  padding-top: 34px;
+  border-right: 1px solid var(--fft-line);
+  color: var(--fft-muted);
+  font: italic 14px/1 "Cormorant Garamond", serif;
+  text-align: center;
+}
+.fft-admin-heading {
+  padding: 36px 40px 34px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.fft-admin-kicker {
+  margin-bottom: 13px;
+  color: var(--fft-muted);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+}
+.fft-admin-title {
+  margin: 0;
+  color: var(--fft-ink);
+  font: 500 clamp(44px, 7vw, 66px)/.8 "Cormorant Garamond", serif;
+  letter-spacing: -.045em;
+  text-transform: none;
+}
+.fft-admin-subtitle {
+  max-width: 520px;
+  margin: 22px 0 0;
+  color: var(--fft-muted);
+  font: italic 17px/1.35 "Cormorant Garamond", serif;
+}
+.fft-admin-meta {
+  min-height: 48px;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px 20px;
+  border-bottom: 1px solid var(--fft-line);
+  color: var(--fft-muted);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+.fft-admin-meta span + span::before {
+  content: "—";
+  margin-right: 20px;
+  color: var(--fft-line);
+}
+.fft-admin-section {
+  display: grid;
+  grid-template-columns: 86px minmax(0, 1fr);
+  border-bottom: 1px solid var(--fft-line);
+}
+.fft-admin-section:last-of-type { border-bottom: 0; }
+.fft-admin-section-num {
+  padding-top: 32px;
+  border-right: 1px solid var(--fft-line);
+  color: var(--fft-muted);
+  font: italic 13px/1 "Cormorant Garamond", serif;
+  text-align: center;
+}
+.fft-admin-content { padding: 30px 40px 34px; }
+.fft-admin-section-title {
+  margin: 0 0 19px;
+  color: var(--fft-ink);
+  font: 500 34px/.9 "Cormorant Garamond", serif;
+  letter-spacing: -.02em;
+  text-transform: lowercase;
+}
+.fft-admin-content p {
+  margin: 0 0 16px;
+  color: var(--fft-muted);
+  text-align: justify;
+}
+.fft-admin-content p:last-child { margin-bottom: 0; }
+.fft-admin-content strong { color: var(--fft-ink); }
+.fft-admin-list {
+  margin: 18px 0 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid var(--fft-line);
+}
+.fft-admin-list li {
+  padding: 10px 0;
+  display: grid;
+  grid-template-columns: 24px minmax(0, 1fr);
+  gap: 10px;
+  border-bottom: 1px solid var(--fft-line);
+  color: var(--fft-muted);
+}
+.fft-admin-list li::before {
+  content: "✦";
+  color: var(--fft-ink);
+  text-align: center;
+}
+.fft-admin-notice {
+  margin: 20px 0 0;
+  padding: 18px 20px;
+  border: 1px solid var(--fft-ink);
+  background: var(--fft-ink);
+  color: var(--fft-paper);
+}
+.fft-admin-notice b {
+  margin-bottom: 7px;
+  display: block;
+  color: inherit;
+  font-size: 10px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+.fft-admin-notice p { margin: 0; color: inherit; text-align: left; }
+.fft-admin-actions {
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 8px;
+  border-top: 1px solid var(--fft-line);
+  background: var(--fft-panel);
+}
+.fft-admin-actions a {
+  min-height: 38px;
+  padding: 9px 13px;
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  border: 1px solid var(--fft-line);
+  background: var(--fft-paper);
+  color: var(--fft-ink);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: border-color .22s ease, background-color .22s ease;
+}
+.fft-admin-actions a:hover {
+  border-color: var(--fft-muted);
+  background: var(--fft-panel);
+}
+.fft-admin-actions i { color: var(--fft-muted); font-size: 13px; }
+@media (max-width: 560px) {
+  .fft-admin-head,
+  .fft-admin-section { grid-template-columns: 54px minmax(0, 1fr); }
+  .fft-admin-heading,
+  .fft-admin-content { padding-right: 22px; padding-left: 22px; }
+  .fft-admin-meta { padding: 12px 16px; }
+  .fft-admin-meta span + span::before { margin-right: 8px; }
+  .fft-admin-actions { justify-content: stretch; }
+  .fft-admin-actions a { flex: 1 1 auto; justify-content: center; }
+}
+
 :root,
 :root[data-color-scheme="light"],
 :root[data-color-scheme="dark"] {
