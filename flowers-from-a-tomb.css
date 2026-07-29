@@ -1621,3 +1621,151 @@ body .page-actions:not(form) #mark_read:hover {
   }
   body .page-actions:not(form) #mark_read { justify-content: center; }
 }
+
+/* Liste des sujets */
+.topic_separator { height: 1px; margin: 30px 0 14px; background: var(--fft-line); }
+.fft-topic {
+  width: 100%;
+  min-height: 170px;
+  margin: 0 0 14px;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 54px minmax(0, 1fr) 118px 205px 104px;
+  align-items: stretch;
+  border: 1px solid var(--fft-line);
+  border-radius: 0;
+  background: var(--fft-paper);
+  overflow: hidden;
+  transition: border-color .28s ease, background-color .28s ease;
+}
+.fft-topic:hover {
+  border-color: var(--fft-muted);
+  background: color-mix(in srgb, var(--fft-panel) 40%, var(--fft-paper));
+}
+.fft-topic-state {
+  width: auto;
+  height: auto;
+  display: grid;
+  place-items: center;
+  border-right: 1px solid var(--fft-line);
+  background: var(--transparent);
+}
+.fft-topic-state img { width: 15px; height: 15px; display: block; object-fit: contain; filter: grayscale(1); }
+.fft-topic-main { min-width: 0; padding: 27px 28px; align-self: center; }
+.fft-topic-heading { display: flex; align-items: baseline; flex-wrap: wrap; gap: 8px; }
+.fft-topic .topic-type {
+  color: var(--fft-muted);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+.fft-topic .topictitle {
+  max-width: 100%;
+  color: var(--fft-ink);
+  font: 500 29px/1 "Cormorant Garamond", serif;
+  white-space: normal;
+  transition: letter-spacing .28s ease, transform .28s ease;
+}
+.fft-topic:hover .topictitle { letter-spacing: .01em; transform: translateX(3px); }
+.fft-topic-heading > img { width: 15px; height: 15px; filter: grayscale(1); }
+.fft-topic-byline {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  color: var(--fft-muted);
+  font-size: 14px;
+}
+.fft-topic-byline .topic-author,
+.fft-topic-byline .topic-author a { color: var(--fft-ink); font-size: 14px; }
+.fft-topic .topicslist-description {
+  width: auto;
+  max-width: 580px;
+  margin-top: 13px;
+  padding: 12px 0 0;
+  border-top: 1px solid var(--fft-line);
+  color: var(--fft-muted);
+  font-size: 14px;
+}
+.fft-topic .topicslist-pagination { margin-top: 10px; display: block; color: var(--fft-muted); font-size: 14px; }
+.fft-topic-stats {
+  padding: 24px 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 18px;
+  border-left: 1px solid var(--fft-line);
+  color: var(--fft-muted);
+  font-size: 14px;
+  text-align: left;
+}
+.fft-topic-stats span,
+.fft-topic-stats strong { display: block; }
+.fft-topic-stats strong { color: var(--fft-ink); font-size: 18px; }
+.fft-topic-last {
+  min-width: 0;
+  padding: 24px 20px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-left: 1px solid var(--fft-line);
+  color: var(--fft-muted);
+  font-size: 14px;
+}
+.fft-topic-label {
+  margin-bottom: 10px;
+  color: var(--fft-muted);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+.fft-topic-time { color: var(--fft-muted); font-size: 14px; }
+.fft-topic-author,
+.fft-topic-author a { margin-top: 4px; color: var(--fft-ink); font-size: 14px; }
+.fft-topic-go { position: absolute; top: 18px; right: 16px; }
+.fft-topic-go img { width: 16px; height: 16px; filter: grayscale(1); }
+.fft-topic-avatar {
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  position: relative;
+  overflow: hidden;
+  border-left: 1px solid var(--fft-line);
+  background: var(--fft-panel);
+}
+.fft-topic-avatar > a { width: 100%; height: 100%; display: block; }
+.fft-topic-avatar img {
+  width: 100% !important;
+  height: 100% !important;
+  max-width: none !important;
+  max-height: none !important;
+  display: block;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 0;
+  filter: grayscale(1) contrast(1.02);
+  transition: filter .4s ease, transform .45s ease;
+}
+.fft-topic:hover .fft-topic-avatar img { filter: grayscale(1) contrast(1.12); transform: scale(1.035); }
+.fft-no-topics {
+  padding: 40px;
+  border: 1px solid var(--fft-line);
+  color: var(--fft-muted);
+  font-size: 14px;
+  text-align: center;
+}
+@media (max-width: 900px) {
+  .fft-topic { grid-template-columns: 46px minmax(0, 1fr) 100px 90px; }
+  .fft-topic-last { grid-column: 2 / 4; grid-row: 2; border-top: 1px solid var(--fft-line); }
+  .fft-topic-avatar { grid-column: 4; grid-row: 1 / 3; }
+}
+@media (max-width: 620px) {
+  .fft-topic { grid-template-columns: 42px minmax(0, 1fr) 80px; }
+  .fft-topic-main { padding: 22px 18px; }
+  .fft-topic-stats { grid-column: 3; }
+  .fft-topic-last { grid-column: 1 / -1; grid-row: 2; border-left: 0; border-top: 1px solid var(--fft-line); }
+  .fft-topic-avatar { display: none; }
+}
