@@ -250,17 +250,21 @@ body #wombat.fft-profile-view {
   background: var(--transparent);
 }
 #wombat > .page-title {
-  min-height: 136px;
+  min-height: 116px;
   margin: 0 0 20px;
-  padding: 28px 34px 28px 120px;
+  padding: 46px 34px 18px 122px;
   position: relative;
   display: flex;
   align-items: center;
   border: 1px solid var(--fft-line);
   background: var(--fft-paper);
   color: var(--fft-ink);
-  font: 400 54px/1 var(--font-pseudo);
+  font: 400 48px/1 var(--font-pseudo);
   text-transform: capitalize;
+}
+#wombat > .page-title a {
+  font: inherit;
+  text-decoration: none;
 }
 #wombat > .page-title:before {
   content: "01";
@@ -278,7 +282,7 @@ body #wombat.fft-profile-view {
   content: "Portrait d’un habitant";
   position: absolute;
   left: 122px;
-  top: 24px;
+  top: 25px;
   color: var(--fft-muted);
   font: 600 14px/1 var(--font);
   letter-spacing: .15em;
@@ -289,7 +293,10 @@ body #wombat.fft-profile-view {
   margin: 0;
   display: grid;
   grid-template-columns: 320px minmax(0, 1fr);
+  gap: 0;
+  padding: 0;
   border: 1px solid var(--fft-line);
+  border-radius: 0;
   background: var(--fft-paper);
 }
 #wombat .profile_avatar {
@@ -321,6 +328,10 @@ body #wombat.fft-profile-view {
   min-width: 0;
   padding: 34px;
   position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-content: start;
+  column-gap: 12px;
 }
 #wombat .profile_infos > strong {
   padding: 7px 10px;
@@ -330,6 +341,9 @@ body #wombat.fft-profile-view {
   font-size: 14px;
   font-weight: 600;
   text-transform: lowercase;
+  grid-column: 1;
+  grid-row: 1;
+  justify-self: start;
 }
 #wombat .profile_infos > strong:before {
   content: "Identité";
@@ -342,13 +356,16 @@ body #wombat.fft-profile-view {
 #wombat .profile_infos > br,
 #wombat .profile_infos > [class*="online"] { display: none; }
 #wombat .profile_contact {
-  margin: 0 0 24px;
-  padding: 0 0 24px;
+  margin: 0;
+  padding: 0;
+  grid-column: 2;
+  grid-row: 1;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   gap: 6px;
-  border-bottom: 1px solid var(--fft-line);
+  border: 0;
+  float: none;
 }
 #wombat .profile_contact > div { display: contents; }
 #wombat .profile_contact a {
@@ -376,12 +393,18 @@ body #wombat.fft-profile-view {
   filter: grayscale(1);
 }
 #wombat .profile_content {
+  width: 100%;
+  height: auto;
+  max-height: none;
   margin-top: 28px;
+  grid-column: 1 / -1;
+  grid-row: 2;
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   align-content: start;
   border-top: 1px solid var(--fft-line);
   border-left: 1px solid var(--fft-line);
+  overflow: visible;
 }
 #wombat .profile_field {
   min-width: 0;
@@ -430,7 +453,8 @@ body #wombat.fft-profile-view {
 }
 #wombat > center {
   margin-top: 14px;
-  padding: 14px;
+  min-height: 52px;
+  padding: 8px 14px;
   display: flex;
   align-items: center;
   justify-content: flex-end;
