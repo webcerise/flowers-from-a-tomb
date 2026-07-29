@@ -193,14 +193,7 @@ body { min-width: 0; font: 400 14px/1.6 var(--font); background: var(--body); }
 .fft-forum-avatar > .ph { position: absolute; inset: 0; display: grid; place-items: center; color: var(--light); font-size: 25px; }
 .fft-forum-avatar img + .ph { display: grid; }
 
-.page-actions {
-  width: 100%;
-  margin: 26px 0;
-  padding: 10px 20px;
-  border-radius: 0;
-  font-size: 14px;
-  text-transform: lowercase;
-}
+.page-actions { width: 100%; margin: 26px 0; font-size: 14px; }
 .hub {
   margin: 42px 0 0;
   border: 1px solid var(--fft-line);
