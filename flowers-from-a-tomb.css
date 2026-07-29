@@ -1487,7 +1487,7 @@ body form.fft-members-filter {
   color: var(--fft-ink);
   font: 400 34px/1 var(--font-pseudo);
   text-overflow: ellipsis;
-  text-transform: lowercase;
+  text-transform: capitalize;
   white-space: nowrap;
 }
 .fft-member-meta {
@@ -2194,21 +2194,19 @@ body .page-actions .button.primary:hover {
   overflow: hidden;
 }
 .fft-topic-page .post_details {
-  min-width: 0;
-  padding: 8px 14px;
-  grid-column: 1 / -1;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 18px;
-  border-bottom: 1px solid var(--fft-line);
-  background: var(--fft-panel);
+  display: contents;
 }
 .fft-topic-page .post_date {
   min-width: 0;
+  min-height: 52px;
+  padding: 8px 14px;
+  grid-column: 1;
   display: flex;
   align-items: center;
   gap: 10px;
+  border-right: 1px solid var(--fft-line);
+  border-bottom: 1px solid var(--fft-line);
+  background: var(--fft-panel);
   color: var(--fft-muted);
   font-size: 14px;
 }
@@ -2222,7 +2220,18 @@ body .page-actions .button.primary:hover {
   white-space: nowrap;
 }
 .fft-topic-page .post_date time { color: var(--fft-muted); font-size: 14px; }
-.fft-topic-page .edition-buttons { display: flex; align-items: center; flex-wrap: wrap; gap: 4px; }
+.fft-topic-page .edition-buttons {
+  min-height: 52px;
+  padding: 8px 14px;
+  grid-column: 2;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 4px;
+  border-bottom: 1px solid var(--fft-line);
+  background: var(--fft-panel);
+}
 .fft-topic-page .edition-buttons [class^="btn-"],
 .fft-topic-page .rep-button {
   width: 32px;
@@ -2259,7 +2268,7 @@ body .page-actions .button.primary:hover {
 }
 .fft-topic-page .post_profile {
   min-width: 0;
-  padding: 24px;
+  padding: 0 24px 24px;
   border-right: 1px solid var(--fft-line);
   background: var(--fft-panel);
   text-align: center;
@@ -2267,14 +2276,24 @@ body .page-actions .button.primary:hover {
 .fft-topic-page .post_profile center { text-align: center; }
 .fft-topic-page .post_pseudo,
 .fft-topic-page .post_pseudo a {
+  display: inline-block;
+  margin-top: 12px;
   color: var(--fft-ink);
   font: 400 36px/1 var(--font-pseudo);
-  text-transform: lowercase;
+  text-transform: capitalize;
 }
 .fft-topic-page .post_rank,
 .fft-topic-page .post_rank * {
   color: var(--fft-muted);
   font-size: 14px;
+}
+.fft-topic-page .post_rank {
+  margin-top: 8px;
+  padding: 7px 10px;
+  display: inline-block;
+  border: 1px solid var(--fft-line);
+  background: var(--transparent);
+  line-height: 1.2;
 }
 .fft-topic-page .post_avatar {
   width: 200px;
@@ -2429,19 +2448,20 @@ body .page-actions .button.primary:hover {
 .fft-viewtopic .quickmod select { font-size: 14px; }
 @media (max-width: 900px) {
   .fft-topic-page .post_row { grid-template-columns: 190px minmax(0, 1fr); }
-  .fft-topic-page .post_profile { padding: 20px 14px; }
-  .fft-topic-page .post_avatar { width: 145px; }
+  .fft-topic-page .post_profile { padding: 0 14px 20px; }
+  .fft-topic-page .post_avatar { width: 145px; height: 232px; }
   .fft-topic-page .post_message { padding: 34px 30px; }
 }
 @media (max-width: 620px) {
   .fft-viewtopic-head { grid-template-columns: 1fr; gap: 16px; padding: 18px; }
   .fft-viewtopic .fft-viewtopic-actions { align-items: stretch; flex-direction: column; }
   .fft-topic-page .post_row { grid-template-columns: 1fr; grid-template-rows: auto; }
-  .fft-topic-page .post_details,
   .fft-topic-page .post_profile,
   .fft-topic-page .post_message { grid-column: 1; }
-  .fft-topic-page .post_details { align-items: flex-start; flex-direction: column; }
+  .fft-topic-page .post_date,
+  .fft-topic-page .edition-buttons { grid-column: 1; border-right: 0; }
+  .fft-topic-page .edition-buttons { justify-content: flex-start; }
   .fft-topic-page .post_profile { border-right: 0; border-bottom: 1px solid var(--fft-line); }
-  .fft-topic-page .post_avatar { width: 135px; }
+  .fft-topic-page .post_avatar { width: 200px; height: 320px; }
   .fft-topic-page .post_message { min-height: 0; padding: 28px 20px; }
 }
