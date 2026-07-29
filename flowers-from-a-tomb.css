@@ -328,7 +328,7 @@ body { min-width: 0; font: 400 14px/1.6 var(--font); background: var(--body); }
   text-decoration: none;
 }
 #bookmark-list input[type="checkbox"] + div label {
-  width: 54px;
+  width: 70px;
   height: 20px;
   margin: auto 2px auto 0;
   border: 1px solid var(--fft-line);
@@ -350,12 +350,6 @@ x-bookmark-list input[type="checkbox"] + div label::after {
 }
 #bookmark-list input[type="checkbox"]:checked + div {
   opacity: .42;
-}
-#bookmark-list input[type="checkbox"]:checked + div label {
-  background: var(--fft-ink);
-}
-#bookmark-list input[type="checkbox"]:not(:checked) + div label {
-  background: var(--fft-muted);
 }
 x-bookmark-list button {
   margin: auto 12px;
