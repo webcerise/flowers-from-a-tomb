@@ -306,7 +306,8 @@ body #wombat.fft-profile-view {
   object-fit: cover;
   object-position: center top;
   border-radius: 0;
-  filter: grayscale(1) contrast(1.04);
+  filter: grayscale(1) contrast(1.04) blur(4px);
+  opacity: 0.8;
 }
 #wombat .profile_avatar-main {
   width: 200px;
