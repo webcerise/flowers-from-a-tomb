@@ -94,7 +94,6 @@ body { min-width: 0; font: 400 14px/1.6 var(--font); background: var(--body); }
   font: italic 14px "Cormorant Garamond", serif;
 }
 .fft-category-number::before { content: counter(fft-category, decimal-leading-zero); }
-.fft-category-heading p { margin: 10px 0 0; color: var(--fft-muted); font-size: 14px; }
 .fft-category-title,
 .fft-category-title h2 {
   margin: 0;
