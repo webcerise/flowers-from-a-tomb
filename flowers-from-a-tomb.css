@@ -248,12 +248,13 @@ body #fft-profile-view.fft-profile-view {
   background: var(--transparent);
 }
 #fft-profile-view > .page-title {
-  min-height: 116px;
+  min-height: 138px;
   margin: 0 0 20px;
   padding: 18px 34px 18px 122px;
   position: relative;
   display: flex;
   align-items: center;
+  gap: 24px;
   border: 1px solid var(--fft-line);
   background: var(--fft-paper);
   color: var(--fft-ink);
@@ -263,6 +264,23 @@ body #fft-profile-view.fft-profile-view {
 #fft-profile-view > .page-title a {
   font: inherit;
   text-decoration: none;
+}
+#fft-profile-view > .page-title .page-title-text {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+#fft-profile-view > .page-title .page-title-icons {
+  margin-left: auto;
+  display: flex;
+  flex: 0 0 auto;
+  gap: 12px;
+}
+#fft-profile-view > .page-title .page-title-icons img {
+  width: 100px;
+  height: 100px;
+  display: block;
+  object-fit: cover;
+  border: 1px solid var(--fft-line);
 }
 #fft-profile-view > .page-title:before {
   content: "01";
@@ -386,9 +404,9 @@ body #fft-profile-view.fft-profile-view {
 }
 #fft-profile-view .profile_avatar-scrap--two {
   width: 72px;
-  top: 116px;
-  right: 14px;
-  transform: rotate(8deg);
+  top: 171px;
+  right: 22px;
+  transform: rotate(10deg);
 }
 #fft-profile-view .profile_avatar-scrap--two:before {
   transform: translateX(-50%) rotate(5deg);
@@ -399,9 +417,9 @@ body #fft-profile-view.fft-profile-view {
 }
 #fft-profile-view .profile_avatar-scrap--three {
   width: 88px;
-  right: 23px;
-  bottom: 35px;
-  transform: rotate(-5deg);
+  right: 183px;
+  bottom: 51px;
+  transform: rotate(27deg);
 }
 #fft-profile-view .profile_avatar-scrap--three:before {
   left: 22%;
@@ -572,8 +590,9 @@ body #fft-profile-view.fft-profile-view {
   #fft-profile-view .profile_content { grid-template-columns: 1fr; }
 }
 @media (max-width: 620px) {
-  #fft-profile-view > .page-title { padding: 72px 20px 22px; font-size: 44px; }
+  #fft-profile-view > .page-title { padding: 72px 20px 22px; flex-wrap: wrap; font-size: 44px; }
   #fft-profile-view > .page-title:before { top: 14px; left: 20px; }
+  #fft-profile-view > .page-title .page-title-icons { width: 100%; margin-left: 0; }
   #fft-profile-view .user_profile { grid-template-columns: 1fr; }
   #fft-profile-view .profile_avatar { width: 100%; height: auto; aspect-ratio: 5 / 8; border-right: 0; border-bottom: 1px solid var(--fft-line); }
   #fft-profile-view .profile_infos { padding: 22px 18px; }
