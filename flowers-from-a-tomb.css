@@ -2221,8 +2221,9 @@ body .page-actions .button.primary:hover {
 .fft-topic-page .edition-buttons { display: flex; align-items: center; flex-wrap: wrap; gap: 4px; }
 .fft-topic-page .edition-buttons [class^="btn-"],
 .fft-topic-page .rep-button {
+  width: 32px;
   min-height: 32px;
-  padding: 0 9px;
+  padding: 0;
   display: inline-flex;
   align-items: center;
   border: 1px solid var(--fft-line);
@@ -2233,6 +2234,10 @@ body .page-actions .button.primary:hover {
   font-weight: 600;
   transition: color .24s ease, background-color .24s ease, border-color .24s ease;
 }
+.fft-topic-page .edition-buttons .ph,
+.fft-topic-page .rep-button > .ph { font-size: 18px; }
+.fft-topic-page .rep-button:has(.rep-nb) { width: auto; padding: 0 8px; }
+.fft-topic-page .rep-text { display: none; }
 .fft-topic-page .edition-buttons [class^="btn-"]:hover,
 .fft-topic-page .rep-button:hover {
   border-color: var(--fft-muted);
@@ -2282,7 +2287,7 @@ body .page-actions .button.primary:hover {
   object-fit: cover;
   object-position: center top;
   border-radius: 0;
-  filter: grayscale(1) contrast(1.02);
+  filter: none;
   transition: filter .35s ease, transform .45s ease;
 }
 .fft-topic-page .post_row:hover .post_avatar img { filter: grayscale(1) contrast(1.12); transform: scale(1.025); }
