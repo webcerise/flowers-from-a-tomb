@@ -2113,18 +2113,18 @@ body > .sidebar .myface-tooltip {
   filter: grayscale(1) contrast(1.2);
 }
 .fft-news-song {
-  max-width: calc(100% - 28px);
+  width: 90%;
   padding: 7px 10px;
   position: absolute;
   z-index: 2;
-  left: 14px;
-  bottom: 14px;
+  left: 5%;
+  top: 277px;
   display: inline-flex;
   align-items: center;
   gap: 8px;
   background: color-mix(in srgb, var(--fft-paper) 88%, transparent);
   color: var(--fft-ink);
-  font-size: 9px;
+  font-size: 12px;
   font-weight: 700;
   letter-spacing: .08em;
   line-height: 1.2;
@@ -2135,7 +2135,7 @@ body > .sidebar .myface-tooltip {
 }
 .fft-news-song i {
   flex: 0 0 auto;
-  font-size: 16px;
+  font-size: 30px;
 }
 .fft-news-song:hover {
   background: var(--fft-ink);
