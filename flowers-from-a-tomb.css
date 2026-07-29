@@ -792,6 +792,56 @@ img.avatar-preview {
   text-decoration: none;
 }
 #fft-profile-view .profile_field a:hover { color: var(--fft-muted); }
+#fft-profile-view .profile-post-history {
+  margin-top: 13px;
+  padding-top: 12px;
+  border-top: 1px solid var(--fft-line);
+}
+#fft-profile-view .profile-post-history .profile-history-heading {
+  margin-bottom: 9px;
+  display: block;
+  color: var(--fft-muted);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: .04em;
+  line-height: 1.4;
+}
+#fft-profile-view .profile-post-history .profile-history-heading strong {
+  color: var(--fft-ink);
+  font-size: inherit;
+}
+#fft-profile-view .profile-history-actions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 6px;
+}
+#fft-profile-view .profile-history-actions a {
+  min-width: 0;
+  padding: 7px 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  border: 1px solid var(--fft-line);
+  background: var(--fft-paper);
+  color: var(--fft-ink);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  line-height: 1;
+  text-transform: uppercase;
+  transition: background-color .22s ease, border-color .22s ease, color .22s ease;
+}
+#fft-profile-view .profile-history-actions a:hover {
+  border-color: var(--fft-muted);
+  background: var(--fft-panel);
+  color: var(--fft-ink);
+}
+#fft-profile-view .profile-history-actions i {
+  flex: 0 0 auto;
+  color: var(--fft-muted);
+  font-size: 12px;
+}
 #fft-profile-view .ajax-profil_edit {
   margin-left: 8px;
   display: inline-flex;
