@@ -54,7 +54,6 @@ t1 {
 /* Balise de petit libellé gras : <b1>…</b1> */
 b1 {
   margin: 0 0 4px;
-  display: block;
   color: var(--fft-muted);
   font-size: 9px;
   font-weight: 700;
