@@ -740,11 +740,11 @@ img.avatar-preview {
 }
 #fft-profile-view .profile_content {
   width: 100%;
-  height: 380px;
-  max-height: 380px;
-  margin-top: 28px;
+  height: 315px;
+  max-height: 315px;
+  margin-top: 14px;
   grid-column: 1 / -1;
-  grid-row: 2;
+  grid-row: 3;
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   align-content: start;
@@ -794,11 +794,9 @@ img.avatar-preview {
 #fft-profile-view .profile_field a:hover { color: var(--fft-muted); }
 #fft-profile-view .profile-history-slot {
   min-width: 0;
-  position: absolute;
-  z-index: 2;
-  top: 78px;
-  right: 34px;
-  left: 34px;
+  margin-top: 18px;
+  grid-column: 1 / -1;
+  grid-row: 2;
 }
 #fft-profile-view .profile-post-history {
   margin: 0;
@@ -861,7 +859,6 @@ img.avatar-preview {
   }
 }
 @media (max-width: 620px) {
-  #fft-profile-view .profile-history-slot { right: 18px; left: 18px; }
   #fft-profile-view .profile-post-history { grid-template-columns: 1fr; gap: 7px; }
 }
 #fft-profile-view .ajax-profil_edit {
