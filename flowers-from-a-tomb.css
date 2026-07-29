@@ -1519,7 +1519,12 @@ body form.fft-members-filter {
   transition: color .25s ease, background-color .25s ease, border-color .25s ease;
 }
 .fft-member-contact a:after { content: "Message privé"; }
-.fft-member-contact img { width: 18px; height: 18px; object-fit: contain; filter: grayscale(1); }
+.fft-member-contact img[src="https://2img.net/i/fa/modernbb/icon_contact_pm.png"] {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+  filter: grayscale(1);
+}
 .fft-member-contact a:hover {
   border-color: var(--fft-muted);
   background: var(--fft-panel);
