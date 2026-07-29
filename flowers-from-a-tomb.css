@@ -2305,26 +2305,65 @@ body .page-actions .button.primary:hover {
   font-size: 14px;
 }
 .fft-topic-page .post_userinfo {
-  margin-top: 18px;
+  width: calc(100% + 48px);
+  max-height: 200px;
+  margin: 20px -24px 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  overscroll-behavior: contain;
   border-top: 1px solid var(--fft-line);
+  border-bottom: 1px solid var(--fft-line);
+  background: var(--fft-panel);
+  scrollbar-color: var(--fft-muted) var(--fft-panel);
+  scrollbar-width: thin;
   text-align: left;
 }
+.fft-topic-page .post_userinfo::-webkit-scrollbar { width: 5px; }
+.fft-topic-page .post_userinfo::-webkit-scrollbar-track { background: var(--fft-panel); }
+.fft-topic-page .post_userinfo::-webkit-scrollbar-thumb { background: var(--fft-muted); }
 .fft-topic-page .user_field {
-  padding: 7px 0;
+  min-width: 0;
+  padding: 10px 24px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 8px;
+  grid-template-columns: 1fr;
+  gap: 3px;
   border-bottom: 1px solid var(--fft-line);
+  transition: background-color .24s ease, padding-left .24s ease;
 }
-.fft-topic-page .field_label,
-.fft-topic-page .field_content,
-.fft-topic-page .field_content * {
+.fft-topic-page .user_field:last-of-type { border-bottom: 0; }
+.fft-topic-page .user_field:hover {
+  padding-left: 28px;
+  background: var(--fft-paper);
+}
+.fft-topic-page .field_label {
   color: var(--fft-muted);
   font-size: 14px;
+  font-weight: 600;
+  letter-spacing: .08em;
+  line-height: 1.35;
+  text-transform: uppercase;
 }
 .fft-topic-page .field_content,
-.fft-topic-page .field_content * { color: var(--fft-ink); text-align: right; }
-.fft-topic-page #list_awards { margin-top: 12px; justify-content: center; }
+.fft-topic-page .field_content * {
+  max-width: 100%;
+  color: var(--fft-ink);
+  font-size: 14px;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+  text-align: left;
+}
+.fft-topic-page .field_content a {
+  text-decoration: underline;
+  text-decoration-color: var(--fft-line);
+  text-underline-offset: 3px;
+}
+.fft-topic-page #list_awards {
+  margin: 0;
+  padding: 14px 24px;
+  justify-content: flex-start;
+  gap: 7px;
+  border-top: 1px solid var(--fft-line);
+}
 .fft-topic-page .award { width: 34px; height: 34px; border-radius: 50%; filter: grayscale(1); }
 .fft-topic-page .post_contact {
   margin-top: 16px;
