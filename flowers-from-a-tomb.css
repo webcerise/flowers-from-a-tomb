@@ -1630,7 +1630,7 @@ body .page-actions:not(form) #mark_read:hover {
   margin: 0 0 10px;
   padding: 0;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 105px 185px 78px;
+  grid-template-columns: minmax(0, 1fr) 82px 185px 78px;
   align-items: stretch;
   border: 1px solid var(--fft-line);
   border-radius: 0;
@@ -1678,11 +1678,11 @@ body .page-actions:not(form) #mark_read:hover {
 }
 .fft-topic .topicslist-pagination { margin-top: 6px; display: block; color: var(--fft-muted); font-size: 14px; }
 .fft-topic-stats {
-  padding: 18px 15px;
+  padding: 6px 10px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 9px;
+  gap: 1px;
   border-left: 1px solid var(--fft-line);
   color: var(--fft-muted);
   font-size: 14px;
@@ -1690,7 +1690,7 @@ body .page-actions:not(form) #mark_read:hover {
 }
 .fft-topic-stats span,
 .fft-topic-stats strong { display: block; }
-.fft-topic-stats strong { color: var(--fft-ink); font-size: 18px; }
+.fft-topic-stats strong { color: var(--fft-ink); font-size: 16px; line-height: 1.15; }
 .fft-topic-last {
   min-width: 0;
   padding: 18px;
@@ -1790,7 +1790,7 @@ body .page-actions:not(form) #mark_read:hover {
 .fft-forum-page .fft-topic-main { padding: 8px 22px; }
 .fft-forum-page .fft-topic .topicslist-description { display: none; }
 .fft-forum-page .fft-topic .topicslist-pagination { margin-top: 3px; }
-.fft-forum-page .fft-topic-stats { padding: 8px 15px; gap: 2px; }
+.fft-forum-page .fft-topic-stats { padding: 6px 10px; gap: 1px; }
 .fft-forum-page .fft-topic-last { padding: 8px 18px; }
 .fft-forum-page .fft-topic-stats,
 .fft-forum-page .fft-topic-last,
