@@ -1878,3 +1878,62 @@ body .page-actions .button.primary:hover {
   color: var(--fft-ink);
   font-size: 14px;
 }
+
+/* Composition de la page forum */
+.fft-viewforum { width: 100%; margin-top: 34px; }
+.fft-viewforum > .fft-index { margin-top: 0; }
+.fft-viewforum-head {
+  min-height: 180px;
+  padding: 34px 24px 30px;
+  border-top: 1px solid var(--fft-line);
+  border-bottom: 1px solid var(--fft-line);
+}
+.fft-viewforum-head > span {
+  display: block;
+  color: var(--fft-muted);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+}
+.fft-viewforum-head h1 {
+  margin: 9px 0 0;
+  color: var(--fft-ink);
+  font: 500 clamp(44px, 5vw, 64px)/.88 "Cormorant Garamond", serif;
+  letter-spacing: -.035em;
+}
+.fft-viewforum-head .forum-page_desc {
+  max-width: 680px;
+  margin: 18px 0 0;
+  color: var(--fft-muted);
+  font-size: 14px;
+  line-height: 1.7;
+}
+.fft-viewforum-nav { margin-bottom: 25px; color: var(--fft-muted); font-size: 14px; }
+.fft-viewforum-nav a {
+  color: var(--fft-muted);
+  font-size: 14px;
+  transition: color .24s ease;
+}
+.fft-viewforum-nav a:hover { color: var(--fft-ink); }
+.fft-viewforum .fft-viewforum-actions {
+  min-height: 60px;
+  margin: 14px 0;
+  padding: 10px 0;
+  border: 0;
+  border-bottom: 1px solid var(--fft-line);
+  background: var(--transparent);
+  outline: 0;
+}
+.fft-viewforum .fft-forum-page { margin-top: 0; }
+.fft-viewforum .fft-viewforum-actions-bottom {
+  margin-top: 20px;
+  border-top: 1px solid var(--fft-line);
+}
+@media (max-width: 620px) {
+  .fft-viewforum-head { min-height: 155px; padding: 28px 18px; }
+  .fft-viewforum .fft-viewforum-actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+}
