@@ -93,11 +93,16 @@ b3 {
 
 /* Balise de soulignement : <u1>…</u1> */
 u1 {
+  padding: 0 .08em;
   color: inherit;
-  text-decoration-line: underline;
-  text-decoration-color: var(--fft-line);
-  text-decoration-thickness: 1px;
-  text-underline-offset: .2em;
+  background: linear-gradient(
+    to bottom,
+    transparent 62%,
+    color-mix(in srgb, var(--fft-line) 72%, transparent) 62%,
+    color-mix(in srgb, var(--fft-line) 72%, transparent) 88%,
+    transparent 88%
+  );
+  text-decoration: none;
 }
 
 #page-header { width: 100%; }
