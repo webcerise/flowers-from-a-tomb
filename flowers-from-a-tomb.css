@@ -1504,13 +1504,22 @@ body form.fft-members-filter {
   font-size: 14px;
 }
 .fft-member-meta dd { color: var(--fft-ink); text-align: right; }
-.fft-member-contact { margin-top: auto; padding-top: 14px; }
+.fft-member-contact { margin-top: auto; padding-top: 14px; position: relative; }
+.fft-member-contact > .ph {
+  position: absolute;
+  z-index: 1;
+  left: 13px;
+  bottom: 10px;
+  color: var(--fft-ink);
+  font-size: 20px;
+  pointer-events: none;
+}
 .fft-member-contact a {
   min-height: 40px;
   padding: 0 13px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   border: 1px solid var(--fft-line);
   color: var(--fft-ink);
   font-size: 14px;
@@ -1520,10 +1529,7 @@ body form.fft-members-filter {
 }
 .fft-member-contact a:after { content: "Message privé"; }
 .fft-member-contact img[src="https://2img.net/i/fa/modernbb/icon_contact_pm.png"] {
-  width: 18px;
-  height: 18px;
-  object-fit: contain;
-  filter: grayscale(1);
+  display: none;
 }
 .fft-member-contact a:hover {
   border-color: var(--fft-muted);
