@@ -289,7 +289,7 @@ img.fft-gif-small,
   transition: background-color .24s ease, border-color .24s ease, transform .24s ease;
 }
 .fft-forum:hover { border-color: var(--fft-muted); background: color-mix(in srgb, var(--fft-panel) 45%, var(--fft-paper)); transform: translateY(-2px); }
-.fft-forum-copy { min-width: 0; padding: 54px 30px 30px 98px; position: relative; align-self: center; }
+.fft-forum-copy { min-width: 0; padding: 54px 30px 30px 98px; align-self: center; }
 .fft-forum-state {
   width: 50px;
   height: 100%;
@@ -328,7 +328,7 @@ img.fft-gif-small,
 .fft-forum .forum_desc > span {
   position: absolute;
   top: 30px;
-  left: 30px;
+  left: 98px;
   color: var(--fft-muted);
   font-size: 14px;
   font-weight: 600;
@@ -613,6 +613,7 @@ x-bookmark-list path {
   .fft-category-number { width: 42px; height: 42px; }
   .fft-forum { grid-template-columns: minmax(0, 1fr) 72px; }
   .fft-forum-copy { padding: 23px 18px 23px 88px; }
+  .fft-forum .forum_desc > span { left: 88px; }
   .fft-forum-stats { grid-column: 1 / -1; grid-row: 2; flex-direction: row; border-left: 0; border-top: 1px solid var(--fft-line); }
   .fft-forum-last { grid-row: 3; }
   .fft-forum-avatar { grid-column: 2; grid-row: 1; }
