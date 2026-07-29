@@ -1815,6 +1815,37 @@ img.avatar-preview {
   .fft-admin-actions a { flex: 1 1 auto; justify-content: center; }
 }
 
+.fft-admin-post--simple {
+  width: min(650px, 100%);
+  padding: 30px;
+}
+.fft-admin-post--simple .fft-admin-title {
+  margin: 0 0 24px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--fft-line);
+  font-size: clamp(38px, 6vw, 54px);
+}
+.fft-admin-body {
+  display: flex;
+  align-items: flex-start;
+  gap: 26px;
+}
+.fft-admin-text {
+  min-width: 0;
+  flex: 1;
+}
+.fft-admin-text p {
+  margin: 0 0 14px;
+  color: var(--fft-muted);
+  text-align: justify;
+}
+.fft-admin-text p:last-child { margin-bottom: 0; }
+.fft-admin-text strong { color: var(--fft-ink); }
+@media (max-width: 560px) {
+  .fft-admin-post--simple { padding: 22px; }
+  .fft-admin-body { flex-direction: column; }
+}
+
 :root,
 :root[data-color-scheme="light"],
 :root[data-color-scheme="dark"] {
@@ -2080,6 +2111,35 @@ body > .sidebar .myface-tooltip {
   border: 1px solid var(--fft-line);
   opacity: .82;
   filter: grayscale(1) contrast(1.2);
+}
+.fft-news-song {
+  max-width: calc(100% - 28px);
+  padding: 7px 10px;
+  position: absolute;
+  z-index: 2;
+  left: 14px;
+  bottom: 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: color-mix(in srgb, var(--fft-paper) 88%, transparent);
+  color: var(--fft-ink);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  line-height: 1.2;
+  text-decoration: none;
+  text-transform: uppercase;
+  backdrop-filter: blur(4px);
+  transition: background-color .25s ease, color .25s ease;
+}
+.fft-news-song i {
+  flex: 0 0 auto;
+  font-size: 16px;
+}
+.fft-news-song:hover {
+  background: var(--fft-ink);
+  color: var(--fft-paper);
 }
 .fft-news-flower {
   width: 144px;
