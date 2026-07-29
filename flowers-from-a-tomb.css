@@ -1968,11 +1968,14 @@ body .page-actions .button.primary:hover {
 .fft-viewforum-number {
   width: 54px;
   height: 54px;
-  display: grid;
-  place-items: center;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
   border: 1px solid var(--fft-line);
   color: var(--fft-muted);
   font: italic 14px "Cormorant Garamond", serif;
+  line-height: 1;
+  text-align: center;
 }
 .fft-viewforum-heading { min-width: 0; }
 .fft-viewforum-head h1 {
@@ -2000,6 +2003,14 @@ body .page-actions .button.primary:hover {
   color: var(--fft-muted);
   font-size: 14px;
   line-height: 1.55;
+}
+.fft-viewforum-head .forum-page_desc > i,
+.fft-viewforum-head .forum-page_desc > em { display: none; }
+.fft-viewforum-head .forum-page_desc > span {
+  margin-right: 8px;
+  color: var(--fft-ink);
+  font-size: 14px;
+  font-weight: 600;
 }
 .fft-viewforum .fft-viewforum-actions {
   width: 100%;
@@ -2030,7 +2041,7 @@ body .page-actions .button.primary:hover {
   height: 92px;
   min-height: 92px;
   margin: 0 0 10px;
-  grid-template-columns: minmax(0, 1fr) 142px 195px 92px;
+  grid-template-columns: minmax(0, 1fr) 132px 195px 92px;
   border: 1px solid var(--fft-line);
   background: var(--fft-paper);
 }
@@ -2052,17 +2063,19 @@ body .page-actions .button.primary:hover {
 .fft-viewforum .fft-topic-byline { margin-top: 7px; }
 .fft-viewforum .fft-topic .topicslist-pagination { margin-top: 3px; }
 .fft-viewforum .fft-topic-stats {
-  padding: 12px 14px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  gap: 10px;
+  padding: 12px 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
   border-left: 1px solid var(--fft-line);
 }
 .fft-viewforum .fft-topic-stats span {
   min-width: 0;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 25px 1fr;
+  align-items: baseline;
+  gap: 5px;
   color: var(--fft-muted);
   font-size: 14px;
   line-height: 1.35;
@@ -2070,6 +2083,7 @@ body .page-actions .button.primary:hover {
 .fft-viewforum .fft-topic-stats strong {
   color: var(--fft-ink);
   font-size: 17px;
+  line-height: 1;
 }
 .fft-viewforum .fft-topic-last {
   padding: 14px 18px;
