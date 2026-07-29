@@ -272,6 +272,7 @@ body #page-header .fft-logo { font-style: italic; }
 body #page-header .fft-navlinks { gap: 35px; }
 body .fft-navbar a {
   padding: 0;
+  position: relative;
   border: 0;
   background: var(--transparent);
   color: var(--light-muted);
@@ -279,6 +280,31 @@ body .fft-navbar a {
   font-weight: 600;
   letter-spacing: .12em;
   text-transform: uppercase;
+  transition: color .25s ease, letter-spacing .25s ease, transform .25s ease;
+}
+body .fft-navbar .fft-navlinks a:after {
+  content: "";
+  height: 1px;
+  position: absolute;
+  right: 0;
+  bottom: -7px;
+  left: 0;
+  background: var(--light);
+  transform: scaleX(0);
+  transform-origin: right center;
+  transition: transform .3s ease;
+}
+body .fft-navbar .fft-navlinks a:hover {
+  color: var(--light);
+  transform: translateY(-2px);
+}
+body .fft-navbar .fft-navlinks a:hover:after {
+  transform: scaleX(1);
+  transform-origin: left center;
+}
+body .fft-navbar .fft-logo:hover {
+  color: var(--light);
+  letter-spacing: .18em;
 }
 body #page-header .fft-issue {
   color: var(--light-dim);
