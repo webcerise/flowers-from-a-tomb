@@ -1035,7 +1035,7 @@ html body #notiffi_panel .notiffi_manage {
   display: flex;
 }
 
-#truesight { position: fixed; z-index: 9999; max-width: 260px; pointer-events: none; }
+#truesight { min-width: 50px; position: fixed; z-index: 9999; max-width: 260px; pointer-events: none; }
 #truesight > div { min-width: 170px; padding: 13px 15px; border: 1px solid var(--dark-line); background: var(--black); color: var(--light); box-shadow: 0 12px 35px var(--shadow); }
 #truesight .ts-head { font: 600 14px/1.25 Inter, Arial, sans-serif; }
 #truesight .ts-text { margin-top: 4px; color: var(--light-muted); font: 400 14px/1.35 Inter, Arial, sans-serif; }
@@ -1484,6 +1484,7 @@ body form.fft-members-filter {
   color: var(--fft-ink);
   font: 500 28px/.95 "Cormorant Garamond", serif;
   text-overflow: ellipsis;
+  text-transform: lowercase;
   white-space: nowrap;
 }
 .fft-member-meta {
@@ -2264,6 +2265,7 @@ body .page-actions .button.primary:hover {
 .fft-topic-page .post_pseudo a {
   color: var(--fft-ink);
   font: 500 30px/1 "Cormorant Garamond", serif;
+  text-transform: lowercase;
 }
 .fft-topic-page .post_rank,
 .fft-topic-page .post_rank * {
@@ -2290,7 +2292,7 @@ body .page-actions .button.primary:hover {
   filter: none;
   transition: filter .35s ease, transform .45s ease;
 }
-.fft-topic-page .post_row:hover .post_avatar img { filter: grayscale(1) contrast(1.12); transform: scale(1.025); }
+.fft-topic-page .post_avatar:hover img { filter: grayscale(1) contrast(1.12); transform: scale(1.025); }
 .fft-topic-page .presence.online {
   margin: 10px auto 0;
   padding: 3px 8px;
