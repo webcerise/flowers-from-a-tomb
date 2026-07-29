@@ -75,7 +75,8 @@ body { min-width: 0; font: 400 14px/1.6 var(--font); background: var(--body); }
 .fft-category { width: 100%; margin: 0 0 42px; padding: 0; border: 0; background: var(--transparent); counter-increment: fft-category; }
 .fft-category-head {
   min-height: 104px;
-  padding: 12px 4px 26px;
+  margin-bottom: 24px;
+  padding: 12px 24px 0;
   display: grid;
   grid-template-columns: 54px minmax(0, 1fr);
   gap: 46px;
@@ -107,7 +108,9 @@ body { min-width: 0; font: 400 14px/1.6 var(--font); background: var(--body); }
   display: grid;
   grid-template-columns: minmax(0, 1fr) 125px 220px 112px;
   border: 1px solid var(--fft-line);
+  border-radius: 0;
   background: var(--fft-paper);
+  overflow: hidden;
   transition: background-color .24s ease, border-color .24s ease, transform .24s ease;
 }
 .fft-forum:hover { border-color: var(--fft-muted); background: color-mix(in srgb, var(--fft-panel) 45%, var(--fft-paper)); transform: translateY(-2px); }
@@ -152,16 +155,18 @@ body { min-width: 0; font: 400 14px/1.6 var(--font); background: var(--body); }
 .fft-forum-last > .ph { position: absolute; right: 16px; top: 16px; color: var(--fft-muted); font-size: 17px; transition: transform .22s ease; }
 .fft-forum-last:hover > .ph { transform: translate(3px, -3px); }
 .fft-forum-avatar {
+  width: 100% !important;
+  height: 100%;
   min-width: 0;
   position: relative;
   overflow: hidden;
   border-left: 1px solid var(--fft-line);
   background: var(--dark-surface);
 }
-.fft-forum-avatar img { width: 100%; height: 100%; display: block; object-fit: cover; object-position: center top; filter: grayscale(1) contrast(1.08); transition: transform .35s ease; }
+.fft-forum-avatar img { width: 100% !important; height: 100% !important; max-width: none !important; max-height: none !important; display: block; object-fit: cover; object-position: center top; border-radius: 0; filter: grayscale(1) contrast(1.08); transition: transform .35s ease; }
 .fft-forum:hover .fft-forum-avatar img { transform: scale(1.035); }
 .fft-forum-avatar > .ph { position: absolute; inset: 0; display: grid; place-items: center; color: var(--light); font-size: 25px; }
-.fft-forum-avatar img + .ph { display: none; }
+.fft-forum-avatar img + .ph { display: grid; }
 
 .page-actions { width: 100%; margin: 26px 0; font-size: 14px; }
 .hub {
@@ -622,7 +627,6 @@ body {
 .fft-header,
 .fft-portal,
 .fft-wanted,
-.fft-forum,
 .fft-hub {
   outline: 1px solid color-mix(in srgb, var(--fft-line) 28%, var(--transparent));
   outline-offset: 6px;
