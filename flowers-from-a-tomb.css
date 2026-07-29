@@ -147,7 +147,6 @@ u1g4 { box-shadow: inset 0 -.5em var(--accent-group4); }
 /* Éléments visuels réutilisables dans les fiches et posts RP */
 .fft-post-visuals {
   --fft-icon-size: 86px;
-  --fft-gif-height: 112px;
   width: 100%;
   margin: 16px 0;
   display: flex;
@@ -168,8 +167,9 @@ img.fft-icon-round {
   object-position: center;
 }
 img.fft-gif-horizontal {
-  width: 100% !important;
-  height: var(--fft-gif-height, 112px) !important;
+  width: 268px !important;
+  height: 150px !important;
+  max-width: 100% !important;
   min-width: 0;
   display: block;
   border: 1px solid var(--fft-line);
@@ -177,20 +177,17 @@ img.fft-gif-horizontal {
   object-fit: cover;
   object-position: center;
 }
-.fft-post-visuals > .fft-gif-horizontal { flex: 1 1 auto; }
+.fft-post-visuals > .fft-gif-horizontal { flex: 0 1 268px; }
 .fft-post-visuals--reverse { flex-direction: row-reverse; }
 .fft-post-visuals--small {
   --fft-icon-size: 64px;
-  --fft-gif-height: 88px;
 }
 .fft-post-visuals--large {
   --fft-icon-size: 110px;
-  --fft-gif-height: 145px;
 }
 @media (max-width: 520px) {
   .fft-post-visuals {
     --fft-icon-size: 68px;
-    --fft-gif-height: 92px;
     gap: 8px;
   }
 }
