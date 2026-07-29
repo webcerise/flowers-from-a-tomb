@@ -2513,6 +2513,7 @@ html body #notiffi_panel .notiffi_manage {
   color: var(--fft-muted);
   font-size: 14px;
   line-height: 1.8;
+  text-transform: lowercase;
 }
 .fft-hub .onlineUsers-list .user {
   width: auto;
@@ -2522,7 +2523,7 @@ html body #notiffi_panel .notiffi_manage {
 .fft-hub .onlineUsers-list a { font-size: 14px; }
 .fft-hub .onlineUsers-list > .separator { display: inline; }
 .fft-hub .onlineUsers-list > .user:last-of-type + .separator { display: none; }
-.fft-hub .hub_lastConnected p { margin: 28px 0 0; color: var(--fft-muted); font-size: 14px; line-height: 1.8; }
+.fft-hub .hub_lastConnected p { margin: 28px 0 0; color: var(--fft-muted); font-size: 14px; line-height: 1.8; text-transform: lowercase; }
 .fft-hub .hub_lastConnected a { color: var(--fft-ink); font-size: 14px; text-decoration: none; }
 .fft-hub .hub_groups {
   grid-column: 1 / -1;
