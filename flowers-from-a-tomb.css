@@ -1266,7 +1266,6 @@ html body #notiffi_panel .notiffi_manage {
 .fft-portal-tabs a,
 .fft-portal-more,
 .fft-forum .forum_sub a,
-.fft-hub .group,
 .page-actions a,
 #page-footer a {
   transition: color .24s ease, background-color .24s ease, border-color .24s ease, box-shadow .24s ease, transform .24s ease, letter-spacing .24s ease;
@@ -1332,13 +1331,6 @@ html body #notiffi_panel .notiffi_manage {
   filter: grayscale(1) contrast(1.4) blur(0);
   transform: translateY(-50%) scale(1.025);
 }
-.fft-hub .group strong { transition: letter-spacing .25s ease; }
-.fft-hub .group:hover {
-  background: var(--transparent);
-  box-shadow: inset 0 -2px 0 var(--fft-muted);
-  transform: none;
-}
-.fft-hub .group:hover strong { letter-spacing: .04em; }
 #page-footer a:hover {
   color: var(--fft-ink);
   letter-spacing: .035em;
@@ -1348,4 +1340,198 @@ html body #notiffi_panel .notiffi_manage {
   background: var(--transparent);
   box-shadow: inset 0 -2px 0 var(--fft-muted);
   transform: none;
+}
+
+/* Liste des membres */
+.fft-members { margin-top: 34px; }
+.fft-members-head {
+  min-height: 250px;
+  padding: 52px 58px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 1px solid var(--fft-line);
+  background: linear-gradient(110deg, var(--fft-panel), var(--transparent) 78%);
+  outline: 1px solid color-mix(in srgb, var(--fft-line) 28%, var(--transparent));
+  outline-offset: 6px;
+}
+.fft-members-head > span,
+.fft-member-kicker,
+.fft-members-filter label {
+  color: var(--fft-muted);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+}
+.fft-members-head h1 {
+  margin: 9px 0 0;
+  color: var(--fft-ink);
+  font: 500 clamp(46px, 6vw, 76px)/.86 "Cormorant Garamond", serif;
+  letter-spacing: -.04em;
+}
+.fft-members-head h1 i { color: var(--fft-muted); font-weight: 400; }
+.fft-members-head p {
+  max-width: 570px;
+  margin: 22px 0 0;
+  color: var(--fft-muted);
+  font-size: 14px;
+}
+.fft-members-filter {
+  margin: 34px 0 14px;
+  padding: 18px;
+  display: grid;
+  grid-template-columns: minmax(260px, 1fr) 210px 180px auto;
+  gap: 12px;
+  align-items: end;
+  border: 1px solid var(--fft-line);
+  background: var(--fft-paper);
+}
+.fft-members-filter > div { min-width: 0; }
+.fft-members-filter label { margin-bottom: 7px; display: block; letter-spacing: .1em; }
+.fft-members-filter input,
+.fft-members-filter select,
+.fft-filter-submit {
+  width: 100%;
+  min-height: 42px;
+  margin: 0;
+  padding: 0 13px;
+  border: 1px solid var(--fft-line);
+  border-radius: 0;
+  background: var(--fft-panel);
+  color: var(--fft-ink);
+  font: 500 14px/1 Inter, Arial, sans-serif;
+}
+.fft-filter-submit {
+  width: auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: color .25s ease, background-color .25s ease, border-color .25s ease;
+}
+.fft-filter-submit i { font-size: 19px; }
+.fft-filter-submit:hover {
+  border-color: var(--fft-muted);
+  background: var(--fft-ink);
+  color: var(--fft-paper);
+}
+.fft-member-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  counter-reset: fft-member;
+}
+.fft-member-card {
+  min-width: 0;
+  counter-increment: fft-member;
+  border: 1px solid var(--fft-line);
+  background: var(--fft-paper);
+  overflow: hidden;
+  transition: border-color .3s ease;
+}
+.fft-member-card:hover { border-color: var(--fft-muted); }
+.fft-member-portrait {
+  width: 100%;
+  aspect-ratio: 400 / 640;
+  position: relative;
+  display: block;
+  overflow: hidden;
+  background: var(--fft-panel);
+}
+.fft-member-portrait:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(var(--transparent) 55%, var(--shadow-strong));
+  pointer-events: none;
+}
+.fft-member-portrait img {
+  width: 100% !important;
+  height: 100% !important;
+  max-width: none !important;
+  display: block;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 0;
+  filter: grayscale(1) contrast(.92);
+  transition: filter .45s ease, transform .6s ease;
+}
+.fft-member-card:hover .fft-member-portrait img {
+  filter: grayscale(1) contrast(1.05);
+  transform: scale(1.025);
+}
+.fft-member-number {
+  position: absolute;
+  z-index: 2;
+  right: 18px;
+  bottom: 15px;
+  color: var(--light);
+  font: italic 16px "Cormorant Garamond", serif;
+}
+.fft-member-number:before { content: counter(fft-member, decimal-leading-zero); }
+.fft-member-content { padding: 24px; }
+.fft-member-name {
+  margin-top: 7px;
+  display: block;
+  overflow: hidden;
+  color: var(--fft-ink);
+  font: 500 34px/.95 "Cormorant Garamond", serif;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.fft-member-meta {
+  margin: 22px 0 0;
+  border-top: 1px solid var(--fft-line);
+}
+.fft-member-meta > div {
+  padding: 10px 0;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 12px;
+  border-bottom: 1px solid var(--fft-line);
+}
+.fft-member-meta dt,
+.fft-member-meta dd {
+  margin: 0;
+  color: var(--fft-muted);
+  font-size: 14px;
+}
+.fft-member-meta dd { color: var(--fft-ink); text-align: right; }
+.fft-member-contact { margin-top: 18px; }
+.fft-member-contact a {
+  min-height: 40px;
+  padding: 0 13px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid var(--fft-line);
+  color: var(--fft-ink);
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: color .25s ease, background-color .25s ease, border-color .25s ease;
+}
+.fft-member-contact a:after { content: "Message privé"; }
+.fft-member-contact img { width: 18px; height: 18px; object-fit: contain; filter: grayscale(1); }
+.fft-member-contact a:hover {
+  border-color: var(--fft-muted);
+  background: var(--fft-panel);
+}
+.fft-members-pagination {
+  margin: 26px 0 0;
+  padding: 18px;
+  border: 1px solid var(--fft-line);
+  background: var(--fft-paper);
+  text-align: center;
+}
+@media (max-width: 900px) {
+  .fft-members-filter { grid-template-columns: 1fr 1fr; }
+  .fft-member-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 620px) {
+  .fft-members-head { min-height: 210px; padding: 36px 28px; }
+  .fft-members-filter,
+  .fft-member-grid { grid-template-columns: 1fr; }
 }
