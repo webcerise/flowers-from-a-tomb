@@ -289,8 +289,29 @@ img.fft-gif-small,
   transition: background-color .24s ease, border-color .24s ease, transform .24s ease;
 }
 .fft-forum:hover { border-color: var(--fft-muted); background: color-mix(in srgb, var(--fft-panel) 45%, var(--fft-paper)); transform: translateY(-2px); }
-.fft-forum-copy { min-width: 0; padding: 54px 30px 30px; align-self: center; }
-.fft-forum-state { display: none; }
+.fft-forum-copy { min-width: 0; padding: 54px 84px 30px 30px; position: relative; align-self: center; }
+.fft-forum-state {
+  width: 48px;
+  height: 48px;
+  position: absolute;
+  top: 22px;
+  right: 24px;
+  display: block;
+  overflow: hidden;
+  outline: 1px solid var(--fft-line);
+  outline-offset: 3px;
+  background-color: var(--fft-panel);
+  background-image: url("https://i.imgur.com/GlXbhoK.png");
+  background-position: center;
+  background-size: cover;
+  filter: grayscale(1) brightness(1.35) contrast(.62);
+  opacity: .48;
+  transition: filter .3s ease, opacity .3s ease;
+}
+.fft-forum:is([class*="new"], [class*="unread"]):not([class*="nonew"]):not([class*="no_new"]):not([class*="no-new"]) .fft-forum-state {
+  filter: grayscale(.15) brightness(.88) contrast(1.22);
+  opacity: 1;
+}
 .fft-forum .forumtitle { display: block; color: var(--fft-ink); font: 500 31px/1 "Cormorant Garamond", serif; }
 .fft-forum .forum_desc { max-width: 620px; margin-top: 11px; color: var(--fft-muted); font-size: 14px; }
 .fft-forum .forum_desc > em {
@@ -591,7 +612,8 @@ x-bookmark-list path {
   .fft-category-head { min-height: 135px; padding: 34px 24px; grid-template-columns: 1fr; }
   .fft-category-number { width: 42px; height: 42px; }
   .fft-forum { grid-template-columns: minmax(0, 1fr) 72px; }
-  .fft-forum-copy { padding: 23px 18px; }
+  .fft-forum-copy { padding: 23px 70px 23px 18px; }
+  .fft-forum-state { width: 40px; height: 40px; top: 20px; right: 18px; }
   .fft-forum-stats { grid-column: 1 / -1; grid-row: 2; flex-direction: row; border-left: 0; border-top: 1px solid var(--fft-line); }
   .fft-forum-last { grid-row: 3; }
   .fft-forum-avatar { grid-column: 2; grid-row: 1; }
