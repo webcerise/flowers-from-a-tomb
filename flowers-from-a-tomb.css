@@ -2237,7 +2237,7 @@ body .page-actions .button.primary:hover {
 .fft-topic-page .edition-buttons .ph,
 .fft-topic-page .rep-button > .ph { font-size: 18px; }
 .fft-topic-page .rep-button:has(.rep-nb) { width: auto; padding: 0 8px; }
-.fft-topic-page .rep-text { display: none; }
+.fft-topic-page .rep-button .rep-text { display: none !important; }
 .fft-topic-page .edition-buttons [class^="btn-"]:hover,
 .fft-topic-page .rep-button:hover {
   border-color: var(--fft-muted);
