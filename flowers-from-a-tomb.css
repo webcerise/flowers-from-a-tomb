@@ -87,7 +87,7 @@ body { min-width: 0; font: 400 14px/1.6 var(--font); background: var(--body); }
 }
 
 /* Balise de libellé gras en ligne : <b3>…</b3> */
-:is(b3, b3g1, b3g2, b3g3, b3g4) {
+b3 {
   color: var(--fft-ink);
   font-size: 10px;
   font-weight: 700;
@@ -125,10 +125,10 @@ body { min-width: 0; font: 400 14px/1.6 var(--font); background: var(--body); }
 }
 
 /* Variantes aux couleurs des groupes */
-:is(t1g1, t2g1, b1g1, b2g1, b3g1, b5g1, f1g1) { color: var(--accent-group1); }
-:is(t1g2, t2g2, b1g2, b2g2, b3g2, b5g2, f1g2) { color: var(--accent-group2); }
-:is(t1g3, t2g3, b1g3, b2g3, b3g3, b5g3, f1g3) { color: var(--accent-group3); }
-:is(t1g4, t2g4, b1g4, b2g4, b3g4, b5g4, f1g4) { color: var(--accent-group4); }
+:is(t1g1, t2g1, b1g1, b2g1, b5g1, f1g1) { color: var(--accent-group1); }
+:is(t1g2, t2g2, b1g2, b2g2, b5g2, f1g2) { color: var(--accent-group2); }
+:is(t1g3, t2g3, b1g3, b2g3, b5g3, f1g3) { color: var(--accent-group3); }
+:is(t1g4, t2g4, b1g4, b2g4, b5g4, f1g4) { color: var(--accent-group4); }
 
 b2g1 { border-color: var(--accent-group1); }
 b2g2 { border-color: var(--accent-group2); }
