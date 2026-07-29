@@ -91,20 +91,6 @@ b3 {
   text-transform: uppercase;
 }
 
-/* Balise de soulignement : <u1>…</u1> */
-u1 {
-  padding: 0 .08em;
-  color: inherit;
-  background: linear-gradient(
-    to bottom,
-    transparent 62%,
-    color-mix(in srgb, var(--fft-line) 72%, transparent) 62%,
-    color-mix(in srgb, var(--fft-line) 72%, transparent) 88%,
-    transparent 88%
-  );
-  text-decoration: none;
-}
-
 #page-header { width: 100%; }
 .fft-navbar {
   width: 100%;
