@@ -1235,8 +1235,9 @@ img.avatar-preview {
   object-fit: cover;
   object-position: center top;
   filter: grayscale(.4) contrast(1.04);
+  transition: filter .3s ease, opacity .3s ease;
 }
-.fft-dossier:hover .fft-dossier-photo img {
+.fft-dossier-photo img:hover {
   filter: grayscale(1) contrast(1.08);
   opacity: .8;
 }
