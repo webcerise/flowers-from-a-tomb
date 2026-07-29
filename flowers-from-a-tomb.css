@@ -2295,14 +2295,30 @@ body .page-actions .button.primary:hover {
   background: var(--transparent);
   line-height: 1.2;
 }
+.fft-topic-page .post_avatar-stage {
+  width: 250px;
+  height: 400px;
+  position: relative;
+  margin: 0 auto;
+  overflow: hidden;
+}
 .fft-topic-page .post_avatar {
   width: 250px;
   height: 400px;
   aspect-ratio: auto;
   margin: 0 auto;
+  position: absolute;
+  inset: 0;
   overflow: hidden;
-  border: 1px solid var(--fft-line);
   background: var(--fft-paper);
+}
+.fft-topic-page .post_avatar:after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  background: linear-gradient(to bottom, var(--transparent) 55%, var(--fft-panel) 100%);
+  pointer-events: none;
 }
 .fft-topic-page .post_avatar img {
   width: 100% !important;
@@ -2312,10 +2328,30 @@ body .page-actions .button.primary:hover {
   object-fit: cover;
   object-position: center top;
   border-radius: 0;
-  filter: none;
-  transition: filter .35s ease, transform .45s ease;
+  filter: grayscale(1) contrast(1.08);
 }
-.fft-topic-page .post_avatar:hover img { filter: grayscale(1) contrast(1.12); transform: scale(1.025); }
+.fft-topic-page .post_avatar-main {
+  width: 200px;
+  height: 320px;
+  position: absolute;
+  z-index: 2;
+  top: 24px;
+  left: 50%;
+  overflow: hidden;
+  border: 1px solid var(--fft-line);
+  background: var(--fft-paper);
+  transform: translateX(-50%);
+}
+.fft-topic-page .post_avatar-main img {
+  width: 100% !important;
+  height: 100% !important;
+  max-width: none !important;
+  display: block;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 0;
+  filter: none;
+}
 .fft-topic-page .post_userinfo {
   width: 100%;
   max-height: 200px;
@@ -2446,7 +2482,9 @@ body .page-actions .button.primary:hover {
 @media (max-width: 900px) {
   .fft-topic-page .post_row { grid-template-columns: 190px minmax(0, 1fr); }
   .fft-topic-page .post_profile { padding: 0 0 20px; }
+  .fft-topic-page .post_avatar-stage,
   .fft-topic-page .post_avatar { width: 190px; height: 304px; }
+  .fft-topic-page .post_avatar-main { width: 152px; height: 243px; top: 18px; }
   .fft-topic-page .post_message { padding: 34px 30px; }
 }
 @media (max-width: 620px) {
@@ -2459,6 +2497,8 @@ body .page-actions .button.primary:hover {
   .fft-topic-page .edition-buttons { grid-column: 1; border-right: 0; }
   .fft-topic-page .edition-buttons { justify-content: flex-start; }
   .fft-topic-page .post_profile { border-right: 0; border-bottom: 1px solid var(--fft-line); }
+  .fft-topic-page .post_avatar-stage,
   .fft-topic-page .post_avatar { width: 250px; height: 400px; }
+  .fft-topic-page .post_avatar-main { width: 200px; height: 320px; top: 24px; }
   .fft-topic-page .post_message { min-height: 0; padding: 28px 20px; }
 }
