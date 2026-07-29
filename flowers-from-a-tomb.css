@@ -515,7 +515,7 @@ body > .sidebar .myface-tooltip {
 .fft-staff-grid i {
   position: absolute;
   inset: 0;
-  background: var(--staff) center top / cover;
+  background: var(--staff) center center / cover;
   filter: grayscale(1) contrast(0.8);
   transition: transform .3s ease;
 }
