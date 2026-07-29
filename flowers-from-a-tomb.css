@@ -1,7 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Mea+Culpa&display=swap");
+
 :root,
 :root[data-color-scheme="light"] {
   --forumSize: min(1180px, calc(100vw - 120px));
   --font: "Inter", Arial, sans-serif;
+  --font-pseudo: "Mea Culpa", cursive;
   --body: #e9e8e4;
   --neutral: #f3f2ee;
   --neutralDark: #deddd8;
@@ -1482,7 +1485,7 @@ body form.fft-members-filter {
   display: block;
   overflow: hidden;
   color: var(--fft-ink);
-  font: 500 28px/.95 "Cormorant Garamond", serif;
+  font: 400 34px/1 var(--font-pseudo);
   text-overflow: ellipsis;
   text-transform: lowercase;
   white-space: nowrap;
@@ -2265,7 +2268,7 @@ body .page-actions .button.primary:hover {
 .fft-topic-page .post_pseudo,
 .fft-topic-page .post_pseudo a {
   color: var(--fft-ink);
-  font: 500 30px/1 "Cormorant Garamond", serif;
+  font: 400 36px/1 var(--font-pseudo);
   text-transform: lowercase;
 }
 .fft-topic-page .post_rank,
@@ -2294,16 +2297,6 @@ body .page-actions .button.primary:hover {
   transition: filter .35s ease, transform .45s ease;
 }
 .fft-topic-page .post_avatar:hover img { filter: grayscale(1) contrast(1.12); transform: scale(1.025); }
-.fft-topic-page .presence.online {
-  margin: 10px auto 0;
-  padding: 3px 8px;
-  display: block;
-  border: 1px solid var(--fft-line);
-  border-radius: 0;
-  background: var(--transparent);
-  color: var(--fft-muted);
-  font-size: 14px;
-}
 .fft-topic-page .post_userinfo {
   width: calc(100% + 48px);
   max-height: 200px;
@@ -2357,14 +2350,6 @@ body .page-actions .button.primary:hover {
   text-decoration-color: var(--fft-line);
   text-underline-offset: 3px;
 }
-.fft-topic-page #list_awards {
-  margin: 0;
-  padding: 14px 24px;
-  justify-content: flex-start;
-  gap: 7px;
-  border-top: 1px solid var(--fft-line);
-}
-.fft-topic-page .award { width: 34px; height: 34px; border-radius: 50%; filter: grayscale(1); }
 .fft-topic-page .post_contact {
   margin-top: 16px;
   padding-top: 14px;
