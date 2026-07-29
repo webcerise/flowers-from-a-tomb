@@ -1825,7 +1825,11 @@ img.avatar-preview {
   border-bottom: 1px solid var(--fft-line);
   font-size: clamp(38px, 6vw, 54px);
 }
-.fft-admin-body {}
+.fft-admin-body > img.fft-icon-square {
+  max-width: 100%;
+  float: left;
+  margin: 0 26px 26px 0;
+}
 .fft-admin-text {
   min-width: 0;
   flex: 1;
@@ -4086,11 +4090,6 @@ body .page-actions .button.primary:hover {
   line-height: 1.85;
 }
 .fft-topic-page .post_message > div:first-child { max-width: 720px; margin: 0 auto; }
-.fft-topic-page .post_message img {
-  max-width: 100%;
-  float: left;
-  margin: 0 26px 26px 0;
-}
 .fft-topic-page .post_signature {
   margin-top: 50px;
   padding-top: 24px;
