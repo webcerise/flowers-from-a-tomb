@@ -118,7 +118,7 @@ body { min-width: 0; font: 400 14px/1.6 var(--font); background: var(--body); }
 .fft-forum-state { display: none; }
 .fft-forum .forumtitle { display: block; color: var(--fft-ink); font: 500 31px/1 "Cormorant Garamond", serif; }
 .fft-forum .forum_desc { max-width: 620px; margin-top: 11px; color: var(--fft-muted); font-size: 14px; }
-.fft-forum .forum_desc > i {
+.fft-forum .forum_desc > em {
   position: absolute;
   z-index: 2;
   top: 50%;
