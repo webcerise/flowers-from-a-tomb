@@ -280,31 +280,13 @@ body .fft-navbar a {
   font-weight: 600;
   letter-spacing: .12em;
   text-transform: uppercase;
-  transition: color .25s ease, background-color .25s ease, letter-spacing .25s ease, transform .25s ease;
+  transition: color .3s ease-in-out, box-shadow .3s ease-in-out, letter-spacing .25s ease, transform .25s ease;
 }
-body .fft-navbar a:hover {
-  background-color: var(--dark-surface);
-  color: var(--light);
-}
-body .fft-navbar .fft-navlinks a:after {
-  content: "";
-  height: 1px;
-  position: absolute;
-  right: 0;
-  bottom: -7px;
-  left: 0;
-  background: var(--light);
-  transform: scaleX(0);
-  transform-origin: right center;
-  transition: transform .3s ease;
-}
+body .fft-navbar .fft-navlinks a { box-shadow: inset 0 0 0 0 var(--light); }
 body .fft-navbar .fft-navlinks a:hover {
-  color: var(--light);
+  box-shadow: inset 180px 0 0 0 var(--light);
+  color: var(--black);
   transform: translateY(-2px);
-}
-body .fft-navbar .fft-navlinks a:hover:after {
-  transform: scaleX(1);
-  transform-origin: left center;
 }
 body .fft-navbar .fft-logo:hover {
   color: var(--light);
