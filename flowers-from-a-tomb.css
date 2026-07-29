@@ -220,6 +220,98 @@ img.fft-gif-small,
   }
 }
 
+/* Modules visuels LS */
+.fft-ls-icons,
+.fft-ls-quote,
+.fft-ls-gif,
+.fft-ls-moodboard,
+.fft-ls-panorama {
+  margin: 24px 0;
+  box-sizing: border-box;
+}
+.fft-ls-icons {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+.fft-ls-icons img,
+.fft-ls-quote img,
+.fft-ls-moodboard img,
+.fft-ls-panorama img {
+  display: block;
+  object-fit: cover;
+  object-position: center;
+}
+.fft-ls-icons--two img {
+  width: 86px !important;
+  height: 86px !important;
+  outline: 1px solid var(--fft-line);
+  outline-offset: 4px;
+}
+.fft-ls-icons--three { gap: 14px; }
+.fft-ls-icons--three img {
+  width: 50px !important;
+  height: 50px !important;
+  outline: 1px solid var(--fft-line);
+  outline-offset: 3px;
+}
+.fft-ls-quote {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.fft-ls-quote img {
+  width: 86px !important;
+  height: 86px !important;
+  flex: 0 0 86px;
+  border-radius: 50%;
+  outline: 1px solid var(--fft-line);
+  outline-offset: 4px;
+}
+.fft-ls-quote blockquote {
+  margin: 0;
+  padding: 2px 0 2px 22px;
+  border-left: 1px solid var(--fft-line);
+  color: var(--fft-muted);
+  font: italic 500 20px/1.35 "Cormorant Garamond", serif;
+}
+.fft-ls-gif img {
+  width: 268px !important;
+  height: 150px !important;
+  max-width: 100% !important;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  outline: 1px solid var(--fft-line);
+  outline-offset: 4px;
+}
+.fft-ls-moodboard {
+  width: min(224px, 100%);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+}
+.fft-ls-moodboard img {
+  width: 100% !important;
+  aspect-ratio: 1;
+}
+.fft-ls-panorama img {
+  width: 100% !important;
+  height: 220px !important;
+  outline: 1px solid var(--fft-line);
+  outline-offset: 4px;
+}
+@media (max-width: 520px) {
+  .fft-ls-quote { align-items: flex-start; gap: 18px; }
+  .fft-ls-quote img {
+    width: 68px !important;
+    height: 68px !important;
+    flex-basis: 68px;
+  }
+  .fft-ls-quote blockquote { padding-left: 16px; font-size: 18px; }
+  .fft-ls-panorama img { height: 160px !important; }
+}
+
 #page-header { width: 100%; }
 .fft-navbar {
   width: 100%;
@@ -1825,7 +1917,7 @@ img.avatar-preview {
   border-bottom: 1px solid var(--fft-line);
   font-size: clamp(38px, 6vw, 54px);
 }
-.fft-admin-body > img.fft-icon-square {
+.fft-admin-body > img.fft-gif-horizontal {
   max-width: 100%;
   float: left;
   margin: 0 26px 26px 0;
