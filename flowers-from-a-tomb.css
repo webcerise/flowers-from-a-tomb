@@ -1796,14 +1796,6 @@ body .page-actions:not(form) #mark_read:hover {
 .fft-forum-page .fft-topic-last,
 .fft-forum-page .fft-topic-avatar { border-color: var(--fft-line); }
 .fft-forum-page .fft-topic-avatar { background: var(--transparent); }
-.fft-forum-page #users_here {
-  margin-top: 28px;
-  padding: 16px 0;
-  border-top: 1px solid var(--fft-line);
-  border-bottom: 1px solid var(--fft-line);
-  color: var(--fft-muted);
-  font-size: 14px;
-}
 
 /* Actions et modération des sujets */
 body .page-actions .buttons { gap: 8px; }
@@ -2073,7 +2065,7 @@ body .page-actions .button.primary:hover {
 .fft-viewforum .fft-topic-stats span {
   min-width: 0;
   display: grid;
-  grid-template-columns: 25px 1fr;
+  grid-template-columns: auto 1fr;
   align-items: baseline;
   gap: 5px;
   color: var(--fft-muted);
@@ -2097,12 +2089,6 @@ body .page-actions .button.primary:hover {
   height: 100%;
   border-left: 1px solid var(--fft-line);
   background: var(--fft-panel);
-}
-.fft-viewforum #users_here {
-  margin: 20px 0 0;
-  padding: 14px 18px;
-  border: 1px solid var(--fft-line);
-  background: var(--fft-paper);
 }
 .fft-viewforum .fft-viewforum-actions-bottom {
   margin: 10px 0 0;
