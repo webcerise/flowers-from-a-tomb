@@ -41,6 +41,16 @@ body { min-width: 0; font: 400 14px/1.6 var(--font); background: var(--body); }
 .main_forum { width: 100%; }
 #page-body { width: var(--forumSize); margin: 34px auto 0; }
 
+/* Balise de grand titre : <t1>…</t1> */
+t1 {
+  margin: 10px 0 13px;
+  display: block;
+  color: var(--fft-ink);
+  font: italic 500 clamp(45px, 7vw, 64px)/.82 "Cormorant Garamond", serif;
+  letter-spacing: -.045em;
+  text-transform: lowercase;
+}
+
 #page-header { width: 100%; }
 .fft-navbar {
   width: 100%;
