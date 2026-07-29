@@ -1949,3 +1949,162 @@ body .page-actions .button.primary:hover {
     flex-direction: column;
   }
 }
+
+/* Direction finale viewforum — continuité directe de l'index */
+.fft-viewforum {
+  margin-top: 34px;
+  color: var(--fft-ink);
+}
+.fft-viewforum-head {
+  min-height: 118px;
+  padding: 18px 24px 24px;
+  display: grid;
+  grid-template-columns: 54px minmax(0, 1fr);
+  gap: 46px;
+  align-items: center;
+  border: 0;
+  background: var(--transparent);
+}
+.fft-viewforum-number {
+  width: 54px;
+  height: 54px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--fft-line);
+  color: var(--fft-muted);
+  font: italic 14px "Cormorant Garamond", serif;
+}
+.fft-viewforum-heading { min-width: 0; }
+.fft-viewforum-head h1 {
+  margin: 4px 0 0;
+  color: var(--fft-ink);
+  font: 500 clamp(38px, 4vw, 46px)/.9 "Cormorant Garamond", serif;
+  letter-spacing: -.025em;
+  text-align: left;
+  text-transform: none;
+}
+.fft-viewforum-nav {
+  margin: 0;
+  color: var(--fft-muted);
+  font-size: 14px;
+  font-weight: 600;
+  text-align: left;
+}
+.fft-viewforum-head .forum-page_desc {
+  max-width: 680px;
+  margin: 10px 0 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: var(--transparent);
+  color: var(--fft-muted);
+  font-size: 14px;
+  line-height: 1.55;
+}
+.fft-viewforum .fft-viewforum-actions {
+  width: 100%;
+  min-height: 58px;
+  margin: 0 0 14px;
+  padding: 8px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid var(--fft-line);
+  border-radius: 0;
+  background: var(--fft-paper);
+  outline: 0;
+}
+.fft-viewforum .fft-viewforum-actions .buttons { margin-left: auto; }
+.fft-viewforum .page-actions .button {
+  min-height: 38px;
+  padding: 0 13px;
+  border-color: var(--fft-line);
+  background: var(--transparent);
+  color: var(--fft-ink);
+}
+.fft-viewforum .fft-forum-page {
+  margin: 0;
+  padding: 0;
+}
+.fft-viewforum .fft-topic {
+  height: 92px;
+  min-height: 92px;
+  margin: 0 0 10px;
+  grid-template-columns: minmax(0, 1fr) 142px 195px 92px;
+  border: 1px solid var(--fft-line);
+  background: var(--fft-paper);
+}
+.fft-viewforum .fft-topic:first-of-type { border-top: 1px solid var(--fft-line); }
+.fft-viewforum .fft-topic:hover {
+  border-color: var(--fft-muted);
+  background: color-mix(in srgb, var(--fft-panel) 42%, var(--fft-paper));
+}
+.fft-viewforum .fft-topic-main {
+  padding: 14px 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.fft-viewforum .fft-topic .topictitle {
+  color: var(--fft-ink);
+  font: 500 27px/1 "Cormorant Garamond", serif;
+}
+.fft-viewforum .fft-topic-byline { margin-top: 7px; }
+.fft-viewforum .fft-topic .topicslist-pagination { margin-top: 3px; }
+.fft-viewforum .fft-topic-stats {
+  padding: 12px 14px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 10px;
+  border-left: 1px solid var(--fft-line);
+}
+.fft-viewforum .fft-topic-stats span {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  color: var(--fft-muted);
+  font-size: 14px;
+  line-height: 1.35;
+}
+.fft-viewforum .fft-topic-stats strong {
+  color: var(--fft-ink);
+  font-size: 17px;
+}
+.fft-viewforum .fft-topic-last {
+  padding: 14px 18px;
+  border-left: 1px solid var(--fft-line);
+}
+.fft-viewforum .fft-topic-time,
+.fft-viewforum .fft-topic-author,
+.fft-viewforum .fft-topic-author a { font-size: 14px; }
+.fft-viewforum .fft-topic-avatar {
+  width: 100%;
+  height: 100%;
+  border-left: 1px solid var(--fft-line);
+  background: var(--fft-panel);
+}
+.fft-viewforum #users_here {
+  margin: 20px 0 0;
+  padding: 14px 18px;
+  border: 1px solid var(--fft-line);
+  background: var(--fft-paper);
+}
+.fft-viewforum .fft-viewforum-actions-bottom {
+  margin: 10px 0 0;
+  border: 1px solid var(--fft-line);
+}
+@media (max-width: 900px) {
+  .fft-viewforum .fft-topic { grid-template-columns: minmax(0, 1fr) 120px 82px; height: auto; min-height: 92px; }
+  .fft-viewforum .fft-topic-last { grid-column: 1 / 3; grid-row: 2; border-top: 1px solid var(--fft-line); }
+  .fft-viewforum .fft-topic-avatar { grid-column: 3; grid-row: 1 / 3; }
+}
+@media (max-width: 620px) {
+  .fft-viewforum-head { grid-template-columns: 1fr; gap: 16px; padding: 18px; }
+  .fft-viewforum .fft-viewforum-actions { align-items: stretch; flex-direction: column; }
+  .fft-viewforum .fft-viewforum-actions .buttons { width: 100%; margin-left: 0; }
+  .fft-viewforum .fft-topic { grid-template-columns: minmax(0, 1fr) 82px; }
+  .fft-viewforum .fft-topic-stats { grid-column: 2; }
+  .fft-viewforum .fft-topic-last { grid-column: 1 / -1; grid-row: 2; }
+  .fft-viewforum .fft-topic-avatar { display: none; }
+}
