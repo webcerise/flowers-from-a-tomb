@@ -91,6 +91,15 @@ b3 {
   text-transform: uppercase;
 }
 
+/* Balise de soulignement : <u1>…</u1> */
+u1 {
+  color: inherit;
+  text-decoration-line: underline;
+  text-decoration-color: var(--fft-line);
+  text-decoration-thickness: 1px;
+  text-underline-offset: .2em;
+}
+
 #page-header { width: 100%; }
 .fft-navbar {
   width: 100%;
