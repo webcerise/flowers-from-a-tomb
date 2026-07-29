@@ -2370,14 +2370,11 @@ body .page-actions .button.primary:hover {
   text-underline-offset: 3px;
 }
 .fft-topic-page .post_contact {
-  margin-top: 16px;
-  padding-top: 14px;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   justify-content: center;
   gap: 6px;
-  border-top: 1px solid var(--fft-line);
 }
 .fft-topic-page .post_contact a {
   width: 34px;
