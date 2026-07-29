@@ -271,7 +271,8 @@ body #page-header .fft-navlinks { grid-column: 2; }
 body #page-header .fft-logo { font-style: italic; }
 body #page-header .fft-navlinks { gap: 35px; }
 body .fft-navbar a {
-  padding: 8px 10px;
+  padding: 2px 8px;
+  border-radius: 0;
   position: relative;
   border: 0;
   background-color: var(--transparent);
@@ -1268,7 +1269,7 @@ html body #notiffi_panel .notiffi_manage {
 .fft-hub .group,
 .page-actions a,
 #page-footer a {
-  transition: color .24s ease, background-color .24s ease, border-color .24s ease, transform .24s ease, letter-spacing .24s ease;
+  transition: color .24s ease, background-color .24s ease, border-color .24s ease, box-shadow .24s ease, transform .24s ease, letter-spacing .24s ease;
 }
 .fft-portal-tabs a:hover,
 .fft-portal-more:hover,
@@ -1308,10 +1309,13 @@ html body #notiffi_panel .notiffi_manage {
 .fft-wanted-grid > a {
   transition: border-color .3s ease, transform .3s ease;
 }
-.fft-staff-grid a:hover,
-.fft-wanted-grid > a:hover {
+.fft-staff-grid a:hover {
   border-color: var(--fft-muted);
   transform: translateY(-3px);
+}
+.fft-wanted-grid > a:hover {
+  border-color: var(--fft-line);
+  transform: none;
 }
 .fft-staff-grid b {
   transition: letter-spacing .3s ease, transform .3s ease;
@@ -1330,11 +1334,18 @@ html body #notiffi_panel .notiffi_manage {
 }
 .fft-hub .group strong { transition: letter-spacing .25s ease; }
 .fft-hub .group:hover {
-  background: var(--fft-panel);
-  transform: translateY(-3px);
+  background: var(--transparent);
+  box-shadow: inset 0 -2px 0 var(--fft-muted);
+  transform: none;
 }
 .fft-hub .group:hover strong { letter-spacing: .04em; }
 #page-footer a:hover {
   color: var(--fft-ink);
   letter-spacing: .035em;
+}
+.fft-portal-tabs a:hover,
+.fft-portal-more:hover {
+  background: var(--transparent);
+  box-shadow: inset 0 -2px 0 var(--fft-muted);
+  transform: none;
 }
