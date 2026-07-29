@@ -1938,6 +1938,7 @@ body > .sidebar .myface-tooltip {
 .fft-wanted h2 { margin: 5px 0 0; color: var(--fft-ink); font: 500 38px/.9 "Cormorant Garamond", serif; }
 .fft-wanted h2 i { color: var(--fft-muted); font-weight: 400; }
 .fft-wanted-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; border: 1px solid var(--fft-line); background: var(--fft-line); }
+.fft-wanted-grid--four { grid-template-columns: repeat(4, 1fr); }
 .fft-wanted-grid > a {
   min-height: 205px;
   padding: 18px 20px;
