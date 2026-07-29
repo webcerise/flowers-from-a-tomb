@@ -2273,7 +2273,11 @@ body .page-actions .button.primary:hover {
   background: var(--fft-panel);
   text-align: center;
 }
-.fft-topic-page .post_profile center { text-align: center; }
+.fft-topic-page .post_profile center {
+  position: relative;
+  z-index: 2 !important;
+  text-align: center;
+}
 .fft-topic-page .post_pseudo,
 .fft-topic-page .post_pseudo a {
   display: inline-block;
@@ -2297,10 +2301,11 @@ body .page-actions .button.primary:hover {
 }
 .fft-topic-page .post_avatar-stage {
   width: 250px;
-  height: 400px;
+  height: 340px;
   position: relative;
+  z-index: 1;
   margin: 0 auto;
-  overflow: hidden;
+  overflow: visible;
 }
 .fft-topic-page .post_avatar {
   width: 250px;
@@ -2329,6 +2334,7 @@ body .page-actions .button.primary:hover {
   object-position: center top;
   border-radius: 0;
   filter: grayscale(1) contrast(1.08);
+  opacity: 0.8;
 }
 .fft-topic-page .post_avatar-main {
   width: 200px;
