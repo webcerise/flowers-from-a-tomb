@@ -1383,7 +1383,7 @@ html body #notiffi_panel .notiffi_manage {
   font: 500 46px/.9 "Cormorant Garamond", serif;
   letter-spacing: -.025em;
 }
-.fft-members-filter {
+body form.fft-members-filter {
   margin: 14px 0;
   padding: 14px;
   display: grid;
@@ -1393,6 +1393,7 @@ html body #notiffi_panel .notiffi_manage {
   border: 1px solid var(--fft-line);
   background: var(--fft-paper);
 }
+.fft-members-filter .fft-filter-submit { justify-self: end; }
 .fft-members-filter > div { min-width: 0; }
 .fft-members-filter label { margin-bottom: 7px; display: block; letter-spacing: .1em; }
 .fft-members-filter input,
@@ -1425,7 +1426,7 @@ html body #notiffi_panel .notiffi_manage {
 }
 .fft-member-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 14px;
   counter-reset: fft-member;
 }
@@ -1433,7 +1434,7 @@ html body #notiffi_panel .notiffi_manage {
   min-height: 226px;
   min-width: 0;
   display: grid;
-  grid-template-columns: 142px minmax(0, 1fr);
+  grid-template-columns: 108px minmax(0, 1fr);
   counter-increment: fft-member;
   border: 1px solid var(--fft-line);
   background: var(--fft-paper);
@@ -1451,6 +1452,7 @@ html body #notiffi_panel .notiffi_manage {
   overflow: hidden;
   background: var(--fft-panel);
 }
+.fft-member-portrait > a { width: 100%; height: 100%; display: block; }
 .fft-member-portrait:after {
   content: "";
   position: absolute;
@@ -1484,7 +1486,7 @@ html body #notiffi_panel .notiffi_manage {
 .fft-member-number:before { content: counter(fft-member, decimal-leading-zero); }
 .fft-member-content {
   min-width: 0;
-  padding: 24px;
+  padding: 20px 18px;
   display: flex;
   flex-direction: column;
 }
@@ -1493,7 +1495,7 @@ html body #notiffi_panel .notiffi_manage {
   display: block;
   overflow: hidden;
   color: var(--fft-ink);
-  font: 500 31px/.95 "Cormorant Garamond", serif;
+  font: 500 28px/.95 "Cormorant Garamond", serif;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
@@ -1544,7 +1546,7 @@ html body #notiffi_panel .notiffi_manage {
 }
 @media (max-width: 900px) {
   .fft-members-filter { grid-template-columns: 1fr 1fr; }
-  .fft-member-grid { grid-template-columns: 1fr; }
+  .fft-member-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 @media (max-width: 620px) {
   .fft-members-head { min-height: 104px; padding: 18px 18px 18px 90px; }
