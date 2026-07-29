@@ -153,18 +153,36 @@ u1g4 { box-shadow: inset 0 -.5em var(--accent-group4); }
   align-items: center;
   gap: 12px;
 }
-img.fft-icon-round {
+img.fft-icon-round,
+img.fft-icon-square {
   width: var(--fft-icon-size, 86px) !important;
   height: var(--fft-icon-size, 86px) !important;
   max-width: none !important;
   flex: 0 0 auto;
   display: block;
   padding: 4px;
-  border: 1px solid var(--fft-line);
-  border-radius: 50%;
   background: var(--fft-paper);
   object-fit: cover;
   object-position: center;
+}
+img.fft-icon-round { border-radius: 50%; }
+img.fft-icon-square { border-radius: 0; }
+img.fft-icon-round,
+img.fft-icon-square,
+img.fft-gif-horizontal {
+  outline: 1px solid var(--fft-line);
+  outline-offset: 4px;
+}
+img.fft-icon-small {
+  width: 50px !important;
+  height: 50px !important;
+}
+.fft-filter-soft {
+  filter: grayscale(1) contrast(.8) !important;
+}
+.fft-filter-faded {
+  filter: grayscale(1) contrast(1.3) !important;
+  opacity: .5 !important;
 }
 img.fft-gif-horizontal {
   width: 268px !important;
@@ -172,7 +190,6 @@ img.fft-gif-horizontal {
   max-width: 100% !important;
   min-width: 0;
   display: block;
-  border: 1px solid var(--fft-line);
   background: var(--fft-panel);
   object-fit: cover;
   object-position: center;
@@ -180,7 +197,7 @@ img.fft-gif-horizontal {
 .fft-post-visuals > .fft-gif-horizontal { flex: 0 1 268px; }
 .fft-post-visuals--reverse { flex-direction: row-reverse; }
 .fft-post-visuals--small {
-  --fft-icon-size: 64px;
+  --fft-icon-size: 50px;
 }
 .fft-post-visuals--large {
   --fft-icon-size: 110px;
