@@ -252,7 +252,7 @@ body #wombat.fft-profile-view {
 #wombat > .page-title {
   min-height: 116px;
   margin: 0 0 20px;
-  padding: 46px 34px 18px 122px;
+  padding: 18px 34px 18px 122px;
   position: relative;
   display: flex;
   align-items: center;
@@ -277,16 +277,6 @@ body #wombat.fft-profile-view {
   border: 1px solid var(--fft-line);
   color: var(--fft-muted);
   font: italic 14px/1 "Cormorant Garamond", serif;
-}
-#wombat > .page-title:after {
-  content: "Portrait d’un habitant";
-  position: absolute;
-  left: 122px;
-  top: 25px;
-  color: var(--fft-muted);
-  font: 600 14px/1 var(--font);
-  letter-spacing: .15em;
-  text-transform: uppercase;
 }
 #wombat .user_profile {
   width: 100%;
@@ -365,7 +355,7 @@ body #wombat.fft-profile-view {
   justify-self: start;
 }
 #wombat .profile_infos > strong:before {
-  content: "Identité";
+  content: "Groupe";
   margin-right: 12px;
   color: var(--fft-ink);
   letter-spacing: .12em;
@@ -433,7 +423,6 @@ body #wombat.fft-profile-view {
 #wombat .profile_content::-webkit-scrollbar-thumb { background: var(--fft-muted); }
 #wombat .profile_field {
   min-width: 0;
-  min-height: 76px;
   margin: 0;
   padding: 15px 17px;
   display: grid;
