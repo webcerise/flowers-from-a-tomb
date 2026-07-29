@@ -51,6 +51,38 @@ t1 {
   text-transform: lowercase;
 }
 
+/* Balise de petit libellé gras : <b1>…</b1> */
+b1 {
+  margin: 0 0 4px;
+  display: block;
+  color: var(--fft-muted);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+
+/* Balise d’étiquette encadrée : <b2>…</b2> */
+b2 {
+  padding: 4px 8px;
+  display: inline-block;
+  border: 1px solid var(--fft-line);
+  color: var(--fft-ink);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+/* Balise de libellé gras en ligne : <b3>…</b3> */
+b3 {
+  color: var(--fft-ink);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+
 #page-header { width: 100%; }
 .fft-navbar {
   width: 100%;
