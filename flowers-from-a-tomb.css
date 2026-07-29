@@ -193,7 +193,14 @@ body { min-width: 0; font: 400 14px/1.6 var(--font); background: var(--body); }
 .fft-forum-avatar > .ph { position: absolute; inset: 0; display: grid; place-items: center; color: var(--light); font-size: 25px; }
 .fft-forum-avatar img + .ph { display: grid; }
 
-.page-actions { width: 100%; margin: 26px 0; font-size: 14px; }
+.page-actions {
+  width: 100%;
+  margin: 26px 0;
+  padding: 10px 20px;
+  border-radius: 0;
+  font-size: 14px;
+  text-transform: lowercase;
+}
 .hub {
   margin: 42px 0 0;
   border: 1px solid var(--fft-line);
@@ -1345,15 +1352,28 @@ html body #notiffi_panel .notiffi_manage {
 /* Liste des membres */
 .fft-members { margin-top: 34px; }
 .fft-members-head {
-  min-height: 250px;
-  padding: 52px 58px;
+  min-height: 112px;
+  padding: 18px 24px 24px 104px;
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  border: 0;
+  background: var(--transparent);
+}
+.fft-members-head:before {
+  content: "01";
+  width: 54px;
+  height: 54px;
+  position: absolute;
+  left: 24px;
+  top: 50%;
+  display: grid;
+  place-items: center;
   border: 1px solid var(--fft-line);
-  background: linear-gradient(110deg, var(--fft-panel), var(--transparent) 78%);
-  outline: 1px solid color-mix(in srgb, var(--fft-line) 28%, var(--transparent));
-  outline-offset: 6px;
+  color: var(--fft-muted);
+  font: italic 14px "Cormorant Garamond", serif;
+  transform: translateY(-50%);
 }
 .fft-members-head > span,
 .fft-member-kicker,
@@ -1365,21 +1385,14 @@ html body #notiffi_panel .notiffi_manage {
   text-transform: uppercase;
 }
 .fft-members-head h1 {
-  margin: 9px 0 0;
+  margin: 5px 0 0;
   color: var(--fft-ink);
-  font: 500 clamp(46px, 6vw, 76px)/.86 "Cormorant Garamond", serif;
-  letter-spacing: -.04em;
-}
-.fft-members-head h1 i { color: var(--fft-muted); font-weight: 400; }
-.fft-members-head p {
-  max-width: 570px;
-  margin: 22px 0 0;
-  color: var(--fft-muted);
-  font-size: 14px;
+  font: 500 46px/.9 "Cormorant Garamond", serif;
+  letter-spacing: -.025em;
 }
 .fft-members-filter {
-  margin: 34px 0 14px;
-  padding: 18px;
+  margin: 14px 0;
+  padding: 14px;
   display: grid;
   grid-template-columns: minmax(260px, 1fr) 210px 180px auto;
   gap: 12px;
@@ -1419,12 +1432,15 @@ html body #notiffi_panel .notiffi_manage {
 }
 .fft-member-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 14px;
   counter-reset: fft-member;
 }
 .fft-member-card {
+  min-height: 226px;
   min-width: 0;
+  display: grid;
+  grid-template-columns: 142px minmax(0, 1fr);
   counter-increment: fft-member;
   border: 1px solid var(--fft-line);
   background: var(--fft-paper);
@@ -1434,7 +1450,9 @@ html body #notiffi_panel .notiffi_manage {
 .fft-member-card:hover { border-color: var(--fft-muted); }
 .fft-member-portrait {
   width: 100%;
-  aspect-ratio: 400 / 640;
+  height: 100%;
+  min-height: 226px;
+  aspect-ratio: auto;
   position: relative;
   display: block;
   overflow: hidden;
@@ -1471,22 +1489,27 @@ html body #notiffi_panel .notiffi_manage {
   font: italic 16px "Cormorant Garamond", serif;
 }
 .fft-member-number:before { content: counter(fft-member, decimal-leading-zero); }
-.fft-member-content { padding: 24px; }
+.fft-member-content {
+  min-width: 0;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+}
 .fft-member-name {
-  margin-top: 7px;
+  margin-top: 5px;
   display: block;
   overflow: hidden;
   color: var(--fft-ink);
-  font: 500 34px/.95 "Cormorant Garamond", serif;
+  font: 500 31px/.95 "Cormorant Garamond", serif;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 .fft-member-meta {
-  margin: 22px 0 0;
+  margin: 17px 0 0;
   border-top: 1px solid var(--fft-line);
 }
 .fft-member-meta > div {
-  padding: 10px 0;
+  padding: 7px 0;
   display: grid;
   grid-template-columns: 1fr auto;
   gap: 12px;
@@ -1499,7 +1522,7 @@ html body #notiffi_panel .notiffi_manage {
   font-size: 14px;
 }
 .fft-member-meta dd { color: var(--fft-ink); text-align: right; }
-.fft-member-contact { margin-top: 18px; }
+.fft-member-contact { margin-top: auto; padding-top: 14px; }
 .fft-member-contact a {
   min-height: 40px;
   padding: 0 13px;
@@ -1528,12 +1551,15 @@ html body #notiffi_panel .notiffi_manage {
 }
 @media (max-width: 900px) {
   .fft-members-filter { grid-template-columns: 1fr 1fr; }
-  .fft-member-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .fft-member-grid { grid-template-columns: 1fr; }
 }
 @media (max-width: 620px) {
-  .fft-members-head { min-height: 210px; padding: 36px 28px; }
+  .fft-members-head { min-height: 104px; padding: 18px 18px 18px 90px; }
+  .fft-members-head:before { left: 18px; }
+  .fft-members-head h1 { font-size: 38px; }
   .fft-members-filter,
   .fft-member-grid { grid-template-columns: 1fr; }
+  .fft-member-card { grid-template-columns: 112px minmax(0, 1fr); }
 }
 
 /* Raccourcis de l'index */
