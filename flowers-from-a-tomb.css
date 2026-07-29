@@ -271,16 +271,20 @@ body #page-header .fft-navlinks { grid-column: 2; }
 body #page-header .fft-logo { font-style: italic; }
 body #page-header .fft-navlinks { gap: 35px; }
 body .fft-navbar a {
-  padding: 0;
+  padding: 8px 10px;
   position: relative;
   border: 0;
-  background: var(--transparent);
+  background-color: var(--transparent);
   color: var(--light-muted);
   font-size: 14px;
   font-weight: 600;
   letter-spacing: .12em;
   text-transform: uppercase;
-  transition: color .25s ease, letter-spacing .25s ease, transform .25s ease;
+  transition: color .25s ease, background-color .25s ease, letter-spacing .25s ease, transform .25s ease;
+}
+body .fft-navbar a:hover {
+  background-color: var(--dark-surface);
+  color: var(--light);
 }
 body .fft-navbar .fft-navlinks a:after {
   content: "";
@@ -1273,4 +1277,82 @@ html body #notiffi_panel .notiffi_manage {
   padding: 0;
   border: 0;
   line-height: 1.7;
+}
+
+/* Mouvements d'interface */
+.fft-portal-tabs a,
+.fft-portal-more,
+.fft-forum .forum_sub a,
+.fft-hub .group,
+.page-actions a,
+#page-footer a {
+  transition: color .24s ease, background-color .24s ease, border-color .24s ease, transform .24s ease, letter-spacing .24s ease;
+}
+.fft-portal-tabs a:hover,
+.fft-portal-more:hover,
+.fft-forum .forum_sub a:hover,
+.page-actions a:hover {
+  border-color: var(--fft-muted);
+  color: var(--fft-ink);
+  transform: translateY(-2px);
+}
+.fft-category-number {
+  transition: color .28s ease, background-color .28s ease, border-color .28s ease, transform .28s ease;
+}
+.fft-category:hover .fft-category-number {
+  border-color: var(--fft-muted);
+  background: var(--fft-panel);
+  color: var(--fft-ink);
+  transform: rotate(-4deg);
+}
+.fft-category-title {
+  transition: letter-spacing .32s ease, transform .32s ease;
+}
+.fft-category:hover .fft-category-title {
+  letter-spacing: -.015em;
+  transform: translateX(5px);
+}
+.fft-forum-stats strong,
+.fft-forum-last .lastpost_link,
+.fft-hub .hub-summary strong {
+  transition: color .24s ease, transform .24s ease;
+}
+.fft-forum:hover .fft-forum-stats strong,
+.fft-forum-last:hover .lastpost_link {
+  color: var(--fft-ink);
+  transform: translateX(3px);
+}
+.fft-staff-grid a,
+.fft-wanted-grid > a {
+  transition: border-color .3s ease, transform .3s ease;
+}
+.fft-staff-grid a:hover,
+.fft-wanted-grid > a:hover {
+  border-color: var(--fft-muted);
+  transform: translateY(-3px);
+}
+.fft-staff-grid b {
+  transition: letter-spacing .3s ease, transform .3s ease;
+}
+.fft-staff-grid a:hover b {
+  letter-spacing: .08em;
+  transform: translateX(-50%) translateY(-3px);
+}
+.fft-hub .hub-gif {
+  transition: opacity .5s ease, filter .5s ease, transform .7s ease;
+}
+.fft-hub .hub_title:hover .hub-gif {
+  opacity: .34;
+  filter: grayscale(1) contrast(1.4) blur(0);
+  transform: translateY(-50%) scale(1.025);
+}
+.fft-hub .group strong { transition: letter-spacing .25s ease; }
+.fft-hub .group:hover {
+  background: var(--fft-panel);
+  transform: translateY(-3px);
+}
+.fft-hub .group:hover strong { letter-spacing: .04em; }
+#page-footer a:hover {
+  color: var(--fft-ink);
+  letter-spacing: .035em;
 }
