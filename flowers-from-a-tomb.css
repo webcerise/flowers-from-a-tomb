@@ -1,10 +1,8 @@
-﻿@import url("https://fonts.googleapis.com/css2?family=Mea+Culpa&display=swap");
-
+﻿
 :root,
 :root[data-color-scheme="light"] {
   --forumSize: min(1180px, calc(100vw - 120px));
   --font: "Inter", Arial, sans-serif;
-  --font-pseudo: "Mea Culpa", cursive;
   --body: #e9e8e4;
   --neutral: #f3f2ee;
   --neutralDark: #deddd8;
@@ -259,8 +257,8 @@ body #fft-profile-view.fft-profile-view {
   border: 1px solid var(--fft-line);
   background: var(--fft-paper);
   color: var(--fft-ink);
-  font: 400 48px/1 var(--font-pseudo);
-  text-transform: capitalize;
+  font: 400 48px/1 var(--font);
+  text-transform: uppercase;
 }
 #fft-profile-view > .page-title a {
   font: inherit;
@@ -1746,9 +1744,9 @@ body form.fft-members-filter {
   display: block;
   overflow: hidden;
   color: var(--fft-ink);
-  font: 400 34px/1 var(--font-pseudo);
+  font: 400 24px/1 var(--font);
   text-overflow: ellipsis;
-  text-transform: capitalize;
+  text-transform: uppercase;
   white-space: nowrap;
 }
 .fft-member-meta {
@@ -2544,8 +2542,8 @@ body .page-actions .button.primary:hover {
   display: inline-block;
   margin-top: 12px;
   color: var(--fft-ink);
-  font: 400 36px/1 var(--font-pseudo);
-  text-transform: capitalize;
+  font: 400 24px/1 var(--font);
+  text-transform: uppercase;
 }
 .fft-topic-page .post_rank,
 .fft-topic-page .post_rank * {
