@@ -2268,7 +2268,7 @@ body .page-actions .button.primary:hover {
 }
 .fft-topic-page .post_profile {
   min-width: 0;
-  padding: 0 24px 24px;
+  padding: 0 0 24px;
   border-right: 1px solid var(--fft-line);
   background: var(--fft-panel);
   text-align: center;
@@ -2296,8 +2296,8 @@ body .page-actions .button.primary:hover {
   line-height: 1.2;
 }
 .fft-topic-page .post_avatar {
-  width: 200px;
-  height: 320px;
+  width: 250px;
+  height: 400px;
   aspect-ratio: auto;
   margin: 0 auto;
   overflow: hidden;
@@ -2317,9 +2317,9 @@ body .page-actions .button.primary:hover {
 }
 .fft-topic-page .post_avatar:hover img { filter: grayscale(1) contrast(1.12); transform: scale(1.025); }
 .fft-topic-page .post_userinfo {
-  width: calc(100% + 48px);
+  width: 100%;
   max-height: 200px;
-  margin: 20px -24px 0;
+  margin: 20px 0 0;
   overflow-x: hidden;
   overflow-y: auto;
   overscroll-behavior: contain;
@@ -2448,8 +2448,8 @@ body .page-actions .button.primary:hover {
 .fft-viewtopic .quickmod select { font-size: 14px; }
 @media (max-width: 900px) {
   .fft-topic-page .post_row { grid-template-columns: 190px minmax(0, 1fr); }
-  .fft-topic-page .post_profile { padding: 0 14px 20px; }
-  .fft-topic-page .post_avatar { width: 145px; height: 232px; }
+  .fft-topic-page .post_profile { padding: 0 0 20px; }
+  .fft-topic-page .post_avatar { width: 190px; height: 304px; }
   .fft-topic-page .post_message { padding: 34px 30px; }
 }
 @media (max-width: 620px) {
@@ -2462,6 +2462,6 @@ body .page-actions .button.primary:hover {
   .fft-topic-page .edition-buttons { grid-column: 1; border-right: 0; }
   .fft-topic-page .edition-buttons { justify-content: flex-start; }
   .fft-topic-page .post_profile { border-right: 0; border-bottom: 1px solid var(--fft-line); }
-  .fft-topic-page .post_avatar { width: 200px; height: 320px; }
+  .fft-topic-page .post_avatar { width: 250px; height: 400px; }
   .fft-topic-page .post_message { min-height: 0; padding: 28px 20px; }
 }
