@@ -1825,11 +1825,7 @@ img.avatar-preview {
   border-bottom: 1px solid var(--fft-line);
   font-size: clamp(38px, 6vw, 54px);
 }
-.fft-admin-body {
-  display: flex;
-  align-items: flex-start;
-  gap: 26px;
-}
+.fft-admin-body {}
 .fft-admin-text {
   min-width: 0;
   flex: 1;
@@ -1843,7 +1839,6 @@ img.avatar-preview {
 .fft-admin-text strong { color: var(--fft-ink); }
 @media (max-width: 560px) {
   .fft-admin-post--simple { padding: 22px; }
-  .fft-admin-body { flex-direction: column; }
 }
 
 :root,
@@ -4090,7 +4085,11 @@ body .page-actions .button.primary:hover {
   line-height: 1.85;
 }
 .fft-topic-page .post_message > div:first-child { max-width: 720px; margin: 0 auto; }
-.fft-topic-page .post_message img { max-width: 100%; }
+.fft-topic-page .post_message img {
+  max-width: 100%;
+  float: left;
+  margin: 0 28px 28px 0;
+}
 .fft-topic-page .post_signature {
   margin-top: 50px;
   padding-top: 24px;
