@@ -2369,11 +2369,40 @@ body .page-actions .button.primary:hover {
   margin-top: 16px;
   padding-top: 14px;
   display: flex;
+  align-items: center;
+  flex-wrap: wrap;
   justify-content: center;
-  gap: 8px;
+  gap: 6px;
   border-top: 1px solid var(--fft-line);
 }
-.fft-topic-page .post_contact img { width: 20px; height: 20px; object-fit: contain; filter: grayscale(1); }
+.fft-topic-page .post_contact a {
+  width: 34px;
+  height: 34px;
+  padding: 0;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  border: 1px solid var(--fft-line);
+  border-radius: 0;
+  background: var(--transparent);
+  color: var(--fft-muted);
+  transition: color .24s ease, background-color .24s ease, border-color .24s ease, transform .24s ease;
+}
+.fft-topic-page .post_contact a:hover {
+  border-color: var(--fft-muted);
+  background: var(--fft-paper);
+  color: var(--fft-ink);
+  transform: translateY(-2px);
+}
+.fft-topic-page .post_contact a[href=""] { display: none; }
+.fft-topic-page .post_contact img {
+  width: 18px;
+  height: 18px;
+  margin: 0;
+  display: block;
+  object-fit: contain;
+  filter: grayscale(1);
+}
 .fft-topic-page .post_message {
   min-width: 0;
   min-height: 520px;
