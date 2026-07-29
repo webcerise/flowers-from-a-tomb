@@ -17,6 +17,10 @@
   --fft-line: #bdbcb6;
   --fft-ink: #111;
   --fft-muted: #6d6d68;
+  --accent-group1: #a9526d; /* Closed Petals — rose fané */
+  --accent-group2: #8065aa; /* Shy Blossom — mauve */
+  --accent-group3: #347b76; /* Wildflower — vert bleuté */
+  --accent-group4: #92702f; /* Faded Bloom — ocre ancien */
 }
 
 :root[data-color-scheme="dark"] {
@@ -89,6 +93,35 @@ b3 {
   font-weight: 700;
   letter-spacing: .04em;
   text-transform: uppercase;
+}
+
+/* Balise d’étiquette pleine : <b4>…</b4> */
+b4 {
+  padding: 4px 8px;
+  display: inline-block;
+  background: var(--fft-ink);
+  border: 1px solid var(--fft-line);
+  color: var(--fft-paper);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+/* Balise de graisse forte : <b5>…</b5> */
+b5 {
+  font-weight: 900;
+}
+
+/* Balise de soulignement en aplat : <u1>…</u1> */
+u1 {
+  text-decoration: none !important;
+  box-shadow: inset 0 -.5em var(--fft-line);
+}
+
+/* Balise de police sérif : <f1>…</f1> */
+f1 {
+  font-family: "Cormorant Garamond", serif;
 }
 
 #page-header { width: 100%; }
