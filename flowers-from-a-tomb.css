@@ -2108,3 +2108,278 @@ body .page-actions .button.primary:hover {
   .fft-viewforum .fft-topic-last { grid-column: 1 / -1; grid-row: 2; }
   .fft-viewforum .fft-topic-avatar { display: none; }
 }
+
+/* Lecture d'un sujet */
+.fft-viewtopic { width: 100%; margin-top: 34px; color: var(--fft-ink); }
+.fft-viewtopic-head {
+  min-height: 118px;
+  padding: 18px 24px 24px;
+  display: grid;
+  grid-template-columns: 54px minmax(0, 1fr);
+  gap: 46px;
+  align-items: center;
+}
+.fft-viewtopic-number {
+  width: 54px;
+  height: 54px;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--fft-line);
+  color: var(--fft-muted);
+  font: italic 14px/1 "Cormorant Garamond", serif;
+}
+.fft-viewtopic-heading { min-width: 0; }
+.fft-viewtopic-nav {
+  margin: 0 0 6px;
+  color: var(--fft-muted);
+  font-size: 14px;
+  font-weight: 600;
+  text-align: left;
+}
+.fft-viewtopic-nav a { color: var(--fft-muted); font-size: 14px; transition: color .24s ease; }
+.fft-viewtopic-nav a:hover { color: var(--fft-ink); }
+.fft-viewtopic-head h1 {
+  margin: 0;
+  overflow: hidden;
+  color: var(--fft-ink);
+  font: 500 clamp(38px, 4vw, 46px)/.92 "Cormorant Garamond", serif;
+  letter-spacing: -.025em;
+  text-align: left;
+  text-overflow: ellipsis;
+  text-transform: none;
+  white-space: nowrap;
+}
+.fft-viewtopic .fft-viewtopic-actions {
+  min-height: 58px;
+  margin: 0 0 14px;
+  padding: 8px 10px;
+  border: 1px solid var(--fft-line);
+  border-radius: 0;
+  background: var(--fft-paper);
+  outline: 0;
+}
+.fft-viewtopic .fft-viewtopic-actions-bottom { margin-top: 14px; }
+.fft-topic-page { width: 100%; margin: 0; padding: 0; background: var(--transparent); }
+.fft-topic-page > .poster-list {
+  min-height: 48px;
+  margin: 0 0 14px;
+  padding: 8px 14px;
+  justify-content: flex-start;
+  border-top: 1px solid var(--fft-line);
+  border-bottom: 1px solid var(--fft-line);
+}
+.fft-topic-page .poster {
+  width: 32px;
+  height: 32px;
+  border: 1px solid var(--fft-paper);
+  border-radius: 50%;
+  filter: grayscale(1);
+}
+.fft-topic-page .poster-count { color: var(--fft-muted); font-size: 14px; }
+.fft-topic-page .post_row {
+  width: 100%;
+  margin: 0 0 20px;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 230px minmax(0, 1fr);
+  grid-template-rows: 52px auto;
+  border: 1px solid var(--fft-line);
+  border-radius: 0;
+  background: var(--fft-paper);
+  overflow: hidden;
+}
+.fft-topic-page .post_details {
+  min-width: 0;
+  padding: 8px 14px;
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  border-bottom: 1px solid var(--fft-line);
+  background: var(--fft-panel);
+}
+.fft-topic-page .post_date {
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--fft-muted);
+  font-size: 14px;
+}
+.fft-topic-page .post_date a {
+  max-width: 260px;
+  overflow: hidden;
+  color: var(--fft-ink);
+  font-size: 14px;
+  font-weight: 600;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.fft-topic-page .post_date time { color: var(--fft-muted); font-size: 14px; }
+.fft-topic-page .edition-buttons { display: flex; align-items: center; flex-wrap: wrap; gap: 4px; }
+.fft-topic-page .edition-buttons [class^="btn-"],
+.fft-topic-page .rep-button {
+  min-height: 32px;
+  padding: 0 9px;
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid var(--fft-line);
+  border-radius: 0;
+  background: var(--transparent);
+  color: var(--fft-muted);
+  font-size: 14px;
+  font-weight: 600;
+  transition: color .24s ease, background-color .24s ease, border-color .24s ease;
+}
+.fft-topic-page .edition-buttons [class^="btn-"]:hover,
+.fft-topic-page .rep-button:hover {
+  border-color: var(--fft-muted);
+  background: var(--fft-paper);
+  color: var(--fft-ink);
+}
+.fft-topic-page .edition-buttons [href=""] { display: none; }
+.fft-topic-page .rep-button .rep-nb {
+  margin-left: 5px;
+  padding: 0;
+  background: var(--transparent);
+  color: inherit;
+  font-size: 14px;
+}
+.fft-topic-page .post_profile {
+  min-width: 0;
+  padding: 24px;
+  border-right: 1px solid var(--fft-line);
+  background: var(--fft-panel);
+  text-align: center;
+}
+.fft-topic-page .post_profile center { text-align: center; }
+.fft-topic-page .post_pseudo,
+.fft-topic-page .post_pseudo a {
+  color: var(--fft-ink);
+  font: 500 30px/1 "Cormorant Garamond", serif;
+}
+.fft-topic-page .post_rank,
+.fft-topic-page .post_rank * {
+  color: var(--fft-muted);
+  font-size: 14px;
+}
+.fft-topic-page .post_avatar {
+  width: 168px;
+  aspect-ratio: 400 / 640;
+  margin: 0 auto;
+  overflow: hidden;
+  border: 1px solid var(--fft-line);
+  background: var(--fft-paper);
+}
+.fft-topic-page .post_avatar img {
+  width: 100% !important;
+  height: 100% !important;
+  max-width: none !important;
+  display: block;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 0;
+  filter: grayscale(1) contrast(1.02);
+  transition: filter .35s ease, transform .45s ease;
+}
+.fft-topic-page .post_row:hover .post_avatar img { filter: grayscale(1) contrast(1.12); transform: scale(1.025); }
+.fft-topic-page .presence.online {
+  margin: 10px auto 0;
+  padding: 3px 8px;
+  display: block;
+  border: 1px solid var(--fft-line);
+  border-radius: 0;
+  background: var(--transparent);
+  color: var(--fft-muted);
+  font-size: 14px;
+}
+.fft-topic-page .post_userinfo {
+  margin-top: 18px;
+  border-top: 1px solid var(--fft-line);
+  text-align: left;
+}
+.fft-topic-page .user_field {
+  padding: 7px 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  border-bottom: 1px solid var(--fft-line);
+}
+.fft-topic-page .field_label,
+.fft-topic-page .field_content,
+.fft-topic-page .field_content * {
+  color: var(--fft-muted);
+  font-size: 14px;
+}
+.fft-topic-page .field_content,
+.fft-topic-page .field_content * { color: var(--fft-ink); text-align: right; }
+.fft-topic-page #list_awards { margin-top: 12px; justify-content: center; }
+.fft-topic-page .award { width: 34px; height: 34px; border-radius: 50%; filter: grayscale(1); }
+.fft-topic-page .post_contact {
+  margin-top: 16px;
+  padding-top: 14px;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  border-top: 1px solid var(--fft-line);
+}
+.fft-topic-page .post_contact img { width: 20px; height: 20px; object-fit: contain; filter: grayscale(1); }
+.fft-topic-page .post_message {
+  min-width: 0;
+  min-height: 520px;
+  padding: 42px 46px;
+  color: var(--fft-ink);
+  font-size: 15px;
+  line-height: 1.85;
+}
+.fft-topic-page .post_message > div:first-child { max-width: 720px; margin: 0 auto; }
+.fft-topic-page .post_message img { max-width: 100%; }
+.fft-topic-page .post_signature {
+  margin-top: 50px;
+  padding-top: 24px;
+  overflow: hidden;
+  border-top: 1px solid var(--fft-line);
+}
+.fft-viewtopic #forum_rules,
+.fft-viewtopic #quickreply_content,
+.fft-viewtopic .quickmod {
+  margin: 20px 0 0;
+  padding: 20px;
+  border: 1px solid var(--fft-line);
+  border-radius: 0;
+  background: var(--fft-paper);
+}
+.fft-viewtopic #forum_rules .h3 {
+  margin-bottom: 14px;
+  color: var(--fft-ink);
+  font: 500 28px/1 "Cormorant Garamond", serif;
+}
+.fft-viewtopic #quickreply_content { overflow: hidden; }
+.fft-viewtopic .quickmod {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+}
+.fft-viewtopic .quickmod label,
+.fft-viewtopic .quickmod select { font-size: 14px; }
+@media (max-width: 900px) {
+  .fft-topic-page .post_row { grid-template-columns: 190px minmax(0, 1fr); }
+  .fft-topic-page .post_profile { padding: 20px 14px; }
+  .fft-topic-page .post_avatar { width: 145px; }
+  .fft-topic-page .post_message { padding: 34px 30px; }
+}
+@media (max-width: 620px) {
+  .fft-viewtopic-head { grid-template-columns: 1fr; gap: 16px; padding: 18px; }
+  .fft-viewtopic .fft-viewtopic-actions { align-items: stretch; flex-direction: column; }
+  .fft-topic-page .post_row { grid-template-columns: 1fr; grid-template-rows: auto; }
+  .fft-topic-page .post_details,
+  .fft-topic-page .post_profile,
+  .fft-topic-page .post_message { grid-column: 1; }
+  .fft-topic-page .post_details { align-items: flex-start; flex-direction: column; }
+  .fft-topic-page .post_profile { border-right: 0; border-bottom: 1px solid var(--fft-line); }
+  .fft-topic-page .post_avatar { width: 135px; }
+  .fft-topic-page .post_message { min-height: 0; padding: 28px 20px; }
+}
