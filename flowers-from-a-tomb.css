@@ -2592,7 +2592,7 @@ body .page-actions .button.primary:hover {
   object-fit: cover;
   object-position: center top;
   border-radius: 0;
-  filter: grayscale(1) contrast(1.08);
+  filter: grayscale(1) contrast(1.08) blur(4px);
   opacity: 0.8;
 }
 .fft-topic-page .post_avatar-main {
