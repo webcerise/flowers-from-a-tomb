@@ -52,7 +52,6 @@ body { min-width: 0; font: 400 14px/1.6 var(--font); background: var(--body); }
   color: var(--fft-ink);
   font: italic 500 clamp(45px, 7vw, 64px)/.82 "Cormorant Garamond", serif;
   letter-spacing: -.045em;
-  text-transform: lowercase;
 }
 
 /* Balise de grand titre manuscrit : <t2>…</t2> */
