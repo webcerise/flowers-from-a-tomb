@@ -45,6 +45,12 @@ body { min-width: 0; font: 400 14px/1.6 var(--font); background: var(--body); }
 .main_forum { width: 100%; }
 #page-body { width: var(--forumSize); margin: 34px auto 0; }
 
+.navigation_links a:not(:first-of-type)::before {
+  content: "\203A" !important;
+  margin-right: 5px;
+  font-size: var(--normal-size);
+}
+
 /* Balise de grand titre : <t1>…</t1> */
 :is(t1, t1g1, t1g2, t1g3, t1g4) {
   margin: 10px 0 13px;
@@ -3905,3 +3911,15 @@ body .page-actions .button.primary:hover {
   .fft-topic-page .post_message { min-height: 0; padding: 28px 20px; }
 }
 
+
+.navigation_links a {
+
+  font-size: var(--normal-size);
+
+  &:not(:first-of-type):before {
+
+    content: ">";
+    font-size: var(--nomal-size);
+    margin-right: 5px;
+  }
+}
