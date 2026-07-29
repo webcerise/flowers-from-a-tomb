@@ -1964,6 +1964,297 @@ img.avatar-preview {
   }
 }
 
+/* Variantes LS — fiches administratives */
+.fft-admin-variant {
+  width: min(680px, 100%);
+  margin: 30px auto;
+  box-sizing: border-box;
+  border: 1px solid var(--fft-line);
+  background: var(--fft-paper);
+  color: var(--fft-ink);
+}
+.fft-admin-variant * { box-sizing: border-box; }
+.fft-admin-variant img { object-fit: cover; object-position: center; }
+.fft-admin-kicker-alt {
+  display: block;
+  color: var(--fft-muted);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+}
+.fft-admin-copy {
+  color: var(--fft-muted);
+  font-size: 13px;
+  line-height: 1.8;
+  text-align: justify;
+  white-space: pre-line;
+}
+.fft-admin-copy strong { color: var(--fft-ink); }
+
+/* 01 — éditoriale */
+.fft-admin-editorial {
+  display: grid;
+  grid-template-columns: 84px minmax(0, 1fr);
+}
+.fft-admin-editorial-rail {
+  padding: 26px 17px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  border-right: 1px solid var(--fft-line);
+}
+.fft-admin-editorial-rail b {
+  color: var(--fft-muted);
+  font: italic 13px/1 "Cormorant Garamond", serif;
+}
+.fft-admin-editorial-rail img {
+  width: 46px !important;
+  height: 46px !important;
+  outline: 1px solid var(--fft-line);
+  outline-offset: 3px;
+}
+.fft-admin-editorial-main { padding: 38px 42px 40px; }
+.fft-admin-editorial h2 {
+  margin: 10px 0 25px;
+  color: var(--fft-ink);
+  font: 500 clamp(44px, 7vw, 66px)/.82 "Cormorant Garamond", serif;
+  letter-spacing: -.045em;
+}
+.fft-admin-editorial .fft-admin-copy {
+  padding-top: 24px;
+  border-top: 1px solid var(--fft-line);
+}
+
+/* 02 — bulletin */
+.fft-admin-bulletin { border-color: var(--fft-ink); }
+.fft-admin-bulletin-head {
+  padding: 27px 32px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: end;
+  gap: 24px;
+  background: var(--fft-ink);
+  color: var(--fft-paper);
+}
+.fft-admin-bulletin-head h2 {
+  margin: 8px 0 0;
+  color: inherit;
+  font: 500 clamp(36px, 6vw, 54px)/.88 "Cormorant Garamond", serif;
+}
+.fft-admin-bulletin-head .fft-admin-kicker-alt { color: inherit; opacity: .65; }
+.fft-admin-bulletin-icons { display: flex; gap: 7px; }
+.fft-admin-bulletin-icons img {
+  width: 46px !important;
+  height: 46px !important;
+  border: 1px solid color-mix(in srgb, var(--fft-paper) 35%, transparent);
+  filter: grayscale(1) contrast(1.15);
+}
+.fft-admin-bulletin-body { padding: 31px 34px 34px; }
+.fft-admin-bulletin-meta {
+  margin-top: 25px;
+  padding-top: 13px;
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  border-top: 1px solid var(--fft-line);
+  color: var(--fft-muted);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+/* 03 — split moodboard */
+.fft-admin-split {
+  min-height: 460px;
+  display: grid;
+  grid-template-columns: minmax(210px, 38%) minmax(0, 1fr);
+}
+.fft-admin-split-visual {
+  padding: 18px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 7px;
+  border-right: 1px solid var(--fft-line);
+  background: var(--fft-panel);
+}
+.fft-admin-split-visual img {
+  width: 100% !important;
+  height: 100% !important;
+  min-height: 0;
+  filter: grayscale(1) contrast(.88);
+}
+.fft-admin-split-content {
+  padding: 42px 38px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.fft-admin-split h2 {
+  margin: 8px 0 25px;
+  font: italic 500 clamp(40px, 6vw, 59px)/.82 "Cormorant Garamond", serif;
+  letter-spacing: -.04em;
+}
+.fft-admin-split .fft-admin-copy {
+  padding-top: 22px;
+  border-top: 1px solid var(--fft-line);
+}
+
+/* 04 — couverture panoramique */
+.fft-admin-cover { overflow: hidden; }
+.fft-admin-cover-visual {
+  height: 270px;
+  position: relative;
+}
+.fft-admin-cover-visual::after {
+  content: "";
+  position: absolute;
+  inset: 40% 0 0;
+  background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, .72));
+  pointer-events: none;
+}
+.fft-admin-cover-visual img {
+  width: 100% !important;
+  height: 100% !important;
+  display: block;
+  filter: grayscale(1) contrast(.9);
+}
+.fft-admin-cover-title {
+  position: absolute;
+  z-index: 1;
+  right: 34px;
+  bottom: 27px;
+  left: 34px;
+  color: #f3f2ee;
+}
+.fft-admin-cover-title span {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+}
+.fft-admin-cover-title h2 {
+  margin: 7px 0 0;
+  color: inherit;
+  font: 500 clamp(40px, 7vw, 63px)/.82 "Cormorant Garamond", serif;
+  letter-spacing: -.04em;
+}
+.fft-admin-cover-body {
+  padding: 31px 36px 37px;
+  columns: 2 230px;
+  column-gap: 34px;
+  column-rule: 1px solid var(--fft-line);
+}
+
+/* 05 — lettre */
+.fft-admin-letter {
+  width: min(570px, 100%);
+  padding: 52px 54px 45px;
+  position: relative;
+}
+.fft-admin-letter-portrait {
+  width: 74px !important;
+  height: 74px !important;
+  position: absolute;
+  top: 38px;
+  right: 45px;
+  border-radius: 50%;
+  outline: 1px solid var(--fft-line);
+  outline-offset: 5px;
+  filter: grayscale(1) contrast(1.15);
+}
+.fft-admin-letter h2 {
+  max-width: calc(100% - 105px);
+  margin: 10px 0 32px;
+  font: italic 500 clamp(40px, 7vw, 58px)/.86 "Mea Culpa", cursive;
+  letter-spacing: 0;
+}
+.fft-admin-letter blockquote {
+  margin: 0 0 25px;
+  padding: 13px 0 13px 19px;
+  border-left: 1px solid var(--fft-line);
+  color: var(--fft-ink);
+  font: italic 500 18px/1.35 "Cormorant Garamond", serif;
+}
+.fft-admin-letter-signature {
+  margin-top: 27px;
+  color: var(--fft-ink);
+  font: italic 500 25px/1 "Mea Culpa", cursive;
+  text-align: right;
+}
+
+/* 06 — affiche collage */
+.fft-admin-poster {
+  padding: 18px;
+  background: var(--fft-panel);
+}
+.fft-admin-poster-inner {
+  padding: 32px 34px 35px;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--fft-line);
+  background: var(--fft-paper);
+}
+.fft-admin-poster-top {
+  margin-bottom: 29px;
+  display: grid;
+  grid-template-columns: 268px minmax(0, 1fr);
+  align-items: center;
+  gap: 30px;
+}
+.fft-admin-poster-gif {
+  width: 268px !important;
+  height: 150px !important;
+  display: block;
+  outline: 1px solid var(--fft-line);
+  outline-offset: 4px;
+  filter: grayscale(1) contrast(1.25);
+}
+.fft-admin-poster h2 {
+  margin: 9px 0 0;
+  font: 800 clamp(31px, 5vw, 47px)/.88 "Cormorant Garamond", serif;
+  letter-spacing: -.025em;
+  text-transform: uppercase;
+}
+.fft-admin-poster-stamp {
+  margin-top: 13px;
+  padding: 5px 8px;
+  display: inline-block;
+  border: 1px solid var(--fft-ink);
+  color: var(--fft-ink);
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  transform: rotate(-2deg);
+}
+.fft-admin-poster .fft-admin-copy {
+  padding-top: 23px;
+  border-top: 1px solid var(--fft-line);
+}
+
+@media (max-width: 620px) {
+  .fft-admin-editorial { grid-template-columns: 58px minmax(0, 1fr); }
+  .fft-admin-editorial-main { padding: 30px 24px 32px; }
+  .fft-admin-editorial-rail { padding-right: 10px; padding-left: 10px; }
+  .fft-admin-editorial-rail img { width: 36px !important; height: 36px !important; }
+  .fft-admin-bulletin-head { grid-template-columns: 1fr; }
+  .fft-admin-split { grid-template-columns: 1fr; }
+  .fft-admin-split-visual {
+    height: 250px;
+    border-right: 0;
+    border-bottom: 1px solid var(--fft-line);
+  }
+  .fft-admin-cover-body { columns: 1; }
+  .fft-admin-letter { padding: 39px 28px 35px; }
+  .fft-admin-letter-portrait { width: 58px !important; height: 58px !important; top: 29px; right: 27px; }
+  .fft-admin-poster-top { grid-template-columns: 1fr; }
+  .fft-admin-poster-gif { max-width: 100% !important; }
+}
+
 :root,
 :root[data-color-scheme="light"],
 :root[data-color-scheme="dark"] {
