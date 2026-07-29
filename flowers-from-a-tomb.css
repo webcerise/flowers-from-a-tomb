@@ -1790,7 +1790,7 @@ body form.fft-members-filter {
   text-transform: uppercase;
   transition: color .25s ease, background-color .25s ease, border-color .25s ease;
 }
-.fft-member-contact a:after { content: "Message privÃ©"; }
+.fft-member-contact a:after { content: "Message privé"; }
 .fft-member-contact img[src="https://2img.net/i/fa/modernbb/icon_contact_pm.png"] {
   display: none;
 }
@@ -2060,7 +2060,7 @@ body .page-actions:not(form) #mark_read:hover {
 .fft-forum-page .fft-topic-avatar { border-color: var(--fft-line); }
 .fft-forum-page .fft-topic-avatar { background: var(--transparent); }
 
-/* Actions et modÃ©ration des sujets */
+/* Actions et modération des sujets */
 body .page-actions .buttons { gap: 8px; }
 body .page-actions .button,
 body .page-actions button,
@@ -2205,7 +2205,7 @@ body .page-actions .button.primary:hover {
   }
 }
 
-/* Direction finale viewforum â€” continuitÃ© directe de l'index */
+/* Direction finale viewforum — continuité directe de l'index */
 .fft-viewforum {
   margin-top: 34px;
   color: var(--fft-ink);
