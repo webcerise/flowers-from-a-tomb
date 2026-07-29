@@ -1644,13 +1644,6 @@ body .page-actions:not(form) #mark_read:hover {
 }
 .fft-topic-main { min-width: 0; padding: 18px 22px; align-self: center; }
 .fft-topic-heading { display: flex; align-items: baseline; flex-wrap: wrap; gap: 8px; }
-.fft-topic .topic-type {
-  color: var(--fft-muted);
-  font-size: 14px;
-  font-weight: 600;
-  letter-spacing: .12em;
-  text-transform: uppercase;
-}
 .fft-topic .topictitle {
   max-width: 100%;
   color: var(--fft-ink);
@@ -1708,14 +1701,6 @@ body .page-actions:not(form) #mark_read:hover {
   border-left: 1px solid var(--fft-line);
   color: var(--fft-muted);
   font-size: 14px;
-}
-.fft-topic-label {
-  margin-bottom: 6px;
-  color: var(--fft-muted);
-  font-size: 14px;
-  font-weight: 600;
-  letter-spacing: .1em;
-  text-transform: uppercase;
 }
 .fft-topic-time { color: var(--fft-muted); font-size: 14px; }
 .fft-topic-author,
@@ -1788,8 +1773,8 @@ body .page-actions:not(form) #mark_read:hover {
   line-height: 1.7;
 }
 .fft-forum-page .fft-topic {
-  height: 70px;
-  min-height: 70px;
+  height: 80px;
+  min-height: 80px;
   margin: 0;
   border: 0;
   border-bottom: 1px solid var(--fft-line);
@@ -1807,7 +1792,6 @@ body .page-actions:not(form) #mark_read:hover {
 .fft-forum-page .fft-topic .topicslist-pagination { margin-top: 3px; }
 .fft-forum-page .fft-topic-stats { padding: 8px 15px; gap: 2px; }
 .fft-forum-page .fft-topic-last { padding: 8px 18px; }
-.fft-forum-page .fft-topic-label { margin-bottom: 2px; }
 .fft-forum-page .fft-topic-stats,
 .fft-forum-page .fft-topic-last,
 .fft-forum-page .fft-topic-avatar { border-color: var(--fft-line); }
@@ -1818,5 +1802,79 @@ body .page-actions:not(form) #mark_read:hover {
   border-top: 1px solid var(--fft-line);
   border-bottom: 1px solid var(--fft-line);
   color: var(--fft-muted);
+  font-size: 14px;
+}
+
+/* Actions et modération des sujets */
+body .page-actions .buttons { gap: 8px; }
+body .page-actions .button,
+body .page-actions button,
+body .page-actions input[type="submit"] {
+  min-height: 40px;
+  padding: 0 14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 1px solid var(--fft-line);
+  border-radius: 0;
+  background: var(--transparent);
+  box-shadow: inset 0 0 0 0 var(--fft-ink);
+  color: var(--fft-ink);
+  font: 600 14px/1 Inter, Arial, sans-serif;
+  cursor: pointer;
+  transition: color .3s ease, border-color .3s ease, box-shadow .3s ease;
+}
+body .page-actions .button:hover,
+body .page-actions button:hover,
+body .page-actions input[type="submit"]:hover,
+body .page-actions #sort-btn.expanded {
+  border-color: var(--fft-ink);
+  box-shadow: inset 220px 0 0 0 var(--fft-ink);
+  color: var(--fft-paper);
+  transform: none;
+}
+body .page-actions .button.primary {
+  border-color: var(--fft-ink);
+  background: var(--fft-ink);
+  color: var(--fft-paper);
+}
+body .page-actions .button.primary:hover {
+  background: var(--transparent);
+  box-shadow: inset 0 0 0 0 var(--fft-ink);
+  color: var(--fft-ink);
+}
+#moderation_link { white-space: nowrap; }
+#moderation_link:empty { display: none; }
+#moderation_link a {
+  color: inherit;
+  font-size: 14px;
+  font-weight: 600;
+}
+#sort-btn i { font-size: 18px; }
+#sort-topics .sort-form {
+  min-width: 245px;
+  margin-top: 8px;
+  padding: 18px;
+  z-index: 30;
+  border: 1px solid var(--fft-line);
+  border-radius: 0;
+  background: var(--fft-paper);
+  box-shadow: 0 18px 45px var(--shadow);
+  color: var(--fft-ink);
+}
+#sort-topics .sort-form h3 {
+  margin: 0 0 14px;
+  color: var(--fft-ink);
+  font: 500 25px/1 "Cormorant Garamond", serif;
+}
+#sort-topics .sort-form p { margin: 0 0 14px; font-size: 14px; }
+#sort-topics .sort-form label { color: var(--fft-muted); font-size: 14px; }
+#sort-topics .sort-form select {
+  min-height: 40px;
+  border: 1px solid var(--fft-line);
+  border-radius: 0;
+  background: var(--fft-panel);
+  color: var(--fft-ink);
   font-size: 14px;
 }
