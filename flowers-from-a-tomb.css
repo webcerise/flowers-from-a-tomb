@@ -789,6 +789,192 @@ img.avatar-preview {
   #fft-profile-view .profile_infos { padding: 22px 18px; }
 }
 
+/* Fiche de présentation */
+.fft-pres {
+  width: min(720px, 100%);
+  margin: 24px auto;
+  border: 1px solid var(--fft-line);
+  background: var(--fft-paper);
+  color: var(--fft-ink);
+  font: 400 14px/1.75 var(--font);
+}
+.fft-pres * { box-sizing: border-box; }
+.fft-pres-head {
+  min-height: 310px;
+  padding: 42px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 246px;
+  gap: 36px;
+  align-items: center;
+  border-bottom: 1px solid var(--fft-line);
+}
+.fft-pres-kicker {
+  margin-bottom: 16px;
+  display: block;
+  color: var(--fft-muted);
+  font: 600 11px/1 var(--font);
+  letter-spacing: .18em;
+  text-transform: uppercase;
+}
+.fft-pres-name {
+  margin: 0;
+  color: var(--fft-ink);
+  font: 500 clamp(46px, 8vw, 72px)/.78 "Cormorant Garamond", serif;
+  letter-spacing: -.045em;
+  text-transform: none;
+}
+.fft-pres-quote {
+  max-width: 310px;
+  margin: 22px 0 0;
+  color: var(--fft-muted);
+  font: italic 18px/1.25 "Cormorant Garamond", serif;
+}
+.fft-pres-mood {
+  height: 220px;
+  position: relative;
+}
+.fft-pres-mood img {
+  width: 118px;
+  height: 118px;
+  position: absolute;
+  display: block;
+  border: 5px solid var(--fft-paper);
+  outline: 1px solid var(--fft-line);
+  background: var(--fft-panel);
+  object-fit: cover;
+  filter: grayscale(1) contrast(1.04);
+  box-shadow: 0 9px 18px rgb(0 0 0 / 16%);
+}
+.fft-pres-mood img:nth-child(1) { top: 0; left: 0; transform: rotate(-6deg); }
+.fft-pres-mood img:nth-child(2) { top: 22px; right: 0; transform: rotate(7deg); }
+.fft-pres-mood img:nth-child(3) { bottom: 0; left: 62px; transform: rotate(-2deg); }
+.fft-pres-facts {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-bottom: 1px solid var(--fft-line);
+}
+.fft-pres-facts div {
+  min-width: 0;
+  padding: 18px 20px;
+  border-right: 1px solid var(--fft-line);
+}
+.fft-pres-facts div:last-child { border-right: 0; }
+.fft-pres-facts dt {
+  margin: 0 0 4px;
+  color: var(--fft-muted);
+  font: 600 10px/1 var(--font);
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+.fft-pres-facts dd {
+  margin: 0;
+  overflow: hidden;
+  color: var(--fft-ink);
+  font-weight: 500;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.fft-pres-section {
+  padding: 40px 44px;
+  position: relative;
+  border-bottom: 1px solid var(--fft-line);
+}
+.fft-pres-section:last-child { border-bottom: 0; }
+.fft-pres-section::before {
+  content: attr(data-num);
+  position: absolute;
+  top: 43px;
+  right: 44px;
+  color: var(--fft-muted);
+  font: italic 13px/1 "Cormorant Garamond", serif;
+}
+.fft-pres-title {
+  margin: 0 0 24px;
+  color: var(--fft-ink);
+  font: 500 38px/.9 "Cormorant Garamond", serif;
+  letter-spacing: -.025em;
+  text-transform: lowercase;
+}
+.fft-pres-text {
+  margin: 0;
+  color: var(--fft-muted);
+  text-align: justify;
+}
+.fft-pres-traits {
+  margin: 0 0 24px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+.fft-pres-traits span {
+  padding: 5px 9px;
+  border: 1px solid var(--fft-line);
+  color: var(--fft-ink);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+.fft-pres-questions {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+.fft-pres-question {
+  min-height: 170px;
+  padding: 18px;
+  border: 1px solid var(--fft-line);
+  background: var(--fft-panel);
+}
+.fft-pres-question b {
+  margin-bottom: 14px;
+  display: block;
+  color: var(--fft-ink);
+  font: 500 20px/1.05 "Cormorant Garamond", serif;
+}
+.fft-pres-question span {
+  color: var(--fft-muted);
+  font-size: 13px;
+}
+.fft-pres-free {
+  max-height: 390px;
+  padding-right: 12px;
+  overflow-y: auto;
+  scrollbar-color: var(--fft-muted) transparent;
+  scrollbar-width: thin;
+}
+.fft-pres-player {
+  padding: 27px 44px;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 24px;
+  align-items: center;
+  background: var(--fft-panel);
+}
+.fft-pres-player strong {
+  color: var(--fft-ink);
+  font: 500 27px/1 "Cormorant Garamond", serif;
+}
+.fft-pres-player p {
+  margin: 0;
+  color: var(--fft-muted);
+  font-size: 12px;
+}
+@media (max-width: 680px) {
+  .fft-pres-head { padding: 34px 24px; grid-template-columns: 1fr; }
+  .fft-pres-mood { width: 246px; margin: 0 auto; }
+  .fft-pres-facts { grid-template-columns: repeat(2, 1fr); }
+  .fft-pres-facts div:nth-child(2) { border-right: 0; }
+  .fft-pres-facts div:nth-child(-n+2) { border-bottom: 1px solid var(--fft-line); }
+  .fft-pres-section { padding: 34px 24px; }
+  .fft-pres-section::before { top: 37px; right: 24px; }
+  .fft-pres-questions { grid-template-columns: 1fr; }
+  .fft-pres-question { min-height: 0; }
+  .fft-pres-player { padding: 26px 24px; grid-template-columns: 1fr; gap: 8px; }
+}
+
 :root,
 :root[data-color-scheme="light"],
 :root[data-color-scheme="dark"] {
