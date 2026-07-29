@@ -1626,11 +1626,11 @@ body .page-actions:not(form) #mark_read:hover {
 .topic_separator { height: 1px; margin: 30px 0 14px; background: var(--fft-line); }
 .fft-topic {
   width: 100%;
-  min-height: 170px;
-  margin: 0 0 14px;
+  min-height: 118px;
+  margin: 0 0 10px;
   padding: 0;
   display: grid;
-  grid-template-columns: 54px minmax(0, 1fr) 118px 205px 104px;
+  grid-template-columns: 40px minmax(0, 1fr) 105px 185px 78px;
   align-items: stretch;
   border: 1px solid var(--fft-line);
   border-radius: 0;
@@ -1650,8 +1650,8 @@ body .page-actions:not(form) #mark_read:hover {
   border-right: 1px solid var(--fft-line);
   background: var(--transparent);
 }
-.fft-topic-state img { width: 15px; height: 15px; display: block; object-fit: contain; filter: grayscale(1); }
-.fft-topic-main { min-width: 0; padding: 27px 28px; align-self: center; }
+.fft-topic-state img { width: 13px; height: 13px; display: block; object-fit: contain; filter: grayscale(1); }
+.fft-topic-main { min-width: 0; padding: 18px 22px; align-self: center; }
 .fft-topic-heading { display: flex; align-items: baseline; flex-wrap: wrap; gap: 8px; }
 .fft-topic .topic-type {
   color: var(--fft-muted);
@@ -1663,14 +1663,14 @@ body .page-actions:not(form) #mark_read:hover {
 .fft-topic .topictitle {
   max-width: 100%;
   color: var(--fft-ink);
-  font: 500 29px/1 "Cormorant Garamond", serif;
+  font: 500 25px/1 "Cormorant Garamond", serif;
   white-space: normal;
   transition: letter-spacing .28s ease, transform .28s ease;
 }
 .fft-topic:hover .topictitle { letter-spacing: .01em; transform: translateX(3px); }
 .fft-topic-heading > img { width: 15px; height: 15px; filter: grayscale(1); }
 .fft-topic-byline {
-  margin-top: 10px;
+  margin-top: 7px;
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
@@ -1682,19 +1682,23 @@ body .page-actions:not(form) #mark_read:hover {
 .fft-topic .topicslist-description {
   width: auto;
   max-width: 580px;
-  margin-top: 13px;
-  padding: 12px 0 0;
-  border-top: 1px solid var(--fft-line);
+  margin-top: 7px;
+  padding: 0;
+  overflow: hidden;
+  border-top: 0;
   color: var(--fft-muted);
   font-size: 14px;
+  line-height: 1.45;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
-.fft-topic .topicslist-pagination { margin-top: 10px; display: block; color: var(--fft-muted); font-size: 14px; }
+.fft-topic .topicslist-pagination { margin-top: 6px; display: block; color: var(--fft-muted); font-size: 14px; }
 .fft-topic-stats {
-  padding: 24px 18px;
+  padding: 18px 15px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 18px;
+  gap: 9px;
   border-left: 1px solid var(--fft-line);
   color: var(--fft-muted);
   font-size: 14px;
@@ -1705,7 +1709,7 @@ body .page-actions:not(form) #mark_read:hover {
 .fft-topic-stats strong { color: var(--fft-ink); font-size: 18px; }
 .fft-topic-last {
   min-width: 0;
-  padding: 24px 20px;
+  padding: 18px;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -1715,7 +1719,7 @@ body .page-actions:not(form) #mark_read:hover {
   font-size: 14px;
 }
 .fft-topic-label {
-  margin-bottom: 10px;
+  margin-bottom: 6px;
   color: var(--fft-muted);
   font-size: 14px;
   font-weight: 600;
@@ -1725,7 +1729,7 @@ body .page-actions:not(form) #mark_read:hover {
 .fft-topic-time { color: var(--fft-muted); font-size: 14px; }
 .fft-topic-author,
 .fft-topic-author a { margin-top: 4px; color: var(--fft-ink); font-size: 14px; }
-.fft-topic-go { position: absolute; top: 18px; right: 16px; }
+.fft-topic-go { position: absolute; top: 14px; right: 13px; }
 .fft-topic-go img { width: 16px; height: 16px; filter: grayscale(1); }
 .fft-topic-avatar {
   width: 100%;
@@ -1758,7 +1762,7 @@ body .page-actions:not(form) #mark_read:hover {
   text-align: center;
 }
 @media (max-width: 900px) {
-  .fft-topic { grid-template-columns: 46px minmax(0, 1fr) 100px 90px; }
+  .fft-topic { grid-template-columns: 40px minmax(0, 1fr) 90px 78px; }
   .fft-topic-last { grid-column: 2 / 4; grid-row: 2; border-top: 1px solid var(--fft-line); }
   .fft-topic-avatar { grid-column: 4; grid-row: 1 / 3; }
 }
