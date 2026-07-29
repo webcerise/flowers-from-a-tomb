@@ -1630,7 +1630,7 @@ body .page-actions:not(form) #mark_read:hover {
   margin: 0 0 10px;
   padding: 0;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 82px 185px 78px;
+  grid-template-columns: minmax(0, 1fr) 142px 185px 78px;
   align-items: stretch;
   border: 1px solid var(--fft-line);
   border-radius: 0;
@@ -1679,16 +1679,16 @@ body .page-actions:not(form) #mark_read:hover {
 .fft-topic .topicslist-pagination { margin-top: 6px; display: block; color: var(--fft-muted); font-size: 14px; }
 .fft-topic-stats {
   padding: 6px 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 1px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 8px;
   border-left: 1px solid var(--fft-line);
   color: var(--fft-muted);
   font-size: 14px;
   text-align: left;
 }
-.fft-topic-stats span,
+.fft-topic-stats span { min-width: 0; display: block; }
 .fft-topic-stats strong { display: block; }
 .fft-topic-stats strong { color: var(--fft-ink); font-size: 16px; line-height: 1.15; }
 .fft-topic-last {
@@ -1836,13 +1836,13 @@ body .page-actions #sort-btn.expanded {
 }
 body .page-actions .button.primary {
   border-color: var(--fft-ink);
-  background: var(--fft-ink);
-  color: var(--fft-paper);
+  background: var(--transparent);
+  color: var(--fft-ink);
 }
 body .page-actions .button.primary:hover {
   background: var(--transparent);
-  box-shadow: inset 0 0 0 0 var(--fft-ink);
-  color: var(--fft-ink);
+  box-shadow: inset 220px 0 0 0 var(--fft-ink);
+  color: var(--fft-paper);
 }
 #moderation_link { white-space: nowrap; }
 #moderation_link:empty { display: none; }
@@ -1883,8 +1883,8 @@ body .page-actions .button.primary:hover {
 .fft-viewforum { width: 100%; margin-top: 34px; }
 .fft-viewforum > .fft-index { margin-top: 0; }
 .fft-viewforum-head {
-  min-height: 180px;
-  padding: 34px 24px 30px;
+  min-height: 116px;
+  padding: 20px 24px 24px;
   border-top: 1px solid var(--fft-line);
   border-bottom: 1px solid var(--fft-line);
 }
@@ -1897,19 +1897,30 @@ body .page-actions .button.primary:hover {
   text-transform: uppercase;
 }
 .fft-viewforum-head h1 {
-  margin: 9px 0 0;
+  margin: 0;
   color: var(--fft-ink);
-  font: 500 clamp(44px, 5vw, 64px)/.88 "Cormorant Garamond", serif;
-  letter-spacing: -.035em;
+  font: 500 clamp(38px, 4vw, 48px)/.9 "Cormorant Garamond", serif;
+  letter-spacing: -.025em;
+  text-align: left;
+  text-transform: none;
 }
 .fft-viewforum-head .forum-page_desc {
   max-width: 680px;
-  margin: 18px 0 0;
+  margin: 12px 0 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: var(--transparent);
   color: var(--fft-muted);
   font-size: 14px;
   line-height: 1.7;
 }
-.fft-viewforum-nav { margin-bottom: 25px; color: var(--fft-muted); font-size: 14px; }
+.fft-viewforum-nav {
+  margin-bottom: 12px;
+  color: var(--fft-muted);
+  font-size: 14px;
+  text-align: left;
+}
 .fft-viewforum-nav a {
   color: var(--fft-muted);
   font-size: 14px;
@@ -1917,9 +1928,9 @@ body .page-actions .button.primary:hover {
 }
 .fft-viewforum-nav a:hover { color: var(--fft-ink); }
 .fft-viewforum .fft-viewforum-actions {
-  min-height: 60px;
-  margin: 14px 0;
-  padding: 10px 0;
+  min-height: 52px;
+  margin: 10px 0 0;
+  padding: 6px 0;
   border: 0;
   border-bottom: 1px solid var(--fft-line);
   background: var(--transparent);
