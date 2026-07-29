@@ -46,7 +46,7 @@ body { min-width: 0; font: 400 14px/1.6 var(--font); background: var(--body); }
 #page-body { width: var(--forumSize); margin: 34px auto 0; }
 
 /* Balise de grand titre : <t1>…</t1> */
-t1 {
+:is(t1, t1g1, t1g2, t1g3, t1g4) {
   margin: 10px 0 13px;
   display: block;
   color: var(--fft-ink);
@@ -56,7 +56,7 @@ t1 {
 }
 
 /* Balise de grand titre manuscrit : <t2>…</t2> */
-t2 {
+:is(t2, t2g1, t2g2, t2g3, t2g4) {
   margin: 10px 0 13px;
   display: block;
   color: var(--fft-ink);
@@ -65,7 +65,7 @@ t2 {
 }
 
 /* Balise de petit libellé gras : <b1>…</b1> */
-b1 {
+:is(b1, b1g1, b1g2, b1g3, b1g4) {
   margin: 0 0 4px;
   color: var(--fft-muted);
   font-size: 9px;
@@ -75,7 +75,7 @@ b1 {
 }
 
 /* Balise d’étiquette encadrée : <b2>…</b2> */
-b2 {
+:is(b2, b2g1, b2g2, b2g3, b2g4) {
   padding: 4px 8px;
   display: inline-block;
   border: 1px solid var(--fft-line);
@@ -87,7 +87,7 @@ b2 {
 }
 
 /* Balise de libellé gras en ligne : <b3>…</b3> */
-b3 {
+:is(b3, b3g1, b3g2, b3g3, b3g4) {
   color: var(--fft-ink);
   font-size: 10px;
   font-weight: 700;
@@ -96,7 +96,7 @@ b3 {
 }
 
 /* Balise d’étiquette pleine : <b4>…</b4> */
-b4 {
+:is(b4, b4g1, b4g2, b4g3, b4g4) {
   padding: 4px 8px;
   display: inline-block;
   background: var(--fft-ink);
@@ -109,20 +109,41 @@ b4 {
 }
 
 /* Balise de graisse forte : <b5>…</b5> */
-b5 {
+:is(b5, b5g1, b5g2, b5g3, b5g4) {
   font-weight: 900;
 }
 
 /* Balise de soulignement en aplat : <u1>…</u1> */
-u1 {
+:is(u1, u1g1, u1g2, u1g3, u1g4) {
   text-decoration: none !important;
   box-shadow: inset 0 -.5em var(--fft-line);
 }
 
 /* Balise de police sérif : <f1>…</f1> */
-f1 {
+:is(f1, f1g1, f1g2, f1g3, f1g4) {
   font-family: "Cormorant Garamond", serif;
 }
+
+/* Variantes aux couleurs des groupes */
+:is(t1g1, t2g1, b1g1, b2g1, b3g1, b5g1, f1g1) { color: var(--accent-group1); }
+:is(t1g2, t2g2, b1g2, b2g2, b3g2, b5g2, f1g2) { color: var(--accent-group2); }
+:is(t1g3, t2g3, b1g3, b2g3, b3g3, b5g3, f1g3) { color: var(--accent-group3); }
+:is(t1g4, t2g4, b1g4, b2g4, b3g4, b5g4, f1g4) { color: var(--accent-group4); }
+
+b2g1 { border-color: var(--accent-group1); }
+b2g2 { border-color: var(--accent-group2); }
+b2g3 { border-color: var(--accent-group3); }
+b2g4 { border-color: var(--accent-group4); }
+
+b4g1 { background: var(--accent-group1); border-color: var(--accent-group1); }
+b4g2 { background: var(--accent-group2); border-color: var(--accent-group2); }
+b4g3 { background: var(--accent-group3); border-color: var(--accent-group3); }
+b4g4 { background: var(--accent-group4); border-color: var(--accent-group4); }
+
+u1g1 { box-shadow: inset 0 -.5em var(--accent-group1); }
+u1g2 { box-shadow: inset 0 -.5em var(--accent-group2); }
+u1g3 { box-shadow: inset 0 -.5em var(--accent-group3); }
+u1g4 { box-shadow: inset 0 -.5em var(--accent-group4); }
 
 #page-header { width: 100%; }
 .fft-navbar {
