@@ -1898,24 +1898,14 @@ img.avatar-preview {
   margin-bottom: 6px;
 }
 .fft-prelink-card {
-  min-height: 270px;
-  display: grid;
-  grid-template-columns: 165px minmax(0, 1fr);
+  min-height: 150px;
+  position: relative;
+  display: block;
   border: 1px solid var(--fft-line);
   background: var(--fft-paper);
 }
 .fft-prelink-card:nth-child(even) {
-  grid-template-columns: minmax(0, 1fr) 165px;
-}
-.fft-prelink-card:nth-child(even) .fft-prelink-visual {
-  grid-column: 2;
-  grid-row: 1;
-  border-right: 0;
-  border-left: 1px solid var(--fft-line);
-}
-.fft-prelink-card:nth-child(even) .fft-prelink-copy {
-  grid-column: 1;
-  grid-row: 1;
+  display: block;
 }
 .fft-prelink-visual {
   min-width: 0;
@@ -1964,7 +1954,7 @@ img.avatar-preview {
 }
 .fft-prelink-copy {
   min-width: 0;
-  padding: 17px 19px 19px;
+  padding: 42px 140px 20px 20px;
 }
 .fft-prelink-copy h3 {
   margin: 0 0 10px;
@@ -2045,7 +2035,7 @@ img.avatar-preview {
   .fft-prelinks-story > div,
   .fft-prelinks-notes > div { padding: 17px 16px 19px; }
   .fft-prelink-card,
-  .fft-prelink-card:nth-child(even) { grid-template-columns: 1fr; }
+  .fft-prelink-card:nth-child(even) { display: block; }
   .fft-prelink-card .fft-prelink-visual,
   .fft-prelink-card:nth-child(even) .fft-prelink-visual {
     min-height: 250px;
@@ -2062,9 +2052,7 @@ img.avatar-preview {
   }
   .fft-prelink-card .fft-prelink-copy,
   .fft-prelink-card:nth-child(even) .fft-prelink-copy {
-    grid-column: 1;
-    grid-row: 2;
-    padding: 17px 16px 19px;
+    padding: 38px 105px 18px 16px;
   }
   .fft-prelinks-notes dl > div { grid-template-columns: 1fr; gap: 4px; }
   .fft-prelinks-contact { grid-template-columns: 1fr; gap: 8px; }
