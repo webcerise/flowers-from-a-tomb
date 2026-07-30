@@ -4253,6 +4253,7 @@ body .page-actions:not(form) #mark_read:hover {
   gap: 6px;
   color: var(--fft-muted);
   font-size: 14px;
+  text-transform: lowercase;
 }
 .fft-topic-byline .topic-author,
 .fft-topic-byline .topic-author a { color: var(--fft-ink); font-size: 14px; }
@@ -4674,6 +4675,7 @@ body .page-actions .button.primary:hover {
 .fft-viewforum .fft-topic-last {
   padding: 14px 18px;
   border-left: 1px solid var(--fft-line);
+  text-transform: lowercase;
 }
 .fft-viewforum .fft-topic-time,
 .fft-viewforum .fft-topic-author,
