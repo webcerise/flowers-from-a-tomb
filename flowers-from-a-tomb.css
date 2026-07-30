@@ -837,13 +837,16 @@ body #fft-profile-view.fft-profile-view {
 }
 #fft-profile-view .profile_avatar-scrap {
   width: 82px;
-  aspect-ratio: 1;
+  aspect-ratio: 4 / 5;
   position: absolute;
-  padding: 5px;
+  padding: 6px 6px 20px;
   overflow: visible;
-  border: 1px solid rgb(54 47 43 / 25%);
-  background: var(--fft-paper);
-  box-shadow: 0 7px 14px rgb(31 24 20 / 24%);
+  box-sizing: border-box;
+  border: 1px solid rgb(54 47 43 / 18%);
+  background: #f3efe6;
+  box-shadow:
+    0 2px 3px rgb(31 24 20 / 18%),
+    0 9px 18px rgb(31 24 20 / 26%);
 }
 #fft-profile-view .profile_avatar-scrap:before {
   content: "";
@@ -862,6 +865,7 @@ body #fft-profile-view.fft-profile-view {
   height: 100%;
   display: block;
   overflow: hidden;
+  background: #d8d4cb;
 }
 #fft-profile-view .profile_avatar-scrap img {
   width: 100% !important;
@@ -879,10 +883,9 @@ body #fft-profile-view.fft-profile-view {
 }
 #fft-profile-view .profile_avatar-scrap--one img {
   object-position: 35% 16%;
-  transform: scale(1.28);
 }
 #fft-profile-view .profile_avatar-scrap--two {
-  width: 72px;
+  width: 76px;
   top: 171px;
   right: 22px;
   transform: rotate(10deg);
@@ -892,10 +895,9 @@ body #fft-profile-view.fft-profile-view {
 }
 #fft-profile-view .profile_avatar-scrap--two img {
   object-position: 65% 32%;
-  transform: scale(1.45);
 }
 #fft-profile-view .profile_avatar-scrap--three {
-  width: 88px;
+  width: 86px;
   right: 183px;
   bottom: 51px;
   transform: rotate(27deg);
@@ -906,7 +908,6 @@ body #fft-profile-view.fft-profile-view {
 }
 #fft-profile-view .profile_avatar-scrap--three img {
   object-position: 45% 65%;
-  transform: scale(1.2);
 }
 #fft-profile-view .profile_infos {
   min-width: 0;
