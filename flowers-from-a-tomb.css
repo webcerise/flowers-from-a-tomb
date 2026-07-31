@@ -5221,6 +5221,7 @@ body .page-actions .button.primary:hover {
   gap: 2px 12px;
   background: var(--fft-panel);
   border: 1px solid var(--fft-line);
+  align-content: start;
 }
 .fft-job-list strong {
   color: var(--fft-ink);
@@ -5240,6 +5241,7 @@ body .page-actions .button.primary:hover {
   border-top: 1px solid var(--fft-line);
   color: var(--fft-muted);
   font-size: 11px;
+  text-transform: lowercase;
 }
 .fft-job-list details {
   grid-column: 1 / -1;
