@@ -5113,3 +5113,113 @@ body .page-actions .button.primary:hover {
   }
 }
 
+/* BOTTIN DES MÉTIERS — SUJET EN ONGLETS */
+.page-tab {
+  display: block;
+  margin-top: 10px;
+}
+.page-tab .post_profile,
+.page-tab .post_date,
+.page-tab .like_button,
+.page-tab .btn-quote,
+.page-tab li:has(.fa-mention),
+.page-tab .btn-ip {
+  display: none;
+}
+.page-tab .post:has(div[onglet]) {
+  display: none;
+}
+.page-tab .post:has(div[onglet]).active {
+  display: block;
+}
+.page-tab.clear .post_details {
+  display: none;
+}
+.fft-job-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.fft-job-tabs button[onglet] {
+  margin: 0;
+  padding: 6px 10px;
+  background: var(--fft-panel);
+  border: 1px solid var(--fft-line);
+  border-radius: 0;
+  color: var(--fft-muted);
+  font: 700 9px/1 var(--font);
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.fft-job-tabs button[onglet].active {
+  background: var(--fft-ink);
+  border-color: var(--fft-ink);
+  color: var(--fft-paper);
+}
+.fft-job-directory {
+  display: grid;
+  gap: 18px;
+}
+.fft-job-directory > header {
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--fft-line);
+}
+.fft-job-directory > header t1 {
+  margin-bottom: 10px;
+}
+.fft-job-directory > header > span {
+  max-width: 650px;
+  display: block;
+  color: var(--fft-muted);
+}
+.fft-job-directory section {
+  display: grid;
+  gap: 10px;
+}
+.fft-job-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+.fft-job-list article {
+  min-width: 0;
+  padding: 12px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 2px 12px;
+  background: var(--fft-panel);
+  border: 1px solid var(--fft-line);
+}
+.fft-job-list strong {
+  color: var(--fft-ink);
+  font: 700 11px/1.3 var(--font);
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+.fft-job-list em {
+  color: var(--fft-muted);
+  font-size: 10px;
+  text-align: right;
+}
+.fft-job-list article > span {
+  grid-column: 1 / -1;
+  padding-top: 8px;
+  margin-top: 6px;
+  border-top: 1px solid var(--fft-line);
+  color: var(--fft-muted);
+  font-size: 11px;
+}
+.fft-job-list a {
+  color: var(--fft-ink);
+  font-weight: 700;
+}
+@media (max-width: 700px) {
+  .fft-job-list {
+    grid-template-columns: 1fr;
+  }
+  .fft-job-tabs button[onglet] {
+    flex: 1 1 calc(50% - 6px);
+  }
+}
+
