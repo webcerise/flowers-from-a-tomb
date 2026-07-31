@@ -5178,7 +5178,7 @@ body .page-actions .button.primary:hover {
   border: 1px solid var(--fft-line);
   border-radius: 0;
   color: var(--fft-muted);
-  font: 700 9px/1 var(--font);
+  font: 700 11px/1 var(--font);
   letter-spacing: .1em;
   text-transform: uppercase;
   cursor: pointer;
@@ -5203,10 +5203,15 @@ body .page-actions .button.primary:hover {
   max-width: 650px;
   display: block;
   color: var(--fft-muted);
+  font-size: 15px;
 }
 .fft-job-directory section {
   display: grid;
   gap: 10px;
+}
+.fft-job-directory b1,
+.fft-job-directory b4 {
+  font-size: 11px;
 }
 .fft-job-list {
   display: grid;
@@ -5225,13 +5230,13 @@ body .page-actions .button.primary:hover {
 }
 .fft-job-list strong {
   color: var(--fft-ink);
-  font: 700 11px/1.3 var(--font);
+  font: 700 13px/1.3 var(--font);
   letter-spacing: .04em;
   text-transform: uppercase;
 }
 .fft-job-list em {
   color: var(--fft-muted);
-  font-size: 10px;
+  font-size: 12px;
   text-align: right;
 }
 .fft-job-list article > span {
@@ -5240,7 +5245,7 @@ body .page-actions .button.primary:hover {
   margin-top: 6px;
   border-top: 1px solid var(--fft-line);
   color: var(--fft-muted);
-  font-size: 11px;
+  font-size: 13px;
   text-transform: lowercase;
 }
 .fft-job-list details {
@@ -5248,11 +5253,11 @@ body .page-actions .button.primary:hover {
   padding-top: 8px;
   border-top: 1px solid var(--fft-line);
   color: var(--fft-muted);
-  font-size: 10px;
+  font-size: 12px;
 }
 .fft-job-list summary {
   color: var(--fft-ink);
-  font-size: 9px;
+  font-size: 11px;
   font-weight: 700;
   letter-spacing: .1em;
   text-transform: uppercase;
