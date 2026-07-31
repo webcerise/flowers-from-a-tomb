@@ -5115,8 +5115,14 @@ body .page-actions .button.primary:hover {
 
 /* BOTTIN DES MÉTIERS — SUJET EN ONGLETS */
 .page-tab {
-  display: block;
+  display: grid;
+  grid-template-columns: 190px minmax(0, 1fr);
+  align-items: start;
+  gap: 14px;
   margin-top: 10px;
+}
+.page-tab > .poster-list {
+  display: none;
 }
 .page-tab .post_profile,
 .page-tab .post_date,
@@ -5132,15 +5138,40 @@ body .page-actions .button.primary:hover {
 .page-tab .post:has(div[onglet]).active {
   display: block;
 }
+.page-tab .post:has(button[onglet]),
+.page-tab .post:has(div[onglet]).active {
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+}
+.page-tab .post:has(button[onglet]) {
+  grid-column: 1;
+  grid-row: 1;
+  position: sticky;
+  top: 14px;
+}
+.page-tab .post:has(div[onglet]) {
+  grid-column: 2;
+  grid-row: 1;
+}
+.page-tab .post:has(button[onglet]) .post_message,
+.page-tab .post:has(div[onglet]).active .post_message {
+  min-height: 0;
+  grid-column: 1 / -1;
+  padding: 24px;
+}
+.page-tab .post:has([onglet]) .post_signature {
+  display: none;
+}
 .page-tab.clear .post_details {
   display: none;
 }
 .fft-job-tabs {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   gap: 6px;
 }
 .fft-job-tabs button[onglet] {
+  width: 100%;
   margin: 0;
   padding: 6px 10px;
   background: var(--fft-panel);
@@ -5215,11 +5246,21 @@ body .page-actions .button.primary:hover {
   font-weight: 700;
 }
 @media (max-width: 700px) {
+  .page-tab {
+    display: block;
+  }
+  .page-tab .post:has(button[onglet]) {
+    position: static;
+  }
   .fft-job-list {
     grid-template-columns: 1fr;
   }
+  .fft-job-tabs {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
   .fft-job-tabs button[onglet] {
-    flex: 1 1 calc(50% - 6px);
+    width: auto;
   }
 }
 
