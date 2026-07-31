@@ -5241,6 +5241,29 @@ body .page-actions .button.primary:hover {
   color: var(--fft-muted);
   font-size: 11px;
 }
+.fft-job-list details {
+  grid-column: 1 / -1;
+  padding-top: 8px;
+  border-top: 1px solid var(--fft-line);
+  color: var(--fft-muted);
+  font-size: 10px;
+}
+.fft-job-list summary {
+  color: var(--fft-ink);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.fft-job-openings {
+  padding-top: 8px;
+  line-height: 1.8;
+}
+.fft-job-openings i {
+  color: var(--fft-line);
+  font-style: normal;
+}
 .fft-job-list a {
   color: var(--fft-ink);
   font-weight: 700;
