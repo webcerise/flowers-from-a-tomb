@@ -5293,3 +5293,136 @@ body .page-actions .button.primary:hover {
   }
 }
 
+/* CALENDRIER D’ELMSBURY — SAISONS */
+.fft-calendar-tabs {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.fft-calendar-tabs button[onglet] {
+  width: 100%;
+  margin: 0;
+  padding: 8px 10px;
+  background: var(--fft-panel);
+  border: 1px solid var(--fft-line);
+  border-radius: 0;
+  color: var(--fft-muted);
+  font: 700 11px / 1 var(--font);
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.fft-calendar-tabs button[onglet].active {
+  background: var(--fft-ink);
+  border-color: var(--fft-ink);
+  color: var(--fft-paper);
+}
+.fft-calendar {
+  display: grid;
+  gap: 26px;
+}
+.fft-calendar > header {
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--fft-line);
+}
+.fft-calendar > header t1 {
+  margin-bottom: 10px;
+}
+.fft-calendar > header > span {
+  max-width: 650px;
+  display: block;
+  color: var(--fft-muted);
+  font-size: 15px;
+}
+.fft-calendar b1 {
+  font-size: 11px;
+}
+.fft-calendar-month {
+  display: grid;
+  grid-template-columns: 100px minmax(0, 1fr);
+  gap: 16px;
+  align-items: start;
+}
+.fft-calendar-month h2 {
+  margin: 0;
+  color: var(--fft-ink);
+  font: 700 12px / 1.2 var(--font);
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+.fft-calendar-month h2 span {
+  display: block;
+  margin-bottom: 5px;
+  color: var(--fft-line);
+  font: 400 38px / .9 var(--font);
+  letter-spacing: 0;
+}
+.fft-calendar-events {
+  display: grid;
+  gap: 10px;
+}
+.fft-calendar-events article {
+  min-width: 0;
+  display: grid;
+  grid-template-columns: 155px minmax(0, 1fr);
+  background: var(--fft-panel);
+  border: 1px solid var(--fft-line);
+}
+.fft-calendar-image {
+  min-height: 150px;
+  background-color: var(--fft-paper);
+  background-position: center;
+  background-size: cover;
+  border-right: 1px solid var(--fft-line);
+  filter: grayscale(1) contrast(1.04);
+}
+.fft-calendar-copy {
+  padding: 18px;
+  align-self: center;
+}
+.fft-calendar-copy h3 {
+  margin: 5px 0 10px;
+  color: var(--fft-ink);
+  font: 400 25px / 1 var(--font);
+  text-transform: uppercase;
+}
+.fft-calendar-copy p {
+  margin: 0;
+  color: var(--fft-muted);
+  font-size: 13px;
+  line-height: 1.6;
+}
+@media (max-width: 700px) {
+  .fft-calendar-tabs {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .fft-calendar-tabs button[onglet] {
+    width: auto;
+  }
+  .fft-calendar-month {
+    grid-template-columns: 1fr;
+  }
+  .fft-calendar-month h2 span {
+    display: inline;
+    margin: 0 8px 0 0;
+    font-size: 25px;
+  }
+  .fft-calendar-events article {
+    grid-template-columns: 115px minmax(0, 1fr);
+  }
+  .fft-calendar-image {
+    min-height: 165px;
+  }
+}
+@media (max-width: 470px) {
+  .fft-calendar-events article {
+    grid-template-columns: 1fr;
+  }
+  .fft-calendar-image {
+    min-height: 180px;
+    border-right: 0;
+    border-bottom: 1px solid var(--fft-line);
+  }
+}
+
