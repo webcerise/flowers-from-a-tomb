@@ -4074,10 +4074,9 @@ body form.fft-members-filter {
   display: block;
   overflow: hidden;
   color: var(--fft-ink);
-  font: 400 24px/1 var(--font);
+  font: 400 24px / 1 var(--font);
   text-overflow: ellipsis;
   text-transform: uppercase;
-  white-space: nowrap;
 }
 .fft-member-meta {
   margin: 17px 0 0;
@@ -4873,9 +4872,9 @@ body .page-actions .button.primary:hover {
 .fft-topic-page .post_pseudo,
 .fft-topic-page .post_pseudo a {
   display: inline-block;
-  margin-top: 12px;
+  margin-top: 14px;
   color: var(--fft-ink);
-  font: 400 24px/1 var(--font);
+  font: 400 24px / 1 var(--font);
   text-transform: uppercase;
 }
 .fft-topic-page .post_rank,
