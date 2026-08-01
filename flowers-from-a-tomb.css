@@ -5374,7 +5374,8 @@ body .page-actions .button.primary:hover {
   background-position: center;
   background-size: cover;
   border-right: 1px solid var(--fft-line);
-  filter: grayscale(1) contrast(1.04);
+  filter: grayscale(1) contrast(1.3) !important;
+  opacity: .5 !important;
 }
 .fft-calendar-copy {
   padding: 18px;
