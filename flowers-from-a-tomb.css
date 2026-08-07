@@ -5644,3 +5644,59 @@ body .page-actions .button.primary:hover {
   .fft-soulmate-footer span { display: block; }
 }
 
+/* SOULMATE SEARCHER — NOTIFICATION */
+.fft-soulmate-notification {
+  width: min(470px, 100%);
+  margin: 24px auto;
+  padding: 12px;
+  display: grid;
+  grid-template-columns: 76px minmax(0, 1fr);
+  gap: 14px;
+  align-items: center;
+  box-sizing: border-box;
+  border: 1px solid var(--fft-ink);
+  background: var(--fft-paper);
+  color: var(--fft-ink);
+  box-shadow: 4px 4px 0 var(--fft-line);
+}
+.fft-soulmate-notification * { box-sizing: border-box; }
+.fft-soulmate-notification > img {
+  width: 76px !important;
+  height: 76px !important;
+  display: block;
+  object-fit: cover;
+  border: 1px solid var(--fft-line);
+  filter: grayscale(1) contrast(1.1);
+}
+.fft-soulmate-notification-copy { min-width: 0; }
+.fft-soulmate-notification b1 {
+  display: block;
+  color: var(--fft-muted);
+  font-size: 8px;
+}
+.fft-soulmate-notification p {
+  margin: 4px 0 10px;
+  color: var(--fft-ink);
+  font: 700 14px / 1.35 var(--font);
+}
+.fft-soulmate-notification a {
+  padding: 6px 10px;
+  display: inline-block;
+  border: 1px solid var(--fft-ink);
+  background: var(--fft-ink);
+  color: var(--fft-paper);
+  font-size: 8px;
+  font-weight: 900;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+@media (max-width: 380px) {
+  .fft-soulmate-notification {
+    grid-template-columns: 58px minmax(0, 1fr);
+  }
+  .fft-soulmate-notification > img {
+    width: 58px !important;
+    height: 58px !important;
+  }
+}
+
