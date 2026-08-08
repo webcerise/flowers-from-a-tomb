@@ -5797,3 +5797,26 @@ body .page-actions .button.primary:hover {
   .fft-relationship-icon span { display: none; }
 }
 
+/* FICHE MOODBOARD */
+.fft-moodboard-card {
+  width: min(680px, 100%);
+  margin: 28px auto;
+  column-count: 3;
+  column-gap: 6px;
+  box-sizing: border-box;
+  background: var(--fft-paper);
+}
+.fft-moodboard-card img {
+  width: 100% !important;
+  height: auto !important;
+  margin: 0 0 6px;
+  display: block;
+  break-inside: avoid;
+}
+@media (max-width: 520px) {
+  .fft-moodboard-card { column-gap: 4px; }
+  .fft-moodboard-card img {
+    margin-bottom: 4px;
+  }
+}
+
