@@ -5700,3 +5700,100 @@ body .page-actions .button.primary:hover {
   }
 }
 
+/* CARNET DE BORD — LISTE DE LIENS */
+.fft-relationships {
+  width: min(620px, 100%);
+  margin: 28px auto;
+  box-sizing: border-box;
+  color: var(--fft-ink);
+  font: 400 13px / 1.6 var(--font);
+}
+.fft-relationships * { box-sizing: border-box; }
+.fft-relationships > header {
+  padding: 0 0 18px;
+  border-bottom: 1px solid var(--fft-line);
+}
+.fft-relationships > header b1 { font-size: 9px; }
+.fft-relationships > header h2 {
+  margin: 7px 0 0;
+  color: var(--fft-ink);
+  font: italic 500 clamp(42px, 7vw, 58px) / .85 "Cormorant Garamond", serif;
+  letter-spacing: -.04em;
+  text-transform: lowercase;
+}
+.fft-relationship-list {
+  border-right: 1px solid var(--fft-line);
+  border-left: 1px solid var(--fft-line);
+}
+.fft-relationship {
+  min-width: 0;
+  display: grid;
+  grid-template-columns: 58px 86px minmax(0, 1fr);
+  border-bottom: 1px solid var(--fft-line);
+  background: var(--fft-paper);
+}
+.fft-relationship-icon {
+  padding: 15px 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  border-right: 1px solid var(--fft-line);
+  color: var(--fft-muted);
+}
+.fft-relationship-icon i {
+  color: var(--fft-ink);
+  font-size: 17px;
+}
+.fft-relationship-icon span {
+  font-size: 7px;
+  font-weight: 800;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+}
+.fft-relationship > img {
+  width: 86px !important;
+  height: 100% !important;
+  min-height: 112px;
+  display: block;
+  object-fit: cover;
+  border-right: 1px solid var(--fft-line);
+  filter: grayscale(1) contrast(1.08);
+}
+.fft-relationship-content {
+  min-width: 0;
+  padding: 18px 20px;
+  align-self: center;
+}
+.fft-relationship-content h3 {
+  margin: 0;
+  color: var(--fft-ink);
+  font: 500 27px / .95 "Cormorant Garamond", serif;
+}
+.fft-relationship-content h3 a { color: inherit; }
+.fft-relationship-content h4 {
+  margin: 6px 0 0;
+  color: var(--fft-muted);
+  font: 800 9px / 1.3 var(--font);
+  letter-spacing: .09em;
+  text-transform: uppercase;
+}
+.fft-relationship-content p {
+  margin: 10px 0 0;
+  padding-top: 9px;
+  border-top: 1px solid var(--fft-line);
+  color: var(--fft-muted);
+  font-size: 11px;
+  line-height: 1.6;
+}
+@media (max-width: 450px) {
+  .fft-relationship { grid-template-columns: 42px 66px minmax(0, 1fr); }
+  .fft-relationship > img { width: 66px !important; min-height: 105px; }
+  .fft-relationship-content { padding: 15px 13px; }
+  .fft-relationship-content h3 { font-size: 23px; }
+  .fft-relationship-icon span { display: none; }
+}
+
