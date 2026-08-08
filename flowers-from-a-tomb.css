@@ -220,6 +220,205 @@ img.fft-gif-small,
   }
 }
 
+/* CARNET DE BORD — GARDE-ROBE */
+.fft-wardrobe {
+  width: min(570px, 100%);
+  margin: 28px auto;
+  box-sizing: border-box;
+  border: 1px solid var(--fft-line);
+  background: var(--fft-paper);
+  color: var(--fft-ink);
+  font: 400 12px / 1.5 var(--font);
+  height: 800px;
+  overflow: auto;
+}
+.fft-wardrobe * { box-sizing: border-box; }
+.fft-wardrobe-status {
+  padding: 13px 24px 8px;
+  display: flex;
+  justify-content: space-between;
+  color: var(--fft-muted);
+  font-size: 7px;
+  font-weight: 800;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+}
+.fft-wardrobe-header {
+  padding: 7px 22px 18px;
+  display: grid;
+  grid-template-columns: 20px minmax(0, 1fr) 20px 42px;
+  gap: 12px;
+  align-items: center;
+  border-bottom: 1px solid var(--fft-line);
+}
+.fft-wardrobe-header > i { font-size: 16px; }
+.fft-wardrobe-header h2 {
+  margin: 0;
+  color: var(--fft-ink);
+  font: 700 18px / 1 var(--font);
+  letter-spacing: -.025em;
+  text-transform: lowercase;
+}
+.fft-wardrobe-header div span {
+  display: block;
+  margin-top: 3px;
+  color: var(--fft-muted);
+  font-size: 8px;
+  text-transform: lowercase;
+}
+.fft-wardrobe-header img {
+  width: 42px !important;
+  height: 42px !important;
+  display: block;
+  border: 1px solid var(--fft-line);
+  border-radius: 50%;
+  object-fit: cover;
+  filter: grayscale(1) contrast(1.08);
+}
+.fft-wardrobe-nav {
+  padding: 10px 14px;
+  display: flex;
+  gap: 5px;
+  overflow-x: auto;
+  border-bottom: 1px solid var(--fft-line);
+  scrollbar-width: none;
+}
+.fft-wardrobe-nav::-webkit-scrollbar { display: none; }
+.fft-wardrobe-nav span {
+  padding: 5px 8px;
+  flex: 0 0 auto;
+  border: 1px solid var(--fft-line);
+  color: var(--fft-muted);
+  font-size: 7px;
+  font-weight: 800;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+}
+.fft-wardrobe-nav span.active {
+  border-color: var(--fft-ink);
+  background: var(--fft-ink);
+  color: var(--fft-paper);
+}
+.fft-wardrobe-preferences {
+  padding: 13px 14px;
+  display: grid;
+  grid-template-columns: 1fr 1.25fr;
+  gap: 18px;
+  border-bottom: 1px solid var(--fft-line);
+  background: var(--fft-paper);
+}
+.fft-wardrobe-preferences > div { min-width: 0; }
+.fft-wardrobe-preferences b1 {
+  margin-bottom: 8px;
+  display: block;
+  font-size: 7px;
+}
+.fft-wardrobe-palette,
+.fft-wardrobe-brands {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+.fft-wardrobe-palette i {
+  width: 22px;
+  height: 22px;
+  display: block;
+  border: 1px solid var(--fft-line);
+  border-radius: 50%;
+  background: var(--color);
+}
+.fft-wardrobe-brands span {
+  padding: 5px 7px;
+  border: 1px solid var(--fft-line);
+  background: var(--fft-panel);
+  color: var(--fft-muted);
+  font-size: 7px;
+  font-weight: 800;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+.fft-wardrobe-grid {
+  padding: 14px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  background: var(--fft-panel);
+}
+.fft-wardrobe-item {
+  min-width: 0;
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid var(--fft-line);
+  background: var(--fft-paper);
+}
+.fft-wardrobe-item > img {
+  width: 100% !important;
+  height: 245px !important;
+  display: block;
+  object-fit: cover;
+}
+.fft-wardrobe-item figcaption {
+  min-height: 58px;
+  padding: 9px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  border-top: 1px solid var(--fft-line);
+}
+.fft-wardrobe-info { min-width: 0; }
+.fft-wardrobe-info b {
+  display: block;
+  overflow: hidden;
+  color: var(--fft-ink);
+  font-size: 9px;
+  font-weight: 800;
+  text-overflow: ellipsis;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.fft-wardrobe-info span {
+  display: block;
+  margin-top: 2px;
+  color: var(--fft-muted);
+  font-size: 8px;
+  text-transform: lowercase;
+}
+.fft-wardrobe-swatches {
+  display: flex;
+  flex: 0 0 auto;
+  gap: 3px;
+}
+.fft-wardrobe-swatches i {
+  width: 15px;
+  height: 15px;
+  display: block;
+  border: 1px solid var(--fft-line);
+  background: var(--swatch);
+}
+.fft-wardrobe-footer {
+  padding: 11px 19px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid var(--fft-line);
+  color: var(--fft-muted);
+}
+.fft-wardrobe-footer span {
+  font-size: 7px;
+  font-weight: 800;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+.fft-wardrobe-footer i { color: var(--fft-ink); font-size: 13px; }
+@media (max-width: 480px) {
+  .fft-wardrobe-preferences { grid-template-columns: 1fr; gap: 12px; }
+  .fft-wardrobe-grid { padding: 8px; gap: 8px; }
+  .fft-wardrobe-item > img { height: 190px !important; }
+  .fft-wardrobe-item figcaption { display: block; }
+  .fft-wardrobe-swatches { margin-top: 7px; }
+}
+
 /* Modules visuels LS */
 .fft-ls-icons,
 .fft-ls-quote,
