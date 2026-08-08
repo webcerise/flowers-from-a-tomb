@@ -229,7 +229,7 @@ img.fft-gif-small,
   background: var(--fft-paper);
   color: var(--fft-ink);
   font: 400 12px / 1.5 var(--font);
-  height: 800px;
+  height: 700px;
   overflow: auto;
 }
 .fft-wardrobe * { box-sizing: border-box; }
@@ -340,7 +340,7 @@ img.fft-gif-small,
 .fft-wardrobe-grid {
   padding: 14px;
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 12px;
   background: var(--fft-panel);
 }
@@ -353,7 +353,7 @@ img.fft-gif-small,
 }
 .fft-wardrobe-item > img {
   width: 100% !important;
-  height: 245px !important;
+  aspect-ratio: 1 / 1;
   display: block;
   object-fit: cover;
 }
@@ -414,7 +414,6 @@ img.fft-gif-small,
 @media (max-width: 480px) {
   .fft-wardrobe-preferences { grid-template-columns: 1fr; gap: 12px; }
   .fft-wardrobe-grid { padding: 8px; gap: 8px; }
-  .fft-wardrobe-item > img { height: 190px !important; }
   .fft-wardrobe-item figcaption { display: block; }
   .fft-wardrobe-swatches { margin-top: 7px; }
 }
@@ -6017,5 +6016,166 @@ body .page-actions .button.primary:hover {
   .fft-moodboard-card img {
     margin-bottom: 4px;
   }
+}
+
+/* CARNET DE BORD — HOME TOUR */
+.fft-home-tour {
+  width: min(680px, 100%);
+  margin: 28px auto;
+  box-sizing: border-box;
+  color: var(--fft-ink);
+  font: 400 12px / 1.6 var(--font);
+}
+.fft-home-tour * { box-sizing: border-box; }
+.fft-home-tour-header {
+  padding: 26px 28px;
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 30px;
+  border: 1px solid var(--fft-line);
+  background: var(--fft-paper);
+}
+.fft-home-tour-header b1 { font-size: 8px; }
+.fft-home-tour-header h2 {
+  margin: 8px 0 7px;
+  color: var(--fft-ink);
+  font: italic 500 clamp(43px, 7vw, 60px) / .82 "Cormorant Garamond", serif;
+  letter-spacing: -.045em;
+  text-transform: lowercase;
+}
+.fft-home-tour-header div > p {
+  margin: 0;
+  color: var(--fft-muted);
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+.fft-home-tour-header > span {
+  max-width: 210px;
+  padding-left: 14px;
+  border-left: 1px solid var(--fft-line);
+  color: var(--fft-muted);
+  font: italic 14px / 1.35 "Cormorant Garamond", serif;
+}
+.fft-home-tour-cover {
+  height: 300px;
+  position: relative;
+  border-right: 1px solid var(--fft-line);
+  border-bottom: 1px solid var(--fft-line);
+  border-left: 1px solid var(--fft-line);
+}
+.fft-home-tour-cover img {
+  width: 100% !important;
+  height: 100% !important;
+  display: block;
+  object-fit: cover;
+}
+.fft-home-tour-cover b {
+  padding: 6px 9px;
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  background: var(--fft-ink);
+  color: var(--fft-paper);
+  font-size: 8px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+.fft-home-tour-facts {
+  margin: 10px 0;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  border-top: 1px solid var(--fft-line);
+  border-left: 1px solid var(--fft-line);
+  background: var(--fft-paper);
+}
+.fft-home-tour-facts div {
+  min-width: 0;
+  padding: 11px 12px;
+  border-right: 1px solid var(--fft-line);
+  border-bottom: 1px solid var(--fft-line);
+}
+.fft-home-tour-facts dt {
+  color: var(--fft-muted);
+  font-size: 7px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+.fft-home-tour-facts dd {
+  margin: 3px 0 0;
+  overflow: hidden;
+  color: var(--fft-ink);
+  font-size: 10px;
+  font-weight: 700;
+  text-overflow: ellipsis;
+  text-transform: lowercase;
+  white-space: nowrap;
+}
+.fft-home-tour-rooms {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+.fft-home-tour-room {
+  min-width: 0;
+  margin: 0;
+  border: 1px solid var(--fft-line);
+  background: var(--fft-paper);
+}
+.fft-home-tour-room > img {
+  width: 100% !important;
+  height: 220px !important;
+  display: block;
+  object-fit: cover;
+}
+.fft-home-tour-room figcaption {
+  min-height: 92px;
+  display: grid;
+  grid-template-columns: 43px minmax(0, 1fr);
+  border-top: 1px solid var(--fft-line);
+}
+.fft-home-tour-room figcaption > span {
+  padding-top: 17px;
+  border-right: 1px solid var(--fft-line);
+  color: var(--fft-muted);
+  font: italic 11px / 1 "Cormorant Garamond", serif;
+  text-align: center;
+}
+.fft-home-tour-room figcaption > div { padding: 14px 15px 16px; }
+.fft-home-tour-room h3 {
+  margin: 0;
+  color: var(--fft-ink);
+  font: 500 24px / 1 "Cormorant Garamond", serif;
+  text-transform: lowercase;
+}
+.fft-home-tour-room p {
+  margin: 7px 0 0;
+  color: var(--fft-muted);
+  font-size: 10px;
+  line-height: 1.5;
+}
+.fft-home-tour-footer {
+  margin-top: 10px;
+  padding: 10px 14px;
+  border: 1px solid var(--fft-line);
+  background: var(--fft-panel);
+  color: var(--fft-muted);
+  font-size: 7px;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-align: center;
+  text-transform: uppercase;
+}
+@media (max-width: 520px) {
+  .fft-home-tour-header { display: block; padding: 23px 20px; }
+  .fft-home-tour-header > span { max-width: none; margin-top: 18px; display: block; }
+  .fft-home-tour-cover { height: 230px; }
+  .fft-home-tour-facts { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .fft-home-tour-room > img { height: 170px !important; }
+  .fft-home-tour-room figcaption { grid-template-columns: 34px minmax(0, 1fr); }
+  .fft-home-tour-room figcaption > div { padding: 12px; }
 }
 
