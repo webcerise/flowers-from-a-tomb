@@ -4902,6 +4902,57 @@ body .page-actions .button.primary:hover {
   .fft-viewforum .fft-topic-avatar { display: none; }
 }
 
+/* Sujets importants — notes et annonces compactes */
+.fft-viewforum .fft-topic:is([class*="sticky"], [class*="announce"], [class*="global"]) {
+  height: 56px;
+  min-height: 56px;
+  grid-template-columns: minmax(0, 1fr) 195px;
+  background: var(--fft-panel);
+}
+.fft-viewforum .fft-topic:is([class*="sticky"], [class*="announce"], [class*="global"]) .fft-topic-main {
+  padding: 8px 18px;
+}
+.fft-viewforum .fft-topic:is([class*="sticky"], [class*="announce"], [class*="global"]) .topictitle {
+  font-size: 20px;
+}
+.fft-viewforum .fft-topic:is([class*="sticky"], [class*="announce"], [class*="global"]) .fft-topic-heading::before {
+  padding: 3px 6px;
+  flex: 0 0 auto;
+  border: 1px solid var(--fft-line);
+  color: var(--fft-muted);
+  font: 800 7px / 1 var(--font);
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+.fft-viewforum .fft-topic[class*="sticky"] .fft-topic-heading::before { content: "note"; }
+.fft-viewforum .fft-topic[class*="announce"] .fft-topic-heading::before { content: "annonce"; }
+.fft-viewforum .fft-topic[class*="global"] .fft-topic-heading::before { content: "annonce globale"; }
+.fft-viewforum .fft-topic:is([class*="sticky"], [class*="announce"], [class*="global"]) .fft-topic-byline,
+.fft-viewforum .fft-topic:is([class*="sticky"], [class*="announce"], [class*="global"]) .topicslist-pagination,
+.fft-viewforum .fft-topic:is([class*="sticky"], [class*="announce"], [class*="global"]) .fft-topic-stats,
+.fft-viewforum .fft-topic:is([class*="sticky"], [class*="announce"], [class*="global"]) .fft-topic-avatar {
+  display: none;
+}
+.fft-viewforum .fft-topic:is([class*="sticky"], [class*="announce"], [class*="global"]) .fft-topic-last {
+  padding: 8px 14px;
+  grid-column: 2;
+  grid-row: 1;
+  border-top: 0;
+}
+.fft-viewforum .fft-topic:is([class*="sticky"], [class*="announce"], [class*="global"]) .fft-topic-time,
+.fft-viewforum .fft-topic:is([class*="sticky"], [class*="announce"], [class*="global"]) .fft-topic-author,
+.fft-viewforum .fft-topic:is([class*="sticky"], [class*="announce"], [class*="global"]) .fft-topic-author a {
+  font-size: 10px;
+}
+@media (max-width: 620px) {
+  .fft-viewforum .fft-topic:is([class*="sticky"], [class*="announce"], [class*="global"]) {
+    grid-template-columns: 1fr;
+  }
+  .fft-viewforum .fft-topic:is([class*="sticky"], [class*="announce"], [class*="global"]) .fft-topic-last {
+    display: none;
+  }
+}
+
 /* Lecture d'un sujet */
 .fft-viewtopic { width: 100%; margin-top: 34px; color: var(--fft-ink); }
 .fft-viewtopic-head {
@@ -6177,5 +6228,320 @@ body .page-actions .button.primary:hover {
   .fft-home-tour-room > img { height: 170px !important; }
   .fft-home-tour-room figcaption { grid-template-columns: 34px minmax(0, 1fr); }
   .fft-home-tour-room figcaption > div { padding: 12px; }
+}
+
+/* CARNET DE BORD — THÈME ASTRAL */
+.fft-astro {
+  width: min(680px, 100%);
+  margin: 28px auto;
+  box-sizing: border-box;
+  color: var(--fft-ink);
+  font: 400 12px / 1.6 var(--font);
+}
+.fft-astro * { box-sizing: border-box; }
+.fft-astro-header {
+  padding: 25px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid var(--fft-line);
+  background: var(--fft-paper);
+}
+.fft-astro-header b1 { font-size: 8px; }
+.fft-astro-header h2 {
+  margin: 8px 0 6px;
+  color: var(--fft-ink);
+  font: italic 500 clamp(44px, 7vw, 62px) / .8 "Cormorant Garamond", serif;
+  letter-spacing: -.045em;
+  text-transform: lowercase;
+}
+.fft-astro-header p {
+  margin: 0;
+  color: var(--fft-muted);
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+.fft-astro-header > i {
+  color: var(--fft-line);
+  font: 400 62px / 1 "Cormorant Garamond", serif;
+}
+.fft-astro-birth {
+  margin: 10px 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid var(--fft-line);
+  border-left: 1px solid var(--fft-line);
+  background: var(--fft-paper);
+}
+.fft-astro-birth div { padding: 11px 14px; border-right: 1px solid var(--fft-line); border-bottom: 1px solid var(--fft-line); }
+.fft-astro-birth dt { color: var(--fft-muted); font-size: 7px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+.fft-astro-birth dd { margin: 3px 0 0; color: var(--fft-ink); font-size: 10px; font-weight: 700; }
+.fft-astro-overview {
+  padding: 25px;
+  display: grid;
+  grid-template-columns: 280px minmax(0, 1fr);
+  gap: 28px;
+  align-items: center;
+  border: 1px solid var(--fft-line);
+  background: var(--fft-panel);
+}
+.fft-astro-wheel {
+  width: 260px;
+  height: 260px;
+  position: relative;
+  border: 1px solid var(--fft-ink);
+  border-radius: 50%;
+  background: repeating-conic-gradient(var(--fft-line) 0 1px, transparent 1px 30deg), var(--fft-paper);
+}
+.fft-astro-wheel::before {
+  content: "";
+  position: absolute;
+  inset: 43px;
+  border: 1px solid var(--fft-line);
+  border-radius: 50%;
+  background: var(--fft-paper);
+}
+.fft-astro-wheel > span {
+  width: 24px;
+  height: 24px;
+  display: grid;
+  place-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+  color: var(--fft-ink);
+  font-size: 15px;
+  transform: translate(-50%, -50%) rotate(calc(var(--i) * 30deg)) translateY(-108px) rotate(calc(var(--i) * -30deg));
+}
+.fft-astro-wheel > div {
+  position: absolute;
+  inset: 68px;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  text-align: center;
+}
+.fft-astro-wheel > div b { color: var(--fft-muted); font-size: 7px; letter-spacing: .12em; text-transform: uppercase; }
+.fft-astro-wheel > div strong { margin: 4px 0 7px; font: italic 500 23px / 1 "Cormorant Garamond", serif; }
+.fft-astro-wheel > div i { color: var(--fft-muted); font-size: 7px; font-style: normal; line-height: 1.6; text-transform: uppercase; }
+.fft-astro-big-three b1 { font-size: 8px; }
+.fft-astro-big-three dl { margin: 12px 0 0; border-top: 1px solid var(--fft-line); }
+.fft-astro-big-three dl div { padding: 13px 0; display: grid; grid-template-columns: 82px 1fr; border-bottom: 1px solid var(--fft-line); }
+.fft-astro-big-three dt { color: var(--fft-muted); font-size: 8px; font-weight: 700; text-transform: uppercase; }
+.fft-astro-big-three dd { margin: 0; }
+.fft-astro-big-three dd b { display: block; font: 500 18px / 1 "Cormorant Garamond", serif; }
+.fft-astro-big-three dd span { color: var(--fft-muted); font-size: 7px; text-transform: uppercase; }
+.fft-astro-section { margin-top: 10px; border: 1px solid var(--fft-line); background: var(--fft-paper); }
+.fft-astro-section > header { display: grid; grid-template-columns: 58px 1fr; border-bottom: 1px solid var(--fft-line); }
+.fft-astro-section > header span { padding: 14px; border-right: 1px solid var(--fft-line); color: var(--fft-muted); font: italic 11px / 1 "Cormorant Garamond", serif; text-align: center; }
+.fft-astro-section h3 { margin: 0; padding: 10px 16px; font: 500 27px / 1 "Cormorant Garamond", serif; text-transform: lowercase; }
+.fft-astro-placements { display: grid; grid-template-columns: repeat(2, 1fr); }
+.fft-astro-placements div { padding: 10px 13px; display: grid; grid-template-columns: 1fr auto; gap: 2px 10px; border-right: 1px solid var(--fft-line); border-bottom: 1px solid var(--fft-line); }
+.fft-astro-placements div:nth-child(even) { border-right: 0; }
+.fft-astro-placements div:nth-last-child(-n+2) { border-bottom: 0; }
+.fft-astro-placements b { font-size: 8px; text-transform: uppercase; }
+.fft-astro-placements span { color: var(--fft-ink); font: 500 16px / 1 "Cormorant Garamond", serif; text-align: right; }
+.fft-astro-placements i { grid-column: 1 / -1; color: var(--fft-muted); font-size: 7px; font-style: normal; text-transform: uppercase; }
+.fft-astro-aspects { padding: 14px; display: flex; flex-wrap: wrap; gap: 6px; }
+.fft-astro-aspects span { padding: 5px 8px; border: 1px solid var(--fft-line); background: var(--fft-panel); color: var(--fft-muted); font-size: 8px; text-transform: uppercase; }
+.fft-astro-reading { display: grid; grid-template-columns: repeat(3, 1fr); }
+.fft-astro-reading article { padding: 17px; border-right: 1px solid var(--fft-line); }
+.fft-astro-reading article:last-child { border-right: 0; }
+.fft-astro-reading h4 { margin: 0 0 8px; font: 500 20px / 1 "Cormorant Garamond", serif; text-transform: lowercase; }
+.fft-astro-reading p { margin: 0; color: var(--fft-muted); font-size: 10px; line-height: 1.6; text-align: justify; }
+.fft-astro-footer { margin-top: 10px; padding: 9px; border: 1px solid var(--fft-line); background: var(--fft-ink); color: var(--fft-paper); font-size: 7px; letter-spacing: .14em; text-align: center; text-transform: uppercase; }
+@media (max-width: 580px) {
+  .fft-astro-overview { grid-template-columns: 1fr; justify-items: center; }
+  .fft-astro-big-three { width: 100%; }
+  .fft-astro-reading { grid-template-columns: 1fr; }
+  .fft-astro-reading article { border-right: 0; border-bottom: 1px solid var(--fft-line); }
+  .fft-astro-reading article:last-child { border-bottom: 0; }
+}
+@media (max-width: 420px) {
+  .fft-astro-birth { grid-template-columns: 1fr; }
+  .fft-astro-overview { padding: 18px; }
+  .fft-astro-wheel { width: 230px; height: 230px; }
+  .fft-astro-wheel > span { transform: translate(-50%, -50%) rotate(calc(var(--i) * 30deg)) translateY(-93px) rotate(calc(var(--i) * -30deg)); }
+  .fft-astro-placements { grid-template-columns: 1fr; }
+  .fft-astro-placements div,
+  .fft-astro-placements div:nth-child(even),
+  .fft-astro-placements div:nth-last-child(-n+2) { border-right: 0; border-bottom: 1px solid var(--fft-line); }
+  .fft-astro-placements div:last-child { border-bottom: 0; }
+}
+
+/* PAGE ACTIVITÉ — DISCOVER */
+.fft-discover {
+  width: 100%;
+  margin: 34px 0 0;
+  color: var(--fft-ink);
+  font: 400 14px / 1.6 var(--font);
+}
+.fft-discover * { box-sizing: border-box; }
+.fft-discover-head {
+  min-height: 132px;
+  padding: 22px 24px;
+  display: grid;
+  grid-template-columns: 54px minmax(0, 1fr);
+  gap: 46px;
+  align-items: center;
+  border-top: 1px solid var(--fft-line);
+  border-bottom: 1px solid var(--fft-line);
+}
+.fft-discover-number {
+  width: 54px;
+  height: 54px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--fft-line);
+  color: var(--fft-muted);
+  font: italic 14px / 1 "Cormorant Garamond", serif;
+}
+.fft-discover-kicker {
+  color: var(--fft-muted);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+.fft-discover-head h1 {
+  margin: 7px 0 5px;
+  color: var(--fft-ink);
+  font: 500 clamp(42px, 5vw, 62px) / .86 "Cormorant Garamond", serif;
+  letter-spacing: -.035em;
+  text-align: left;
+  text-transform: lowercase;
+}
+.fft-discover-head p {
+  margin: 0;
+  color: var(--fft-muted);
+  font-size: 12px;
+}
+.fft-discover-empty {
+  margin: 18px 0 0;
+  padding: 36px;
+  display: grid;
+  place-items: center;
+  gap: 10px;
+  border: 1px solid var(--fft-line);
+  background: var(--fft-paper);
+  color: var(--fft-muted);
+  text-align: center;
+}
+.fft-discover-empty i { color: var(--fft-ink); font-size: 24px; }
+.fft-discover-empty p { margin: 0; }
+.fft-discover-feed {
+  margin: 20px 0 0;
+  padding: 0;
+  border: 0;
+  background: var(--transparent);
+}
+.fft-discover-day {
+  display: grid;
+  grid-template-columns: 165px minmax(0, 1fr);
+  border-top: 1px solid var(--fft-line);
+}
+.fft-discover-date {
+  padding: 23px 20px;
+  border-right: 1px solid var(--fft-line);
+  background: var(--fft-panel);
+}
+.fft-discover-date > span {
+  display: block;
+  color: var(--fft-muted);
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+.fft-discover-date h2 {
+  margin: 7px 0 0;
+  padding: 0;
+  color: var(--fft-ink);
+  font: italic 500 25px / .95 "Cormorant Garamond", serif;
+  text-transform: lowercase;
+}
+.fft-discover-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.fft-discover-item {
+  min-height: 82px;
+  padding: 12px 18px;
+  display: grid;
+  grid-template-columns: 52px minmax(0, 1fr) auto;
+  gap: 15px;
+  align-items: center;
+  border-bottom: 1px solid var(--fft-line);
+  background: var(--fft-paper);
+  transition: background-color .25s ease;
+  text-transform: lowercase;
+}
+.fft-discover-item:hover { background: var(--fft-panel); }
+img.act-icon {
+  display: none;
+}
+.fft-discover-avatar {
+  width: 52px;
+  height: 52px;
+  display: block;
+  border: 1px solid var(--fft-line);
+  border-radius: 50%;
+  background-color: var(--fft-panel);
+  background-image: var(--activity-image);
+  background-position: center top;
+  background-size: cover;
+  filter: grayscale(1) contrast(1.06);
+}
+.fft-discover-text {
+  min-width: 0;
+  color: var(--fft-muted);
+  font-size: 13px;
+  line-height: 1.55;
+}
+.fft-discover-text a {
+  color: var(--fft-ink);
+  font-weight: 700;
+  text-decoration: none;
+}
+.fft-discover-time {
+  padding: 5px 7px;
+  border: 1px solid var(--fft-line);
+  color: var(--fft-muted);
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  white-space: nowrap;
+  text-transform: uppercase;
+}
+.fft-discover-end {
+  margin-top: 10px;
+  padding: 12px;
+  border: 1px solid var(--fft-line);
+  background: var(--fft-panel);
+  color: var(--fft-muted);
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-align: center;
+  text-transform: uppercase;
+}
+@media (max-width: 700px) {
+  .fft-discover-head { grid-template-columns: 42px minmax(0, 1fr); gap: 22px; padding: 20px 0; }
+  .fft-discover-number { width: 42px; height: 42px; }
+  .fft-discover-day { grid-template-columns: 1fr; }
+  .fft-discover-date { padding: 15px 17px; border-right: 0; border-bottom: 1px solid var(--fft-line); }
+  .fft-discover-date h2 { font-size: 21px; }
+}
+@media (max-width: 480px) {
+  .fft-discover-item { grid-template-columns: 42px minmax(0, 1fr); gap: 11px; padding: 11px; }
+  .fft-discover-avatar { width: 42px; height: 42px; }
+  .fft-discover-time { grid-column: 2; justify-self: start; }
 }
 
